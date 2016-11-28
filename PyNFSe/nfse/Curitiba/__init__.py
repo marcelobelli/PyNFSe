@@ -1,2 +1,2 @@
 from . import serializacao
-from . import schema
+from . import comunicacao
