@@ -1,6 +1,8 @@
 .PyNFSe
 .idea
-
+cert.pem
+key_nopass.key
+errado.key
 
 # Created by .ignore support plugin (hsz.mobi)
 ### OSX template
