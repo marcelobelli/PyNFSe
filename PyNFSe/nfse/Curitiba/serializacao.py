@@ -1,19 +1,19 @@
 from importlib import import_module
 
 
-class Serializacao():
+class Serializacao(object):
 
     def __init__(self):
         global nfse_schema
         nfse_schema = import_module('PyNFSe.nfse.Curitiba.schema')
 
-    def consultar_nfse(self, emissor, numero_nfse):
-        id_emissor = nfse_schema.tcIdentificacaoPrestador()
-        id_emissor.Cnpj = emissor.cnpj
-        id_emissor.InscricaoMunicipal = emissor.inscricao_municipal
+    def consultar_nfse(self, prestador, numero_nfse):
+        id_prestador = nfse_schema.tcIdentificacaoPrestador()
+        id_prestador.Cnpj = prestador.cnpj
+        id_prestador.InscricaoMunicipal = prestador.inscricao_municipal
 
         consulta = nfse_schema.ConsultarNfseEnvio()
-        consulta.Prestador = id_emissor
+        consulta.Prestador = id_prestador
 
         consulta.NumeroNfse = numero_nfse
 

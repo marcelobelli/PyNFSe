@@ -1,4 +1,4 @@
-class Emissor(object):
+class Prestador(object):
 
     def __init__(self, **kwargs):
         for key, value in kwargs.items():

@@ -1,9 +1,8 @@
 from zeep import Client
 from PyNFSe.utils.transports import TransportWithCert
-from zeep.transports import Transport
 
 
-class Comunicacao():
+class Comunicacao(object):
     _url_homologacao = 'https://pilotoisscuritiba.curitiba.pr.gov.br/nfse_ws/NfseWs.asmx?WSDL'
     _url_producao = 'https://isscuritiba.curitiba.pr.gov.br/Iss.NfseWebService/nfsews.asmx?WSDL'
     _url_ambiente = None
