@@ -3,6 +3,8 @@
 cert.pem
 key_nopass.key
 errado.key
+teste.*
+certificadoiss.pfx
 
 # Created by .ignore support plugin (hsz.mobi)
 ### OSX template

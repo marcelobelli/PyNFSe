@@ -1,8 +1,7 @@
-class Prestador(object):
+from .base import Entidade
 
-    def __init__(self, **kwargs):
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+
+class Prestador(Entidade):
 
     cnpj = str()
     inscricao_municipal = str()
