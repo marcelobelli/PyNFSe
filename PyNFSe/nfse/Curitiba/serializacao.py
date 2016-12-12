@@ -1,5 +1,5 @@
 from PyNFSe.nfse.Curitiba import schema as nfse_schema
-
+from pyxb import BIND
 
 def consulta_nfse(prestador, numero_nfse):
 
@@ -9,6 +9,27 @@ def consulta_nfse(prestador, numero_nfse):
     consulta.NumeroNfse = numero_nfse
 
     xml = consulta.toxml(element_name='ConsultarNfseEnvio')
+    xml = _limpeza_xml(xml)
+
+    return xml
+
+
+def envio_lote_rps(lote_rps):
+
+    serial_lote_rps = nfse_schema.tcLoteRps()
+    serial_lote_rps.NumeroLote = lote_rps.numero_lote
+    serial_lote_rps.id = lote_rps.identificador
+    serial_lote_rps.Cnpj = lote_rps.cnpj
+    serial_lote_rps.InscricaoMunicipal = lote_rps.inscricao_municipal
+    serial_lote_rps.QuantidadeRps = len(lote_rps.lista_rps)
+    serial_lote_rps.ListaRps = BIND()
+    for rps in lote_rps.lista_rps:
+        serial_lote_rps.ListaRps.append(_serial_rps(rps))
+
+    serial_enviar_lote = nfse_schema.EnviarLoteRpsEnvio()
+    serial_enviar_lote.LoteRps = serial_lote_rps
+
+    xml = serial_enviar_lote.toxml()
     xml = _limpeza_xml(xml)
 
     return xml
@@ -79,6 +100,32 @@ def _serial_servico(servico):
     serial_servico.CodigoTributacaoMunicipio = servico.codigo_tributacao_municipio if servico.codigo_tributacao_municipio else None
 
     return serial_servico
+
+
+def _serial_rps(rps):
+
+    id_rps = nfse_schema.tcIdentificacaoRps()
+    id_rps.Numero = rps.numero
+    id_rps.Serie = rps.serie
+    id_rps.Tipo = rps.tipo
+
+    inf_rps = nfse_schema.tcInfRps()
+    inf_rps.IdentificacaoRps = id_rps
+    inf_rps.DataEmissao = rps.data_emissao.strftime('%Y-%m-%dT%H:%M:%S')
+    inf_rps.NaturezaOperacao = rps.natureza_operacao
+    inf_rps.RegimeEspecialTributacao = rps.regime_especial if rps.regime_especial else None
+    inf_rps.OptanteSimplesNacional = rps.simples
+    inf_rps.IncentivadorCultural = rps.incentivo
+    inf_rps.Status = 1
+    inf_rps.Servico = _serial_servico(rps.servico)
+    inf_rps.Prestador = _serial_prestador(rps.prestador)
+    inf_rps.Tomador = _serial_tomador(rps.tomador)
+    inf_rps.id = rps.identificador
+
+    serial_rps = nfse_schema.tcRps()
+    serial_rps.InfRps = inf_rps
+    
+    return serial_rps
 
 
 def _limpeza_xml(xml):

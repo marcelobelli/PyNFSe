@@ -2,17 +2,23 @@ import unittest
 
 from decimal import Decimal
 
+from PyNFSe.entidades.lote_rps import LoteRPS
 from PyNFSe.entidades.servico import Servico
 from PyNFSe.entidades.tomador import Tomador
 from PyNFSe.entidades.prestador import Prestador
+from PyNFSe.entidades.rps import RPS
 from PyNFSe.nfse.Curitiba import schema as nfse_schema
-from PyNFSe.nfse.Curitiba.serializacao import _serial_tomador, _serial_prestador, _serial_servico, consulta_nfse
+from PyNFSe.nfse.Curitiba.serializacao import _serial_tomador, _serial_prestador, _serial_servico, _serial_rps, consulta_nfse
+import PyNFSe.nfse.Curitiba.serializacao as s
+from datetime import datetime
+from pyxb import BIND
 
 class SerializacaoTestCase(unittest.TestCase):
 
     maxDiff = None
 
     def setUp(self):
+
         self.prestador = Prestador(cnpj='12345678000123',
                                    inscricao_municipal='0987654321')
 
@@ -50,12 +56,34 @@ class SerializacaoTestCase(unittest.TestCase):
                                desconto_incondicionado=Decimal('10.00'),
                                desconto_condicionado=Decimal('10.00'))
 
+        self.rps = RPS(identificador='N1',
+                       data_emissao=datetime(2016, 12, 12, 17, 22, 39, 960610),
+                       servico=self.servico,
+                       prestador=self.prestador,
+                       tomador=self.tomador,
+                       simples=1,
+                       incentivo=2,
+                       numero=1,
+                       serie='A1',
+                       tipo='1',
+                       natureza_operacao=1,
+                       regime_especial=6)
+
+        self.lote_rps = LoteRPS(identificador='L1',
+                                numero_lote=1,
+                                cnpj=self.rps.prestador.cnpj,
+                                inscricao_municipal=self.rps.prestador.inscricao_municipal,
+                                quantidade_rps=1,
+                                lista_rps=[self.rps, ])
+
         # Necessário para "serializar" os objetos antes do lote completo.
-        self.inf_rps = nfse_schema.tcInfRps()
+        self.tc_inf_rps = nfse_schema.tcInfRps()
+        self.tc_lote_rps = nfse_schema.tcLoteRps()
+        self.tc_lote_rps.ListaRps = BIND()
 
     def test_xml_prestador(self):
         xml_prestador = _serial_prestador(self.prestador)
-        self.inf_rps.Prestador = xml_prestador
+        self.tc_inf_rps.Prestador = xml_prestador
         xml_prestador = xml_prestador.toxml()
 
         xml_prestador_expected = xml_expected('prestador.xml')
@@ -64,7 +92,7 @@ class SerializacaoTestCase(unittest.TestCase):
 
     def test_xml_tomador(self):
         xml_tomador = _serial_tomador(self.tomador)
-        self.inf_rps.Tomador = xml_tomador
+        self.tc_inf_rps.Tomador = xml_tomador
         xml_tomador = xml_tomador.toxml()
 
         xml_tomador_expected = xml_expected('tomador.xml')
@@ -73,12 +101,22 @@ class SerializacaoTestCase(unittest.TestCase):
 
     def test_xml_servico(self):
         xml_servico = _serial_servico(self.servico)
-        self.inf_rps.Servico = xml_servico
+        self.tc_inf_rps.Servico = xml_servico
         xml_servico = xml_servico.toxml()
 
         xml_servico_expected = xml_expected('servico.xml')
 
         self.assertEqual(xml_servico, xml_servico_expected)
+
+    def test_xml_rps(self):
+        xml_rps = s._serial_rps(self.rps)
+        self.tc_lote_rps.ListaRps.append(xml_rps)
+        xml_rps = xml_rps.toxml()
+
+
+        xml_rps_expected = xml_expected('rps.xml')
+
+        self.assertEqual(xml_rps, xml_rps_expected)
 
     def test_consultar_nfse_por_nota(self):
         numero_nota = 179
@@ -87,6 +125,13 @@ class SerializacaoTestCase(unittest.TestCase):
         xml_consultar_nfse_expected = xml_expected('ConsultarNfseEnvio-por_nota.xml')
 
         self.assertEqual(xml_consultar_nfse, xml_consultar_nfse_expected)
+
+    def test_envio_lote_rps(self):
+        xml_lote_rps = s.envio_lote_rps(self.lote_rps)
+
+        xml_lote_rps_expected = xml_expected('EnviarLoteRpsEnvio.xml')
+
+        self.assertEqual(xml_lote_rps, xml_lote_rps_expected)
 
 
 def xml_expected(arquivo_xml):
