@@ -3,6 +3,7 @@
 cert.pem
 key_nopass.key
 errado.key
+xteste.py
 teste.*
 certificadoiss.pfx
 
