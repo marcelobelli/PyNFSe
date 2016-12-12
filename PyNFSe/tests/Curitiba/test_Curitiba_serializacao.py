@@ -6,7 +6,7 @@ from PyNFSe.entidades.servico import Servico
 from PyNFSe.entidades.tomador import Tomador
 from PyNFSe.entidades.prestador import Prestador
 from PyNFSe.nfse.Curitiba import schema as nfse_schema
-from PyNFSe.nfse.Curitiba.serializacao import _serial_tomador, _serial_prestador, _serial_servico
+from PyNFSe.nfse.Curitiba.serializacao import _serial_tomador, _serial_prestador, _serial_servico, consulta_nfse
 
 class SerializacaoTestCase(unittest.TestCase):
 
@@ -79,6 +79,14 @@ class SerializacaoTestCase(unittest.TestCase):
         xml_servico_expected = xml_expected('servico.xml')
 
         self.assertEqual(xml_servico, xml_servico_expected)
+
+    def test_consultar_nfse_por_nota(self):
+        numero_nota = 179
+        xml_consultar_nfse = consulta_nfse(self.prestador, numero_nota)
+
+        xml_consultar_nfse_expected = xml_expected('ConsultarNfseEnvio-por_nota.xml')
+
+        self.assertEqual(xml_consultar_nfse, xml_consultar_nfse_expected)
 
 
 def xml_expected(arquivo_xml):
