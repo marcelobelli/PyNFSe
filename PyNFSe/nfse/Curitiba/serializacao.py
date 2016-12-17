@@ -76,8 +76,10 @@ def _serial_servico(servico):
     
     valores_servico = nfse_schema.tcValores()
     valores_servico.ValorServicos = servico.valor_servico
+    valores_servico.BaseCalculo = servico.base_calculo
     valores_servico.IssRetido = servico.iss_retido
-    valores_servico.ValorDeducoes = servico.valor_servico if servico.valor_servico else None
+    valores_servico.ValorLiquidoNfse = servico.valor_liquido
+    valores_servico.ValorDeducoes = servico.valor_deducoes if servico.valor_deducoes else None
     valores_servico.ValorPis = servico.valor_pis if servico.valor_pis else None
     valores_servico.ValorCofins = servico.valor_cofins if servico.valor_cofins else None
     valores_servico.ValorInss = servico.valor_inss if servico.valor_inss else None
@@ -85,7 +87,6 @@ def _serial_servico(servico):
     valores_servico.ValorCsll = servico.valor_csll if servico.valor_csll else None
     valores_servico.ValorIss = servico.valor_iss if servico.valor_iss else None
     valores_servico.ValorIssRetido = servico.valor_iss_retido if servico.valor_iss_retido else None
-    valores_servico.ValorLiquidoNfse = servico.valor_liquido if servico.valor_liquido else None
     valores_servico.OutrasRetencoes = servico.outras_retencoes if servico.outras_retencoes else None
     valores_servico.Aliquota = servico.aliquota if servico.aliquota else None
     valores_servico.DescontoIncondicionado = servico.desconto_incondicionado if servico.desconto_incondicionado else None

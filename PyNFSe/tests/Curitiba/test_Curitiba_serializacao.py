@@ -33,28 +33,16 @@ class SerializacaoTestCase(unittest.TestCase):
                                telefone='4132221122',
                                email='financeiro@cliente.com.br')
 
-        self.servico = Servico(valor_servico=Decimal('100.00'),
-                               iss_retido=2,
-                               item_lista='1401',
-                               discriminacao='Descrição do Serviço Prestado',
-                               codigo_municipio='4106902',
-                               codigo_cnae=9511800,
-                               codigo_tributacao_municipio='1401',
-                               # Opcional
-                               valor_deducoes=Decimal('10.00'),
-                               valor_pis=Decimal('10.00'),
-                               valor_cofins=Decimal('10.00'),
-                               valor_inss=Decimal('10.00'),
-                               valor_ir=Decimal('10.00'),
-                               valor_csll=Decimal('10.00'),
-                               valor_iss=Decimal('10.00'),
-                               valor_iss_retido=Decimal('10.00'),
-                               valor_liquido=Decimal('10.00'),
-                               outras_retencoes=Decimal('10.00'),
-                               base_calculo=Decimal('10.00'),
-                               aliquota=Decimal('0.02'),
-                               desconto_incondicionado=Decimal('10.00'),
-                               desconto_condicionado=Decimal('10.00'))
+        self.servico = Servico(
+            valor_servico=Decimal('1000.00'),
+            iss_retido=2,  # 1 - Sim, 2 - Não
+            item_lista='1401',
+            discriminacao='Descrição do Serviço Prestado',
+            codigo_municipio='4106902',
+            codigo_cnae=9511800,
+            codigo_tributacao_municipio='1401',
+            aliquota=Decimal('0.02')
+        )
 
         self.rps = RPS(identificador='N1',
                        data_emissao=datetime(2016, 12, 12, 17, 22, 39, 960610),
