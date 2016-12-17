@@ -7,5 +7,5 @@ ratings:
    - "**.py"
 
 exclude_paths:
-  - "_dsig.py"
-  - "schema.py"
+  - "**/_dsig.py"
+  - "**/schema.py"
