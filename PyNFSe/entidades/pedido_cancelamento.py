@@ -8,4 +8,3 @@ class PedidoCancelamentoNFSe(Entidade):
     numero_nota = int()
     codigo_municipio = str()
     codigo_cancelamento = str()
-

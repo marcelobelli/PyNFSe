@@ -49,7 +49,7 @@ def envio_lote_rps(lote_rps):
     return xml
 
 
-def consultar_situacao_lote_rps(prestador, protocolo):
+def consulta_situacao_lote_rps(prestador, protocolo):
 
     consulta = nfse_schema.ConsultarSituacaoLoteRpsEnvio()
     consulta.Prestador = _serial_prestador(prestador)
@@ -60,7 +60,26 @@ def consultar_situacao_lote_rps(prestador, protocolo):
 
     return xml
 
-def consultar_lote_rps(prestador, protocolo):
+
+def consulta_nfse_por_rps(rps):
+    id_rps = nfse_schema.tcIdentificacaoRps()
+    id_rps.Numero = rps.numero
+    id_rps.Serie = rps.serie
+    id_rps.Tipo = rps.tipo
+
+    id_prestador = _serial_prestador(rps.prestador)
+
+    consulta = nfse_schema.ConsultarNfseRpsEnvio()
+    consulta.IdentificacaoRps = id_rps
+    consulta.Prestador = id_prestador
+
+    xml = consulta.toxml()
+    xml = _limpeza_xml(xml)
+
+    return xml
+
+
+def consulta_lote_rps(prestador, protocolo):
 
     consulta = nfse_schema.ConsultarLoteRpsEnvio()
     consulta.Prestador = _serial_prestador(prestador)
@@ -72,7 +91,7 @@ def consultar_lote_rps(prestador, protocolo):
     return xml
 
 
-def cancelar_nfse(pedido_cancelamento_nfse):
+def cancela_nfse(pedido_cancelamento_nfse):
     id_nfse = nfse_schema.tcIdentificacaoNfse()
     id_nfse.Numero = pedido_cancelamento_nfse.numero_nota
     id_nfse.Cnpj = pedido_cancelamento_nfse.prestador.cnpj

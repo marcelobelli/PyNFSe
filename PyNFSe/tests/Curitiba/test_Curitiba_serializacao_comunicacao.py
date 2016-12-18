@@ -32,21 +32,30 @@ class SerializacaoComunicacaoTestCase(BaseTestesSerializacao):
         self.assertEqual(xml_lote_rps, xml_lote_rps_expected)
 
     def test_consultar_situacao_lote_rps(self):
-        xml_consultar_situacao_lote = s.consultar_situacao_lote_rps(self.prestador, '636174090357960929')
+        xml_consultar_situacao_lote = s.consulta_situacao_lote_rps(self.prestador, '636174090357960929')
 
         xml_consultar_situacao_lote_expected = xml_expected('ConsultarSituacaoLoteRpsEnvio.xml')
 
         self.assertEqual(xml_consultar_situacao_lote, xml_consultar_situacao_lote_expected)
 
+    def test_consultar_nfse_por_rps(self):
+
+        xml_consultar_nfse = s.consulta_nfse_por_rps(self.rps)
+
+        xml_consultar_nfse_expected = xml_expected('ConsultarNfseRpsEnvio.xml')
+
+        self.assertEqual(xml_consultar_nfse, xml_consultar_nfse_expected)
+
+
     def test_consultar_lote_rps(self):
-        xml_consultar_lote = s.consultar_lote_rps(self.prestador, '636174090357960929')
+        xml_consultar_lote = s.consulta_lote_rps(self.prestador, '636174090357960929')
 
         xml_consultar_lote_expected = xml_expected('ConsultarLoteRpsEnvio.xml')
 
         self.assertEqual(xml_consultar_lote, xml_consultar_lote_expected)
 
     def test_cancelar_nfse(self):
-        xml_cancelar_nfse = s.cancelar_nfse(self.pedido_cancelamento_nfse)
+        xml_cancelar_nfse = s.cancela_nfse(self.pedido_cancelamento_nfse)
 
         xml_cancelar_nfse_expected = xml_expected('CancelarNfseEnvio.xml')
 

@@ -25,6 +25,9 @@ class Comunicacao(object):
     def consultar_lote_rps(self, xml):
         return self._cliente.service.RecepcionarXml('ConsultarLoteRps', xml)
 
+    def consultar_nfse_por_rps(self, xml):
+        return self._cliente.service.RecepcionarXml('ConsultarNfsePorRps', xml)
+
     def enviar_lote_rps(self, xml):
         return self._cliente.service.RecepcionarXml('RecepcionarLoteRps', xml)
 
