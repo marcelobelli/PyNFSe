@@ -1,6 +1,7 @@
 from pyxb import BIND
 
 from PyNFSe.nfse.pr.curitiba import schema as nfse_schema
+from PyNFSe._entidades import Prestador, Tomador, Servico, RPS, LoteRPS, PedidoCancelamentoNFSe
 
 
 def consulta_nfse_por_numero(prestador, numero_nfse):
@@ -32,19 +33,8 @@ def consulta_nfse_por_data(prestador, data_inicial, data_final):
     return xml
 
 
-def consulta_situacao_lote_rps(prestador, protocolo):
-
-    consulta = nfse_schema.ConsultarSituacaoLoteRpsEnvio()
-    consulta.Prestador = _serial_prestador(prestador)
-    consulta.Protocolo = protocolo
-
-    xml = consulta.toxml()
-    xml = _limpeza_xml(xml)
-
-    return xml
-
-
-def consulta_nfse_por_rps(rps):
+def consulta_nfse_por_rps(dict_rps):
+    rps = RPS(**dict_rps)
     id_rps = nfse_schema.tcIdentificacaoRps()
     id_rps.Numero = rps.numero
     id_rps.Serie = rps.serie
@@ -55,6 +45,18 @@ def consulta_nfse_por_rps(rps):
     consulta = nfse_schema.ConsultarNfseRpsEnvio()
     consulta.IdentificacaoRps = id_rps
     consulta.Prestador = id_prestador
+
+    xml = consulta.toxml()
+    xml = _limpeza_xml(xml)
+
+    return xml
+
+
+def consulta_situacao_lote_rps(prestador, protocolo):
+
+    consulta = nfse_schema.ConsultarSituacaoLoteRpsEnvio()
+    consulta.Prestador = _serial_prestador(prestador)
+    consulta.Protocolo = protocolo
 
     xml = consulta.toxml()
     xml = _limpeza_xml(xml)
@@ -74,7 +76,8 @@ def consulta_lote_rps(prestador, protocolo):
     return xml
 
 
-def envio_lote_rps(lote_rps):
+def envio_lote_rps(dict_lote_rps):
+    lote_rps = LoteRPS(**dict_lote_rps)
 
     serial_lote_rps = nfse_schema.tcLoteRps()
     serial_lote_rps.NumeroLote = lote_rps.numero_lote
@@ -95,11 +98,13 @@ def envio_lote_rps(lote_rps):
     return xml
 
 
-def cancela_nfse(pedido_cancelamento_nfse):
+def cancela_nfse(dict_pedido_cancelamento_nfse):
+    pedido_cancelamento_nfse = PedidoCancelamentoNFSe(**dict_pedido_cancelamento_nfse)
+
     id_nfse = nfse_schema.tcIdentificacaoNfse()
     id_nfse.Numero = pedido_cancelamento_nfse.numero_nota
-    id_nfse.Cnpj = pedido_cancelamento_nfse.prestador.cnpj
-    id_nfse.InscricaoMunicipal = pedido_cancelamento_nfse.prestador.inscricao_municipal
+    id_nfse.Cnpj = pedido_cancelamento_nfse.prestador['cnpj']
+    id_nfse.InscricaoMunicipal = pedido_cancelamento_nfse.prestador['inscricao_municipal']
     id_nfse.CodigoMunicipio = pedido_cancelamento_nfse.codigo_municipio
 
     info_pedido = nfse_schema.tcInfPedidoCancelamento()
@@ -119,7 +124,8 @@ def cancela_nfse(pedido_cancelamento_nfse):
     return xml
 
 
-def _serial_prestador(prestador):
+def _serial_prestador(dict_prestador):
+    prestador = Prestador(**dict_prestador)
 
     id_prestador = nfse_schema.tcIdentificacaoPrestador()
     id_prestador.Cnpj = prestador.cnpj
@@ -128,7 +134,8 @@ def _serial_prestador(prestador):
     return id_prestador
 
 
-def _serial_tomador(tomador):
+def _serial_tomador(dict_tomador):
+    tomador = Tomador(**dict_tomador)
 
     endereco_tomador = nfse_schema.tcEndereco()
     endereco_tomador.Endereco = tomador.endereco
@@ -156,8 +163,9 @@ def _serial_tomador(tomador):
     return serial_tomador
 
 
-def _serial_servico(servico):
-    
+def _serial_servico(dict_servico):
+    servico = Servico(**dict_servico)
+
     valores_servico = nfse_schema.tcValores()
     valores_servico.ValorServicos = servico.valor_servico
     valores_servico.BaseCalculo = servico.base_calculo
@@ -187,7 +195,8 @@ def _serial_servico(servico):
     return serial_servico
 
 
-def _serial_rps(rps):
+def _serial_rps(dict_rps):
+    rps = RPS(**dict_rps)
 
     id_rps = nfse_schema.tcIdentificacaoRps()
     id_rps.Numero = rps.numero

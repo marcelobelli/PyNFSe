@@ -1,1 +1,0 @@
-from .curitiba import Curitiba

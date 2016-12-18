@@ -11,8 +11,8 @@ class AssinaturaTestCase(BaseTestesSerializacao):
     def setUp(self):
         super(AssinaturaTestCase, self).setUp()
         namespace = '{http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}'
-        certificado = c('PyNFSe/tests/pr/curitiba/certificados/certificado.pfx', '123456')
-        self.assinador = Assinatura(certificado['str_certificado'], certificado['str_chave'], namespace)
+        cert, cert_file, key, key_file = c('PyNFSe/tests/pr/curitiba/certificados/certificado.pfx', '123456')
+        self.assinador = Assinatura(cert, key, namespace)
 
     def test_assinatura_lote_rps(self):
 
@@ -30,6 +30,7 @@ class AssinaturaTestCase(BaseTestesSerializacao):
         xml_cancelar_nfse_expected = xml_expected('CancelarNfseEnvio-Assinado.xml')
 
         self.assertEqual(xml_cancelar_nfse, xml_cancelar_nfse_expected)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -12,12 +12,18 @@ def certificado(certificado_pfx, senha):
     cert_file = _cria_arquivo_temp(cert)
     key_file = _cria_arquivo_temp(key)
 
-    certificado = {
-        'str_certificado': cert,
-        'arquivo_certificado': cert_file,
-        'str_chave': key,
-        'arquivo_chave': key_file
-    }
+    # certificado = {
+    #     'str_certificado': cert,
+    #     'arquivo_certificado': cert_file,
+    #     'str_chave': key,
+    #     'arquivo_chave': key_file
+    # }
+    certificado = [
+        cert,
+        cert_file,
+        key,
+        key_file
+    ]
 
     return certificado
 

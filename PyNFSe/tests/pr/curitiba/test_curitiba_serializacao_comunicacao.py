@@ -46,7 +46,6 @@ class SerializacaoComunicacaoTestCase(BaseTestesSerializacao):
 
         self.assertEqual(xml_consultar_nfse, xml_consultar_nfse_expected)
 
-
     def test_consultar_lote_rps(self):
         xml_consultar_lote = s.consulta_lote_rps(self.prestador, '636174090357960929')
 
@@ -60,6 +59,7 @@ class SerializacaoComunicacaoTestCase(BaseTestesSerializacao):
         xml_cancelar_nfse_expected = xml_expected('CancelarNfseEnvio.xml')
 
         self.assertEqual(xml_cancelar_nfse, xml_cancelar_nfse_expected)
+
 
 if __name__ == '__main__':
     unittest.main()
