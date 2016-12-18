@@ -1,6 +1,7 @@
 from PyNFSe.nfse.Curitiba import schema as nfse_schema
 from pyxb import BIND
 
+
 def consulta_nfse_por_numero(prestador, numero_nfse):
 
     consulta = nfse_schema.ConsultarNfseEnvio()
@@ -13,6 +14,7 @@ def consulta_nfse_por_numero(prestador, numero_nfse):
 
     return xml
 
+
 def consulta_nfse_por_data(prestador, data_inicial, data_final):
 
     consulta = nfse_schema.ConsultarNfseEnvio()
@@ -24,26 +26,6 @@ def consulta_nfse_por_data(prestador, data_inicial, data_final):
     consulta.PeriodoEmissao.DataFinal = data_final
 
     xml = consulta.toxml()
-    xml = _limpeza_xml(xml)
-
-    return xml
-
-def envio_lote_rps(lote_rps):
-
-    serial_lote_rps = nfse_schema.tcLoteRps()
-    serial_lote_rps.NumeroLote = lote_rps.numero_lote
-    serial_lote_rps.id = lote_rps.identificador
-    serial_lote_rps.Cnpj = lote_rps.cnpj
-    serial_lote_rps.InscricaoMunicipal = lote_rps.inscricao_municipal
-    serial_lote_rps.QuantidadeRps = len(lote_rps.lista_rps)
-    serial_lote_rps.ListaRps = BIND()
-    for rps in lote_rps.lista_rps:
-        serial_lote_rps.ListaRps.append(_serial_rps(rps))
-
-    serial_enviar_lote = nfse_schema.EnviarLoteRpsEnvio()
-    serial_enviar_lote.LoteRps = serial_lote_rps
-
-    xml = serial_enviar_lote.toxml()
     xml = _limpeza_xml(xml)
 
     return xml
@@ -86,6 +68,27 @@ def consulta_lote_rps(prestador, protocolo):
     consulta.Protocolo = protocolo
 
     xml = consulta.toxml()
+    xml = _limpeza_xml(xml)
+
+    return xml
+
+
+def envio_lote_rps(lote_rps):
+
+    serial_lote_rps = nfse_schema.tcLoteRps()
+    serial_lote_rps.NumeroLote = lote_rps.numero_lote
+    serial_lote_rps.id = lote_rps.identificador
+    serial_lote_rps.Cnpj = lote_rps.cnpj
+    serial_lote_rps.InscricaoMunicipal = lote_rps.inscricao_municipal
+    serial_lote_rps.QuantidadeRps = len(lote_rps.lista_rps)
+    serial_lote_rps.ListaRps = BIND()
+    for rps in lote_rps.lista_rps:
+        serial_lote_rps.ListaRps.append(_serial_rps(rps))
+
+    serial_enviar_lote = nfse_schema.EnviarLoteRpsEnvio()
+    serial_enviar_lote.LoteRps = serial_lote_rps
+
+    xml = serial_enviar_lote.toxml()
     xml = _limpeza_xml(xml)
 
     return xml

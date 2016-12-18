@@ -1,0 +1,1 @@
+from .assinatura import Assinatura
