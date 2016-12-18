@@ -1,5 +1,6 @@
-from PyNFSe.nfse.Curitiba import schema as nfse_schema
 from pyxb import BIND
+
+from PyNFSe.nfse.pr.curitiba import schema as nfse_schema
 
 
 def consulta_nfse_por_numero(prestador, numero_nfse):
