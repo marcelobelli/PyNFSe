@@ -38,6 +38,13 @@ class SerializacaoComunicacaoTestCase(BaseTestesSerializacao):
 
         self.assertEqual(xml_consultar_lote, xml_consultar_lote_expected)
 
+    def test_cancelar_nfse(self):
+        xml_cancelar_nfse = s.cancelar_nfse(self.pedido_cancelamento_nfse)
+
+        xml_cancelar_nfse_expected = xml_expected('CancelarNfseEnvio.xml')
+
+        self.assertEqual(xml_cancelar_nfse, xml_cancelar_nfse_expected)
+
 if __name__ == '__main__':
     unittest.main()
 

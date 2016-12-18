@@ -24,3 +24,6 @@ class Comunicacao(object):
 
     def enviar_lote_rps(self, xml):
         return self._cliente.service.RecepcionarXml('RecepcionarLoteRps', xml)
+
+    def cancelar_nfse(self, xml):
+        return self._cliente.service.RecepcionarXml('CancelarNfse', xml)

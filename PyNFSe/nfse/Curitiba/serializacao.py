@@ -61,6 +61,30 @@ def consultar_situacao_lote_rps(prestador, protocolo):
     return xml
 
 
+def cancelar_nfse(pedido_cancelamento_nfse):
+    id_nfse = nfse_schema.tcIdentificacaoNfse()
+    id_nfse.Numero = pedido_cancelamento_nfse.numero_nota
+    id_nfse.Cnpj = pedido_cancelamento_nfse.prestador.cnpj
+    id_nfse.InscricaoMunicipal = pedido_cancelamento_nfse.prestador.inscricao_municipal
+    id_nfse.CodigoMunicipio = pedido_cancelamento_nfse.codigo_municipio
+
+    info_pedido = nfse_schema.tcInfPedidoCancelamento()
+    info_pedido.IdentificacaoNfse = id_nfse
+    info_pedido.id = pedido_cancelamento_nfse.identificador
+    info_pedido.CodigoCancelamento = pedido_cancelamento_nfse.codigo_cancelamento
+
+    pedido = nfse_schema.tcPedidoCancelamento()
+    pedido.InfPedidoCancelamento = info_pedido
+
+    cancelar = nfse_schema.CancelarNfseEnvio()
+    cancelar.Pedido = pedido
+
+    xml = cancelar.toxml()
+    xml = _limpeza_xml(xml)
+
+    return xml
+
+
 def _serial_prestador(prestador):
 
     id_prestador = nfse_schema.tcIdentificacaoPrestador()

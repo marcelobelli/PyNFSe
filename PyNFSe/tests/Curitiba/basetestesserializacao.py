@@ -4,7 +4,7 @@ from decimal import Decimal
 from datetime import datetime
 from pyxb import BIND
 
-from PyNFSe.entidades import Prestador, Tomador, Servico, RPS, LoteRPS
+from PyNFSe.entidades import Prestador, Tomador, Servico, RPS, LoteRPS, PedidoCancelamentoNFSe
 from PyNFSe.nfse.Curitiba import schema as nfse_schema
 
 
@@ -63,6 +63,14 @@ class BaseTestesSerializacao(unittest.TestCase):
             inscricao_municipal=self.rps.prestador.inscricao_municipal,
             quantidade_rps=1,
             lista_rps=[self.rps, ]
+        )
+
+        self.pedido_cancelamento_nfse = PedidoCancelamentoNFSe(
+            identificador='C1',
+            prestador=self.prestador,
+            numero_nota=192,
+            codigo_municipio='4106902',
+            codigo_cancelamento='1'
         )
 
         # Necessário para "serializar" os objetos antes do lote completo.

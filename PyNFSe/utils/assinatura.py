@@ -42,6 +42,23 @@ class Assinatura:
 
         return xml_lote_rps_assinado
 
+    def assinar_cancelamento_nfse(self, xml_cancelamento_nfse):
+
+        root = etree.fromstring(xml_cancelamento_nfse.encode())
+        pedido = root.find('{0}Pedido'.format(NAMESPACE))
+        inf_pedido = pedido.find('{0}InfPedidoCancelamento'.format(NAMESPACE))
+        reference_uri = inf_pedido.attrib.get('id')
+
+        assinatura = self._assinatura_xml(pedido, reference_uri)
+
+        pedido.append(assinatura)
+
+        xml_pedido_cancelamento_assinado = etree.tostring(root, encoding='utf-8').decode()
+
+        xml_pedido_cancelamento_assinado = xml_pedido_cancelamento_assinado.replace('ds:', '').replace(':ds', '')
+
+        return xml_pedido_cancelamento_assinado
+
     def _assinatura_xml(self, data, reference_uri):
 
         pkcs12 = crypto.load_pkcs12(open(self.certificado_pfx, 'rb').read(), self.senha)
