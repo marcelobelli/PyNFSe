@@ -1,17 +1,22 @@
 from zeep import Client
+
 from PyNFSe.utils.transports import TransportWithCert
 
 
 class Comunicacao(object):
-    _url_homologacao = 'https://pilotoisscuritiba.curitiba.pr.gov.br/nfse_ws/NfseWs.asmx?WSDL'
-    _url_producao = 'https://isscuritiba.curitiba.pr.gov.br/Iss.NfseWebService/nfsews.asmx?WSDL'
-    _url_ambiente = None
-    _cliente = None
 
-    def __init__(self, homologacao=False, cert=None):
-        self._url_ambiente = self._url_homologacao if homologacao else self._url_producao
-        verify = False if homologacao else True
-        self._cliente = Client(self._url_ambiente, transport=TransportWithCert(verify=verify, cert=cert))
+    def __init__(self, url_homolocacao, url_producao, homologacao=False, certificado=None):
+        self.url_homologacao = url_homolocacao
+        self.url_producao = url_producao
+        self.homologacao = homologacao
+        self.certificado = certificado
+        self.set_cliente()
+
+    def set_cliente(self):
+        url_ambiente = self.url_homologacao if self.homologacao else self.url_producao
+        verify = False if self.homologacao else True
+
+        self._cliente = Client(url_ambiente, transport=TransportWithCert(verify=verify, cert=self.certificado))
 
     def validar_xml(self, xml):
         return self._cliente.service.ValidarXml(xml)
