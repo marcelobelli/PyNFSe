@@ -5,10 +5,10 @@ from signxml import XMLSigner, methods
 
 class Assinatura:
 
-    def __init__(self, certificado_pfx, senha, namespace):
+    def __init__(self, certificado, chave, namespace):
 
-        self.certificado_pfx = certificado_pfx
-        self.senha = senha.encode()
+        self.cert = certificado
+        self.key = chave
         self.NAMESPACE = namespace
 
         self._assinador = XMLSigner(
@@ -61,14 +61,10 @@ class Assinatura:
 
     def _assinatura_xml(self, data, reference_uri):
 
-        pkcs12 = crypto.load_pkcs12(open(self.certificado_pfx, 'rb').read(), self.senha)
-        cert = crypto.dump_certificate(crypto.FILETYPE_PEM, pkcs12.get_certificate())
-        key = crypto.dump_privatekey(crypto.FILETYPE_PEM, pkcs12.get_privatekey())
-
         assinatura = self._assinador.sign(
             data=data,
-            key=key,
-            cert=cert,
+            key=self.key,
+            cert=self.cert,
             reference_uri='#{}'.format(reference_uri)
         )
 
