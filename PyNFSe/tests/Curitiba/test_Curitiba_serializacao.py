@@ -121,6 +121,13 @@ class SerializacaoTestCase(unittest.TestCase):
 
         self.assertEqual(xml_lote_rps, xml_lote_rps_expected)
 
+    def test_consultar_lote_rps(self):
+        xml_consultar_lote = s.consultar_situacao_lote_rps(self.prestador, '636174090357960929')
+
+        xml_consultar_lote_expected = xml_expected('ConsultarSituacaoLoteRpsEnvio.xml')
+
+        self.assertEqual(xml_consultar_lote, xml_consultar_lote_expected)
+
 
 def xml_expected(arquivo_xml):
     with open('PyNFSe/tests/Curitiba/xml_expected/{}'.format(arquivo_xml), 'r') as xml:
