@@ -1,22 +1,9 @@
-from zeep import Client
-
-from PyNFSe.utils.transports import TransportWithCert
-
+from PyNFSe.utils.cliente_comunicacao import ClienteComunicacao
 
 class Comunicacao(object):
 
-    def __init__(self, url_homolocacao, url_producao, homologacao=False, certificado=None):
-        self.url_homologacao = url_homolocacao
-        self.url_producao = url_producao
-        self.homologacao = homologacao
-        self.certificado = certificado
-        self.set_cliente()
-
-    def set_cliente(self):
-        url_ambiente = self.url_homologacao if self.homologacao else self.url_producao
-        verify = False if self.homologacao else True
-
-        self._cliente = Client(url_ambiente, transport=TransportWithCert(verify=verify, cert=self.certificado))
+    def __init__(self, url_ambiente, homologacao=False, certificado=None):
+        self._cliente = ClienteComunicacao(url_ambiente, homologacao, certificado)
 
     def validar_xml(self, xml):
         return self._cliente.service.ValidarXml(xml)
