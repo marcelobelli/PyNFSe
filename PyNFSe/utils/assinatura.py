@@ -2,14 +2,14 @@ from lxml import etree
 from OpenSSL import crypto
 from signxml import XMLSigner, methods
 
-NAMESPACE = '{http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}'
 
 class Assinatura:
 
-    def __init__(self, certificado_pfx, senha):
+    def __init__(self, certificado_pfx, senha, namespace):
 
         self.certificado_pfx = certificado_pfx
         self.senha = senha.encode()
+        self.NAMESPACE = namespace
 
         self._assinador = XMLSigner(
             method=methods.detached,
@@ -21,16 +21,16 @@ class Assinatura:
     def assinar_lote_rps(self, xml_lote_rps):
 
         root = etree.fromstring(xml_lote_rps.encode())
-        lista_rps = root.findall('./{0}LoteRps/{0}ListaRps/*'.format(NAMESPACE))
+        lista_rps = root.findall('./{0}LoteRps/{0}ListaRps/*'.format(self.NAMESPACE))
 
         for rps in lista_rps:
-            infrps = rps.find('{0}InfRps'.format(NAMESPACE))
+            infrps = rps.find('{0}InfRps'.format(self.NAMESPACE))
             reference_uri = infrps.attrib.get('id')
             assinatura = self._assinatura_xml(rps, reference_uri)
 
             rps.append(assinatura)
 
-        lote_rps = root.find('{0}LoteRps'.format(NAMESPACE))
+        lote_rps = root.find('{0}LoteRps'.format(self.NAMESPACE))
         reference_uri = lote_rps.attrib.get('id')
         assinatura = self._assinatura_xml(root, reference_uri)
 
@@ -45,8 +45,8 @@ class Assinatura:
     def assinar_cancelamento_nfse(self, xml_cancelamento_nfse):
 
         root = etree.fromstring(xml_cancelamento_nfse.encode())
-        pedido = root.find('{0}Pedido'.format(NAMESPACE))
-        inf_pedido = pedido.find('{0}InfPedidoCancelamento'.format(NAMESPACE))
+        pedido = root.find('{0}Pedido'.format(self.NAMESPACE))
+        inf_pedido = pedido.find('{0}InfPedidoCancelamento'.format(self.NAMESPACE))
         reference_uri = inf_pedido.attrib.get('id')
 
         assinatura = self._assinatura_xml(pedido, reference_uri)
