@@ -60,6 +60,17 @@ def consultar_situacao_lote_rps(prestador, protocolo):
 
     return xml
 
+def consultar_lote_rps(prestador, protocolo):
+
+    consulta = nfse_schema.ConsultarLoteRpsEnvio()
+    consulta.Prestador = _serial_prestador(prestador)
+    consulta.Protocolo = protocolo
+
+    xml = consulta.toxml()
+    xml = _limpeza_xml(xml)
+
+    return xml
+
 
 def cancelar_nfse(pedido_cancelamento_nfse):
     id_nfse = nfse_schema.tcIdentificacaoNfse()

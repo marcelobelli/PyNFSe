@@ -19,8 +19,11 @@ class Comunicacao(object):
     def consultar_nfse(self, xml):
         return self._cliente.service.RecepcionarXml('ConsultarNfse', xml)
 
-    def consultar_lote_rps(self, xml):
+    def consultar_situacao_lote_rps(self, xml):
         return self._cliente.service.RecepcionarXml('ConsultarSituacaoLoteRps', xml)
+
+    def consultar_lote_rps(self, xml):
+        return self._cliente.service.RecepcionarXml('ConsultarLoteRps', xml)
 
     def enviar_lote_rps(self, xml):
         return self._cliente.service.RecepcionarXml('RecepcionarLoteRps', xml)

@@ -31,10 +31,17 @@ class SerializacaoComunicacaoTestCase(BaseTestesSerializacao):
 
         self.assertEqual(xml_lote_rps, xml_lote_rps_expected)
 
-    def test_consultar_lote_rps(self):
-        xml_consultar_lote = s.consultar_situacao_lote_rps(self.prestador, '636174090357960929')
+    def test_consultar_situacao_lote_rps(self):
+        xml_consultar_situacao_lote = s.consultar_situacao_lote_rps(self.prestador, '636174090357960929')
 
-        xml_consultar_lote_expected = xml_expected('ConsultarSituacaoLoteRpsEnvio.xml')
+        xml_consultar_situacao_lote_expected = xml_expected('ConsultarSituacaoLoteRpsEnvio.xml')
+
+        self.assertEqual(xml_consultar_situacao_lote, xml_consultar_situacao_lote_expected)
+
+    def test_consultar_lote_rps(self):
+        xml_consultar_lote = s.consultar_lote_rps(self.prestador, '636174090357960929')
+
+        xml_consultar_lote_expected = xml_expected('ConsultarLoteRpsEnvio.xml')
 
         self.assertEqual(xml_consultar_lote, xml_consultar_lote_expected)
 
