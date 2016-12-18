@@ -1,7 +1,7 @@
 from PyNFSe.nfse.Curitiba import schema as nfse_schema
 from pyxb import BIND
 
-def consulta_nfse(prestador, numero_nfse):
+def consulta_nfse_por_numero(prestador, numero_nfse):
 
     consulta = nfse_schema.ConsultarNfseEnvio()
     consulta.Prestador = _serial_prestador(prestador)
@@ -13,6 +13,20 @@ def consulta_nfse(prestador, numero_nfse):
 
     return xml
 
+def consulta_nfse_por_data(prestador, data_inicial, data_final):
+
+    consulta = nfse_schema.ConsultarNfseEnvio()
+    consulta.Prestador = _serial_prestador(prestador)
+
+    consulta.PeriodoEmissao = BIND()
+
+    consulta.PeriodoEmissao.DataInicial = data_inicial
+    consulta.PeriodoEmissao.DataFinal = data_final
+
+    xml = consulta.toxml()
+    xml = _limpeza_xml(xml)
+
+    return xml
 
 def envio_lote_rps(lote_rps):
 

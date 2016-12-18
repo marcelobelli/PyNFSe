@@ -1,4 +1,5 @@
 import unittest
+import datetime
 
 import PyNFSe.nfse.Curitiba.serializacao as s
 from PyNFSe.tests.Curitiba.basetestesserializacao import BaseTestesSerializacao, xml_expected
@@ -8,9 +9,18 @@ class SerializacaoComunicacaoTestCase(BaseTestesSerializacao):
 
     def test_consultar_nfse_por_nota(self):
         numero_nota = 179
-        xml_consultar_nfse = s.consulta_nfse(self.prestador, numero_nota)
+        xml_consultar_nfse = s.consulta_nfse_por_numero(self.prestador, numero_nota)
 
         xml_consultar_nfse_expected = xml_expected('ConsultarNfseEnvio-por_nota.xml')
+
+        self.assertEqual(xml_consultar_nfse, xml_consultar_nfse_expected)
+
+    def test_consultar_nfse_por_data(self):
+        data_inicial = datetime.datetime(2016, 12, 12)
+        data_final = datetime.datetime(2016, 12, 17)
+        xml_consultar_nfse = s.consulta_nfse_por_data(self.prestador, data_inicial, data_final)
+
+        xml_consultar_nfse_expected = xml_expected('ConsultarNfseEnvio-por_data.xml')
 
         self.assertEqual(xml_consultar_nfse, xml_consultar_nfse_expected)
 
@@ -30,3 +40,4 @@ class SerializacaoComunicacaoTestCase(BaseTestesSerializacao):
 
 if __name__ == '__main__':
     unittest.main()
+
