@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><ConsultarNfseEnvio xmlns="http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd"><Prestador><Cnpj>12345678000123</Cnpj><InscricaoMunicipal>0987654321</InscricaoMunicipal></Prestador><PeriodoEmissao><DataInicial>2016-12-12</DataInicial><DataFinal>2016-12-17</DataFinal></PeriodoEmissao></ConsultarNfseEnvio>

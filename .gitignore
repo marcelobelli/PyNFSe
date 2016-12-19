@@ -2,9 +2,9 @@ __pycache__
 .PyNFSe
 .idea
 o_que_nao_da_pra_deixar_nos_testes.py
-PyNFSe/tests/pr/curitiba/test_curitiba_comunicacao.py
-PyNFSe/tests/pr/curitiba/test_curitiba_facade.py
-PyNFSe/tests/pr/curitiba/xml_expected/comunicacao
+tests/pr/curitiba/test_curitiba_comunicacao.py
+tests/pr/curitiba/test_curitiba_facade.py
+tests/pr/curitiba/xml_expected/comunicacao/
 certificadoiss.pfx
 
 # Created by .ignore support plugin (hsz.mobi)
