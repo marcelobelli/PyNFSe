@@ -1,11 +1,12 @@
 __pycache__
 .PyNFSe
 .idea
+
+## Testes que necessitam de dados quentes
 o_que_nao_da_pra_deixar_nos_testes.py
 tests/pr/curitiba/test_curitiba_comunicacao.py
 tests/pr/curitiba/test_curitiba_facade.py
 tests/pr/curitiba/xml_expected/comunicacao/
-certificadoiss.pfx
 
 # Created by .ignore support plugin (hsz.mobi)
 ### OSX template
