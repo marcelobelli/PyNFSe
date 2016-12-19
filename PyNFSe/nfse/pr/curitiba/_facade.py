@@ -2,7 +2,6 @@ from PyNFSe.utils.certificado import certificado as c
 from PyNFSe.utils.assinatura import Assinatura
 from PyNFSe.nfse.pr.curitiba import _serializacao as s
 from PyNFSe.nfse.pr.curitiba._comunicacao import Comunicacao
-from PyNFSe.utils.entidades import Prestador, Tomador, Servico, RPS, LoteRPS, PedidoCancelamentoNFSe
 
 
 class Facade:

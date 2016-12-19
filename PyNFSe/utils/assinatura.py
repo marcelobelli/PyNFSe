@@ -1,5 +1,4 @@
 from lxml import etree
-from OpenSSL import crypto
 from signxml import XMLSigner, methods
 
 
