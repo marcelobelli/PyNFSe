@@ -1,6 +1,6 @@
 from pyxb import BIND
 
-from PyNFSe.nfse.pr.curitiba import schema as nfse_schema
+from PyNFSe.nfse.pr.curitiba import _schema as nfse_schema
 from PyNFSe.utils.entidades import Prestador, Tomador, Servico, RPS, LoteRPS, PedidoCancelamentoNFSe
 
 

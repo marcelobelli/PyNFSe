@@ -1,7 +1,7 @@
 import unittest
 import datetime
 
-import PyNFSe.nfse.pr.curitiba.serializacao as s
+import PyNFSe.nfse.pr.curitiba._serializacao as s
 from tests.pr.curitiba.basetestesserializacao import BaseTestesSerializacao, xml_expected
 
 
