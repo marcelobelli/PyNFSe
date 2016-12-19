@@ -1,10 +1,10 @@
+__pycache__
 .PyNFSe
 .idea
-cert.pem
-key_nopass.key
-errado.key
 xxx_teste.py
-teste.*
+PyNFSe/tests/pr/curitiba/test_curitiba_comunicacao.py
+PyNFSe/tests/pr/curitiba/test_curitiba_facade.py
+PyNFSe/tests/pr/curitiba/xml_expected/comunicacao
 certificadoiss.pfx
 
 # Created by .ignore support plugin (hsz.mobi)

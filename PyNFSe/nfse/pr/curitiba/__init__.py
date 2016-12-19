@@ -1,1 +1,1 @@
-from .servicos import Servicos as Curitiba
+from ._facade import Facade as NFSeCuritiba

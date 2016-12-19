@@ -4,7 +4,6 @@ from decimal import Decimal
 from datetime import datetime
 from pyxb import BIND
 
-from PyNFSe._entidades import Prestador, Tomador, Servico, RPS, LoteRPS, PedidoCancelamentoNFSe
 from PyNFSe.nfse.pr.curitiba import schema as nfse_schema
 
 
@@ -77,6 +76,7 @@ class BaseTestesSerializacao(unittest.TestCase):
         self.tc_inf_rps = nfse_schema.tcInfRps()
         self.tc_lote_rps = nfse_schema.tcLoteRps()
         self.tc_lote_rps.ListaRps = BIND()
+
 
 def xml_expected(arquivo_xml):
     with open('PyNFSe/tests/pr/curitiba/xml_expected/{}'.format(arquivo_xml), 'r') as xml:

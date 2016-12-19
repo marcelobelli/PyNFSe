@@ -2,8 +2,8 @@ import unittest
 
 import PyNFSe.nfse.pr.curitiba.serializacao as s
 from PyNFSe.tests.pr.curitiba.basetestesserializacao import BaseTestesSerializacao, xml_expected
-from PyNFSe._utils.certificado import certificado as c
-from PyNFSe._utils.assinatura import Assinatura
+from PyNFSe.utils.certificado import certificado as c
+from PyNFSe.utils.assinatura import Assinatura
 
 
 class AssinaturaTestCase(BaseTestesSerializacao):
@@ -11,7 +11,7 @@ class AssinaturaTestCase(BaseTestesSerializacao):
     def setUp(self):
         super(AssinaturaTestCase, self).setUp()
         namespace = '{http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}'
-        cert, cert_file, key, key_file = c('PyNFSe/tests/pr/curitiba/certificados/certificado.pfx', '123456')
+        cert, cert_file, key, key_file = c('PyNFSe/tests/pr/curitiba/certificado/certificado.pfx', '123456')
         self.assinador = Assinatura(cert, key, namespace)
 
     def test_assinatura_lote_rps(self):
