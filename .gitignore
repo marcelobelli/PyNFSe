@@ -1,7 +1,7 @@
 __pycache__
 .PyNFSe
 .idea
-o_que_nao_da_pra_deixar_nos_tests.py
+o_que_nao_da_pra_deixar_nos_testes.py
 PyNFSe/tests/pr/curitiba/test_curitiba_comunicacao.py
 PyNFSe/tests/pr/curitiba/test_curitiba_facade.py
 PyNFSe/tests/pr/curitiba/xml_expected/comunicacao
