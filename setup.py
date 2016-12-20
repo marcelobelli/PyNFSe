@@ -4,8 +4,11 @@ DESCRIPTION = 'Lib que facilita a vida de quem trabalham com Nota Fiscal de Serv
 
 LONG_DESCRIPTION = '''
 A PyNFSe realiza todos os passos para quem trabalha com NFS-e:
+
 - Cria os XMLs de RPS (Recibo Provisório de Serviço) e dos Lotes RPS. Tudo devidamente assinado :)
+
 - Realiza a comunicação com o webservice da respectiva prefeitura, enviando lotes RPSs, consultando e cancelando NFS-es...
+
 Enfim, a PyNFSe faz todo o trabalho duro :)
 
 Prefeituras suportadas:
@@ -34,8 +37,6 @@ INSTALL_REQUIREMENTS = [
     'signxml',
 ]
 
-
-
 setup(
     name='PyNFSe',
     description=DESCRIPTION,
@@ -46,7 +47,7 @@ setup(
     url='https://github.com/marcelobelli/PyNFSe',
     author='Marcelo Belli',
     author_email='marcelo@belli.me',
-    packages=find_packages(exclude=['docs', 'tests']),
+    packages=find_packages(exclude=['test*']),
     install_requires=INSTALL_REQUIREMENTS,
     test_suite='tests',
     classifiers=CLASSIFIERS,
