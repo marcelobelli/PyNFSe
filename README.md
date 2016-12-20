@@ -4,7 +4,11 @@
 [![Build Status](https://travis-ci.org/marcelobelli/PyNFSe.svg?branch=master)](https://travis-ci.org/marcelobelli/PyNFSe)
 [![Coverage Status](https://coveralls.io/repos/github/marcelobelli/PyNFSe/badge.svg?branch=master)](https://coveralls.io/github/marcelobelli/PyNFSe?branch=master)
 
-Biblioteca  que interage com webservice de Nota Fiscal de Serviços Eletrônica (NFS-e).
+A PyNFSe realiza todos os passos para quem trabalha com NFS-e:
+* Cria os XMLs de RPS (Recibo Provisório de Serviço) e dos Lotes RPS. Tudo devidamente assinado :)
+* Realiza a comunicação com o webservice da respectiva prefeitura, enviando lotes RPSs, consultando e cancelando NFS-es...
+
+Enfim, a PyNFSe faz todo o trabalho duro :)
 
 ## Cidades Atendidas
 
