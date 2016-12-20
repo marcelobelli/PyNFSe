@@ -14,8 +14,14 @@ Enfim, a PyNFSe faz todo o trabalho duro :)
 
 * Curitiba
 
-## Instalação 
+## Instalação
 
+Via PyPI
+```console
+pip install PyNFSe
+```
+
+ou
 ```console
 git clone https://github.com/marcelobelli/PyNFSe.git
 cd PyNFSe
