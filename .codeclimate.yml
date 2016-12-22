@@ -8,4 +8,4 @@ ratings:
 
 exclude_paths:
   - "**/_dsig.py"
-  - "**/schema.py"
+  - "**/_schema.py"
