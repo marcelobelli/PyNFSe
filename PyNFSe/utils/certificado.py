@@ -9,15 +9,16 @@ def certificado(certificado_pfx, senha):
     cert = crypto.dump_certificate(crypto.FILETYPE_PEM, pkcs12.get_certificate())
     key = crypto.dump_privatekey(crypto.FILETYPE_PEM, pkcs12.get_privatekey())
 
-    cert_file = _cria_arquivo_temp(cert)
+    cert_ca = b''
+
+    for ca in pkcs12.get_ca_certificates():
+        cert_ca = crypto.dump_certificate(crypto.FILETYPE_PEM, ca) + cert_ca
+
+    cert_ca = cert + cert_ca
+
+    cert_file = _cria_arquivo_temp(cert_ca)
     key_file = _cria_arquivo_temp(key)
 
-    # certificado = {
-    #     'str_certificado': cert,
-    #     'arquivo_certificado': cert_file,
-    #     'str_chave': key,
-    #     'arquivo_chave': key_file
-    # }
     certificado = [
         cert,
         cert_file,
