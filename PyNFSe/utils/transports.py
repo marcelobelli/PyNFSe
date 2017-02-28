@@ -1,11 +1,11 @@
 import requests
 
-from zeep.utils import NotSet
+# from zeep.utils import NotSet
 from zeep.transports import Transport
 
 
 class TransportWithCert(Transport):
-    def __init__(self, cache=NotSet, timeout=300, operation_timeout=None, verify=True,
+    def __init__(self, timeout=300, operation_timeout=None, verify=True,
                  http_auth=None, cert=None):
         self.cert = cert
         super(TransportWithCert, self).__init__(cache=cache, timeout=timeout,

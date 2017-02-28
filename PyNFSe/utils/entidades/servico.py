@@ -29,7 +29,7 @@ class Servico(Entidade):
 
         self.base_calculo = self._calcular_base_calculo()
         self.valor_iss = self._calcular_iss()
-        self.valor_iss_retido = self._calcular_iss() if self.iss_retido else None
+        self.valor_iss_retido = Decimal() if self.iss_retido == 2 else self.valor_iss
         self.valor_liquido = self._calcular_valor_liquido()
 
     def _calcular_base_calculo(self):

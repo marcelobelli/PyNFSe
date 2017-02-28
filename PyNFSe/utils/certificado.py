@@ -11,8 +11,9 @@ def certificado(certificado_pfx, senha):
 
     cert_ca = b''
 
-    for ca in pkcs12.get_ca_certificates():
-        cert_ca = crypto.dump_certificate(crypto.FILETYPE_PEM, ca) + cert_ca
+    if pkcs12.get_ca_certificates():
+        for ca in pkcs12.get_ca_certificates():
+            cert_ca = crypto.dump_certificate(crypto.FILETYPE_PEM, ca) + cert_ca
 
     cert_ca = cert + cert_ca
 
@@ -20,7 +21,7 @@ def certificado(certificado_pfx, senha):
     key_file = _cria_arquivo_temp(key)
 
     certificado = [
-        cert,
+        cert_ca,
         cert_file,
         key,
         key_file

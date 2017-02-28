@@ -1,4 +1,4 @@
+requests==2.11.1
 PyXB==1.2.5
-lxml==3.6.4
-zeep==0.23.0
-signxml==2.2.1
+zeep==1.0.0
+signxml==2.2.3

@@ -21,7 +21,7 @@ CLASSIFIERS = [
     'Environment :: Console',
     'Intended Audience :: Developers',
     'Intended Audience :: Other Audience',
-    'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
+    'License :: OSI Approved :: MIT License',
     'Natural Language :: Portuguese (Brazilian)',
     'Operating System :: OS Independent',
     'Programming Language :: Python :: 3.5',
@@ -32,7 +32,7 @@ CLASSIFIERS = [
 
 INSTALL_REQUIREMENTS = [
     'PyXB>=1.2.5',
-    'lxml',
+    'requests==2.11.1',
     'zeep',
     'signxml',
 ]
@@ -41,7 +41,7 @@ setup(
     name='PyNFSe',
     description=DESCRIPTION,
     long_description=LONG_DESCRIPTION,
-    license='GNU General Public License v3 or later (GPLv3+)',
+    license='MIT License',
     platforms='any',
     version='0.1.0',
     url='https://github.com/marcelobelli/PyNFSe',
