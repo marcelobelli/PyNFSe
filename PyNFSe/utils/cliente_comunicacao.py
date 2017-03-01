@@ -5,7 +5,7 @@ from zeep.transports import Transport
 
 class ClienteComunicacao(Client):
 
-    def __init__(self, url_ambiente , certificado, producao=False):
+    def __init__(self, url_ambiente , certificado, producao):
         verify = producao
         session = Session()
         session.cert = certificado

@@ -6,7 +6,7 @@ from PyNFSe.nfse.pr.curitiba.comunicacao import Comunicacao
 
 class Facade:
 
-    def __init__(self, certificado_pfx, senha, producao):
+    def __init__(self, certificado_pfx, senha, producao=False):
         namespace = '{http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}'
         url_homologacao = 'https://pilotoisscuritiba.curitiba.pr.gov.br/nfse_ws/NfseWs.asmx?WSDL'
         url_producao = 'https://isscuritiba.curitiba.pr.gov.br/Iss.NfseWebService/nfsews.asmx?WSDL'
