@@ -50,4 +50,4 @@ class Servico(Entidade):
 
         valor_iss = self.base_calculo * self.aliquota
 
-        return valor_iss
+        return Decimal(valor_iss).quantize(Decimal(10) ** -2)
