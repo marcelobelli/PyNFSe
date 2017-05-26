@@ -3,3 +3,5 @@ lxml==3.6.4
 PyXB==1.2.5
 zeep==1.0.0
 signxml==2.2.3
+prompt-toolkit==1.0.14
+click==6.7
