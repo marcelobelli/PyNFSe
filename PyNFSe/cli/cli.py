@@ -1,7 +1,11 @@
 import click
+import json
+import os
 
-from PyNFSe.cli.cli_commands import salvar_cliente, listar_clientes, setup
-from PyNFSe.utils.entidades.tomador import Tomador
+
+from PyNFSe.cli import constants
+from PyNFSe.cli import helpers
+from PyNFSe.cli import cadastro
 
 
 @click.group()
@@ -11,48 +15,83 @@ def cli():
 
 @cli.command()
 def configurar_cli():
-    setup()
-    # click.echo('{}'.format('sim' if yes else 'não'))
-    # pass
+    helpers.criar_diretorio(constants.DIR_PYNFSE)
+
+    if helpers.criar_arquivo_json(constants.JSON_PRESTADOR):
+        prestador = cadastro.prestador()
+        helpers.salvar_arquivo_json(constants.JSON_PRESTADOR, prestador)
+
+    if helpers.criar_arquivo_json(constants.JSON_CONFIGURACAO):
+        configuracao = cadastro.configuracao()
+        helpers.salvar_arquivo_json(constants.JSON_CONFIGURACAO, configuracao)
+
+    if helpers.criar_arquivo_json(constants.JSON_AMBIENTE_PRODUCAO):
+        ambiente = cadastro.ambiente('Produção')
+        helpers.salvar_arquivo_json(constants.JSON_AMBIENTE_PRODUCAO, ambiente)
+
+    ambiente_teste = click.prompt('Deseja cadastar ambiente homologação (s/n)', type=click.Choice(['s', 'n']),
+                                  default='s')
+    if ambiente_teste == 's':
+        if helpers.criar_arquivo_json(constants.JSON_AMBIENTE_HOMOLOGACAO):
+            ambiente = cadastro.ambiente('Homologação')
+            helpers.salvar_arquivo_json(constants.JSON_AMBIENTE_HOMOLOGACAO, ambiente)
+
+    helpers.criar_arquivo_json(constants.JSON_TOMADORES)
+
 
 @cli.command()
-@click.option('-td', '--tipo_doc', prompt='Tipo Documento', type=click.Choice(['cpf', 'cnpj']), default='cnpj')
-@click.option('-nd', '--numero_doc', prompt='Número Documento')
-@click.option('-rz', '--razao_social', prompt='Razão Social')
-@click.option('-im', '--inscricao_municipal')
-@click.option('-er', '--endereco', prompt='Endereço (Apenas a rua)')
-@click.option('-en', '--endereco_numero', prompt='Número endereço')
-@click.option('-ec', '--endereco_complemento')
-@click.option('-eb', '--bairro', prompt='Bairro')
-@click.option('-cm', '--codigo_municipio', prompt='Código Município')
-@click.option('-uf', '--uf', prompt='UF')
-@click.option('-cep', '--cep', prompt='CEP')
-@click.option('-te', '--telefone')
-@click.option('-em', '--email')
-def cadastrar_tomador(tipo_doc, numero_doc, razao_social, inscricao_municipal,
-                      endereco, endereco_numero, endereco_complemento,
-                      bairro, codigo_municipio, uf, cep, telefone, email):
+def cadastrar_tomador():
+    if not os.path.exists(constants.DIR_PYNFSE):
+        print('pynfse não configurado. Execute "python pynfse.py configurar_cli" e siga os passos.')
+        return
 
-    tomador = Tomador()
-    tomador.tipo_documento = tipo_doc
-    tomador.numero_documento = numero_doc
-    tomador.razao_social = razao_social
-    tomador.inscricao_municipal = inscricao_municipal
-    tomador.endereco = endereco
-    tomador.endereco_numero = endereco_numero
-    tomador.endereco_complemento = endereco_complemento
-    tomador.bairro = bairro
-    tomador.codigo_municipio = codigo_municipio
-    tomador.uf = uf
-    tomador.cep = cep
-    tomador.telefone = telefone
-    tomador.email = email
+    tomador = cadastro.tomador()
 
-    salvar_cliente(tomador.json(), tomador.numero_documento)
+    with open(constants.JSON_TOMADORES, mode='r') as file:
+        json_file = json.load(file)
+
+    with open(constants.JSON_TOMADORES, mode='w') as file:
+        json_file[tomador.numero_documento] = tomador.__dict__
+        json.dump(json_file, file, ensure_ascii=False)
+
+
+@cli.command()
+@click.option('--producao', is_flag=True)
+def emitir_nfse(producao):
+    print(producao)
+    amb = helpers.retornar_ambiente(producao)
+    print(amb.certificado)
+    prestador = helpers.retornar_prestador()
+    tomador = helpers.retornar_tomador()
+    amb = helpers.retornar_ambiente(producao)
+    while not tomador:
+        tomador = helpers.retornar_tomador()
+
+    servico = cadastro.servico()
+
+    servico.__init__()
+
+    lote = cadastro.lote_rps(prestador, tomador, servico, amb)
+
+    retorno = helpers.enviar_lote(lote.__dict__, amb, producao)
+
+
+    amb.numero_lote += 1
+    amb.numero_rps += 1
+
+    if producao:
+        helpers.salvar_arquivo_json(constants.JSON_AMBIENTE_PRODUCAO, amb)
+    else:
+        helpers.salvar_arquivo_json(constants.JSON_AMBIENTE_HOMOLOGACAO, amb)
+
+    print(retorno)
 
 
 @cli.command()
 def listar_cliente():
-    print('Lista')
-    listar_clientes()
+    with open(constants.JSON_TOMADORES, mode='r') as file:
+        tomadores = json.load(file)
 
+    for num_doc in tomadores:
+        tomador = tomadores[num_doc]
+        print('{0} - {1}'.format(tomador['razao_social'], tomador['numero_documento']))
