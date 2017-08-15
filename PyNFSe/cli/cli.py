@@ -58,31 +58,30 @@ def cadastrar_tomador():
 @cli.command()
 @click.option('--producao', is_flag=True)
 def emitir_nfse(producao):
-    print(producao)
-    amb = helpers.retornar_ambiente(producao)
-    print(amb.certificado)
-    prestador = helpers.retornar_prestador()
-    tomador = helpers.retornar_tomador()
-    amb = helpers.retornar_ambiente(producao)
+
+    ambiente = cadastro.retornar_ambiente(producao)
+    configuracao = cadastro.retornar_configuracao()
+    prestador = cadastro.retornar_prestador()
+    tomador = cadastro.retornar_tomador()
     while not tomador:
-        tomador = helpers.retornar_tomador()
+        tomador = cadastro.retornar_tomador()
 
     servico = cadastro.servico()
 
     servico.__init__()
 
-    lote = cadastro.lote_rps(prestador, tomador, servico, amb)
+    lote = cadastro.lote_rps(prestador, tomador, servico, ambiente, configuracao)
 
-    retorno = helpers.enviar_lote(lote.__dict__, amb, producao)
+    retorno = helpers.enviar_lote(lote.__dict__, ambiente, producao)
 
 
-    amb.numero_lote += 1
-    amb.numero_rps += 1
+    ambiente.numero_lote += 1
+    ambiente.numero_rps += 1
 
     if producao:
-        helpers.salvar_arquivo_json(constants.JSON_AMBIENTE_PRODUCAO, amb)
+        helpers.salvar_arquivo_json(constants.JSON_AMBIENTE_PRODUCAO, ambiente)
     else:
-        helpers.salvar_arquivo_json(constants.JSON_AMBIENTE_HOMOLOGACAO, amb)
+        helpers.salvar_arquivo_json(constants.JSON_AMBIENTE_HOMOLOGACAO, ambiente)
 
     print(retorno)
 
