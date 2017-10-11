@@ -103,8 +103,8 @@ def cancela_nfse(dict_pedido_cancelamento_nfse):
 
     id_nfse = nfse_schema.tcIdentificacaoNfse()
     id_nfse.Numero = pedido_cancelamento_nfse.numero_nota
-    id_nfse.Cnpj = pedido_cancelamento_nfse.prestador['cnpj']
-    id_nfse.InscricaoMunicipal = pedido_cancelamento_nfse.prestador['inscricao_municipal']
+    id_nfse.Cnpj = pedido_cancelamento_nfse.prestador.cnpj
+    id_nfse.InscricaoMunicipal = pedido_cancelamento_nfse.prestador.inscricao_municipal
     id_nfse.CodigoMunicipio = pedido_cancelamento_nfse.codigo_municipio
 
     info_pedido = nfse_schema.tcInfPedidoCancelamento()
