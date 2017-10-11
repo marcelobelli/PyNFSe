@@ -124,8 +124,7 @@ def cancela_nfse(dict_pedido_cancelamento_nfse):
     return xml
 
 
-def _serial_prestador(dict_prestador):
-    prestador = Prestador(**dict_prestador)
+def _serial_prestador(prestador):
 
     id_prestador = nfse_schema.tcIdentificacaoPrestador()
     id_prestador.Cnpj = prestador.cnpj
@@ -134,8 +133,7 @@ def _serial_prestador(dict_prestador):
     return id_prestador
 
 
-def _serial_tomador(dict_tomador):
-    tomador = Tomador(**dict_tomador)
+def _serial_tomador(tomador):
 
     endereco_tomador = nfse_schema.tcEndereco()
     endereco_tomador.Endereco = tomador.endereco
@@ -163,8 +161,7 @@ def _serial_tomador(dict_tomador):
     return serial_tomador
 
 
-def _serial_servico(dict_servico):
-    servico = Servico(**dict_servico)
+def _serial_servico(servico):
 
     valores_servico = nfse_schema.tcValores()
     valores_servico.ValorServicos = servico.valor_servico

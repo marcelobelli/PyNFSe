@@ -9,9 +9,9 @@ def lote_rps(prestador, tomador, servico, ambiente, configuracao):
 
     rps.identificador = 'N{}'.format(ambiente.numero_rps)
     rps.data_emissao = datetime.today()
-    rps.servico = servico.__dict__
-    rps.prestador = prestador.__dict__
-    rps.tomador = tomador.__dict__
+    rps.servico = servico
+    rps.prestador = prestador
+    rps.tomador = tomador
     rps.simples = configuracao.simples
     rps.incentivo = configuracao.incentivo
     rps.numero = ambiente.numero_rps
