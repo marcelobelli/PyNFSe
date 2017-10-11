@@ -4,3 +4,4 @@ from .tomador import Tomador
 from .prestador import Prestador
 from .rps import RPS
 from .pedido_cancelamento import PedidoCancelamentoNFSe
+from .configuracao import Ambiente, Configuracao

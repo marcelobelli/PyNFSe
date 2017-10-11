@@ -1,3 +1,5 @@
+import json
+
 class Entidade(object):
 
     def __init__(self, **kwargs):
