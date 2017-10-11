@@ -24,6 +24,6 @@ def lote_rps(prestador, tomador, servico, ambiente, configuracao):
     lote.numero_lote = ambiente.numero_lote
     lote.cnpj = prestador.cnpj
     lote.inscricao_municipal = prestador.inscricao_municipal
-    lote.lista_rps = [rps.__dict__]
+    lote.lista_rps = [rps]
 
     return lote

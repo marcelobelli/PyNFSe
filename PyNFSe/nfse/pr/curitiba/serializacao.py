@@ -33,8 +33,8 @@ def consulta_nfse_por_data(prestador, data_inicial, data_final):
     return xml
 
 
-def consulta_nfse_por_rps(dict_rps):
-    rps = RPS(**dict_rps)
+def consulta_nfse_por_rps(rps):
+
     id_rps = nfse_schema.tcIdentificacaoRps()
     id_rps.Numero = rps.numero
     id_rps.Serie = rps.serie
@@ -192,8 +192,7 @@ def _serial_servico(servico):
     return serial_servico
 
 
-def _serial_rps(dict_rps):
-    rps = RPS(**dict_rps)
+def _serial_rps(rps):
 
     id_rps = nfse_schema.tcIdentificacaoRps()
     id_rps.Numero = rps.numero

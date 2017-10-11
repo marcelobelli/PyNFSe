@@ -5,7 +5,7 @@ from datetime import datetime
 from pyxb import BIND
 
 from PyNFSe.nfse.pr.curitiba import _schema as nfse_schema
-from PyNFSe.utils.entidades import Prestador, Tomador, Servico
+from PyNFSe.utils.entidades import Prestador, Tomador, Servico, RPS
 
 
 class BaseTestesSerializacao(unittest.TestCase):
@@ -41,7 +41,7 @@ class BaseTestesSerializacao(unittest.TestCase):
             'aliquota':Decimal('0.02')
         })
 
-        self.rps = {
+        self.rps = RPS(**{
             'identificador':'N1',
             'data_emissao':datetime(2016, 12, 12, 17, 22, 39, 960610),
             'servico':self.servico,
@@ -54,7 +54,7 @@ class BaseTestesSerializacao(unittest.TestCase):
             'tipo':'1',
             'natureza_operacao':1,
             'regime_especial':6
-        }
+        })
 
         self.lote_rps = {
             'identificador':'L1',
