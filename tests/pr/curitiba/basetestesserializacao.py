@@ -1,11 +1,11 @@
 import unittest
-
-from decimal import Decimal
 from datetime import datetime
+from decimal import Decimal
+
 from pyxb import BIND
 
 from PyNFSe.nfse.pr.curitiba import _schema as nfse_schema
-from PyNFSe.utils.entidades import Prestador, Tomador, Servico, RPS
+from PyNFSe.utils.entidades import RPS, Prestador, Servico, Tomador
 
 
 class BaseTestesSerializacao(unittest.TestCase):

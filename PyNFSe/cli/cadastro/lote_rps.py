@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from PyNFSe.utils.entidades import LoteRPS, RPS
+from PyNFSe.utils.entidades import RPS, LoteRPS
 
 
 def lote_rps(prestador, tomador, servico, ambiente, configuracao):

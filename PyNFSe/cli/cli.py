@@ -1,11 +1,9 @@
-import click
 import json
 import os
 
+import click
 
-from PyNFSe.cli import constants
-from PyNFSe.cli import helpers
-from PyNFSe.cli import cadastro
+from PyNFSe.cli import cadastro, constants, helpers
 
 
 @click.group()

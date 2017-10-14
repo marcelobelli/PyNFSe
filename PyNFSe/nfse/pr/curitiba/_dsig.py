@@ -5,14 +5,19 @@
 # Namespace http://www.w3.org/2000/09/xmldsig# [xmlns:dsig]
 
 from __future__ import unicode_literals
+
+import io
+import sys
+
 import pyxb
 import pyxb.binding
+# Import bindings for namespaces imported into schema
+import pyxb.binding.datatypes
 import pyxb.binding.saxer
-import io
-import pyxb.utils.utility
 import pyxb.utils.domutils
-import sys
 import pyxb.utils.six as _six
+import pyxb.utils.utility
+
 # Unique identifier for bindings created at the same time
 _GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:f41c9a26-b4f0-11e6-9ca1-406c8f42f6c5')
 
@@ -26,8 +31,6 @@ if pyxb.__version__ != _PyXBVersion:
 # inside class definitions where property names may conflict.
 _module_typeBindings = pyxb.utils.utility.Object()
 
-# Import bindings for namespaces imported into schema
-import pyxb.binding.datatypes
 
 # NOTE: All namespace declarations are reserved within the binding
 Namespace = pyxb.namespace.NamespaceForURI('http://www.w3.org/2000/09/xmldsig#', create_if_missing=True)
@@ -2236,4 +2239,3 @@ def _BuildAutomaton_20 ():
     st_1._set_transitionSet(transitions)
     return fac.Automaton(states, counters, False, containing_state=None)
 RSAKeyValueType._Automaton = _BuildAutomaton_20()
-

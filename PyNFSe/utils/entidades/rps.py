@@ -1,4 +1,4 @@
-from .base import  Entidade
+from .base import Entidade
 
 
 class RPS(Entidade):

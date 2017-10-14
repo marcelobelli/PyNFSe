@@ -1,9 +1,10 @@
 import unittest
 
 import PyNFSe.nfse.pr.curitiba.serializacao as s
-from tests.pr.curitiba.basetestesserializacao import BaseTestesSerializacao, xml_expected
-from PyNFSe.utils.certificado import certificado as c
 from PyNFSe.utils.assinatura import Assinatura
+from PyNFSe.utils.certificado import certificado as c
+from tests.pr.curitiba.basetestesserializacao import (BaseTestesSerializacao,
+                                                      xml_expected)
 
 
 class AssinaturaTestCase(BaseTestesSerializacao):

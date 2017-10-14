@@ -1,5 +1,6 @@
-from .base import Entidade
 from decimal import Decimal
+
+from .base import Entidade
 
 
 class Servico(Entidade):

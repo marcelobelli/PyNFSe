@@ -1,5 +1,6 @@
-from OpenSSL import crypto
 from tempfile import NamedTemporaryFile
+
+from OpenSSL import crypto
 
 
 def certificado(certificado_pfx, senha):
