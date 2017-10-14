@@ -219,24 +219,31 @@ def _serial_servico(servico):
 
 
 def _serial_rps(rps):
-
     id_rps = nfse_schema.tcIdentificacaoRps()
-    id_rps.Numero = rps.numero
-    id_rps.Serie = rps.serie
-    id_rps.Tipo = rps.tipo
+    id_rps_schema = {
+        'Numero': rps.numero,
+        'Serie': rps.serie,
+        'Tipo': rps.tipo,
+    }
+    for key, value in id_rps_schema.items():
+        setattr(id_rps, key, value)
 
     inf_rps = nfse_schema.tcInfRps()
-    inf_rps.IdentificacaoRps = id_rps
-    inf_rps.DataEmissao = rps.data_emissao.strftime('%Y-%m-%dT%H:%M:%S')
-    inf_rps.NaturezaOperacao = rps.natureza_operacao
-    inf_rps.RegimeEspecialTributacao = rps.regime_especial if rps.regime_especial else None
-    inf_rps.OptanteSimplesNacional = rps.simples
-    inf_rps.IncentivadorCultural = rps.incentivo
-    inf_rps.Status = 1
-    inf_rps.Servico = _serial_servico(rps.servico)
-    inf_rps.Prestador = _serial_prestador(rps.prestador)
-    inf_rps.Tomador = _serial_tomador(rps.tomador)
-    inf_rps.id = rps.identificador
+    inf_rps_schema = {
+        'IdentificacaoRps': id_rps,
+        'DataEmissao': rps.data_emissao.strftime('%Y-%m-%dT%H:%M:%S'),
+        'NaturezaOperacao': rps.natureza_operacao,
+        'RegimeEspecialTributacao': rps.regime_especial,
+        'OptanteSimplesNacional': rps.simples,
+        'IncentivadorCultural': rps.incentivo,
+        'Status': 1,
+        'Servico': _serial_servico(rps.servico),
+        'Prestador': _serial_prestador(rps.prestador),
+        'Tomador': _serial_tomador(rps.tomador),
+        'id': rps.identificador,
+    }
+    for key, value in inf_rps_schema.items():
+        setattr(inf_rps, key, value)
 
     serial_rps = nfse_schema.tcRps()
     serial_rps.InfRps = inf_rps
