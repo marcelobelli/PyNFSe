@@ -9,8 +9,8 @@ class Servico(Entidade):
     item_lista = str()
     discriminacao = str()
     codigo_municipio = str()
-    codigo_cnae = int()
-    codigo_tributacao_municipio = str()
+    codigo_cnae = None
+    codigo_tributacao_municipio = None
 
     valor_deducoes = Decimal()
     valor_pis = Decimal()
