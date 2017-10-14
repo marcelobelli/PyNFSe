@@ -138,29 +138,44 @@ def _serial_prestador(prestador):
 
 
 def _serial_tomador(tomador):
-
     endereco_tomador = nfse_schema.tcEndereco()
-    endereco_tomador.Endereco = tomador.endereco
-    endereco_tomador.Complemento = tomador.endereco_complemento if tomador.endereco_complemento else None
-    endereco_tomador.Numero = tomador.endereco_numero
-    endereco_tomador.Bairro = tomador.bairro
-    endereco_tomador.CodigoMunicipio = tomador.codigo_municipio if tomador.codigo_municipio else None
-    endereco_tomador.Uf = tomador.uf
-    endereco_tomador.Cep = tomador.cep
+    endereco_tomador_schema = {
+        'Endereco': tomador.endereco,
+        'Complemento': tomador.endereco_complemento,
+        'Numero': tomador.endereco_numero,
+        'Bairro': tomador.bairro,
+        'CodigoMunicipio': tomador.codigo_municipio,
+        'Uf': tomador.uf,
+        'Cep': tomador.cep,
+    }
+    for key, value in endereco_tomador_schema.items():
+        setattr(endereco_tomador, key, value)
 
     id_tomador = nfse_schema.tcIdentificacaoTomador()
-    id_tomador.CpfCnpj = tomador.numero_documento
-    id_tomador.InscricaoMunicipal = tomador.inscricao_municipal if tomador.inscricao_municipal else None
+    id_tomador_schema = {
+        'CpfCnpj': tomador.numero_documento,
+        'InscricaoMunicipal': tomador.inscricao_municipal,
+    }
+    for key, value in id_tomador_schema.items():
+        setattr(id_tomador, key, value)
 
     serial_tomador = nfse_schema.tcDadosTomador()
-    serial_tomador.IdentificacaoTomador = id_tomador
-    serial_tomador.RazaoSocial = tomador.razao_social
-    serial_tomador.Endereco = endereco_tomador
+    serial_tomador_schema = {
+        'IdentificacaoTomador': id_tomador,
+        'RazaoSocial': tomador.razao_social,
+        'Endereco': endereco_tomador,
+    }
+    for key, value in serial_tomador_schema.items():
+        setattr(serial_tomador, key, value)
 
     if tomador.telefone or tomador.email:
         serial_tomador.Contato = nfse_schema.tcContato()
-        serial_tomador.Contato.Telefone = tomador.telefone if tomador.telefone else None
-        serial_tomador.Contato.Email = tomador.email if tomador.email else None
+        contato_schema = {
+            'Telefone': tomador.telefone,
+            'Email': tomador.email
+        }
+        for key, value in contato_schema.items():
+            setattr(serial_tomador.Contato, key, value)
 
     return serial_tomador
 
