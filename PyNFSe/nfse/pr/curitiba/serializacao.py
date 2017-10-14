@@ -127,8 +127,12 @@ def cancela_nfse(dict_pedido_cancelamento_nfse):
 def _serial_prestador(prestador):
 
     id_prestador = nfse_schema.tcIdentificacaoPrestador()
-    id_prestador.Cnpj = prestador.cnpj
-    id_prestador.InscricaoMunicipal = prestador.inscricao_municipal
+    id_prestador_schema = {
+        'Cnpj': prestador.cnpj,
+        'InscricaoMunicipal': prestador.inscricao_municipal
+    }
+    for key, value in id_prestador_schema.items():
+        setattr(id_prestador, key, value)
 
     return id_prestador
 
