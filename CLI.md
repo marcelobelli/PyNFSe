@@ -1,12 +1,5 @@
 # PyNFSe
 
-A biblioteca PyNFSe funciona como um facilitador para os desenvolvedores que precisa gerir a emissão de Nota Fiscal de Serviços por meio eletrônico. As funcionalidades desta biblioteca:
-
-* Criação dos XMLs de RPS (Recibo Provisório de Serviço)
-* Criação dos XML dos Lotes RPS.
-* Envio dos lotes de RPSs, realizando a comunicação com o webservice da respectiva prefeitura
-* Consulta e Cancelamento de NFS-es emitidas
-
 As etapas para o fluxo de trabalho da biblioteca são:
 
 * Configuração do ambiente
@@ -17,7 +10,7 @@ As etapas para o fluxo de trabalho da biblioteca são:
 
 ## Configuração do ambiente
 
-Para a configuração do ambiente ( de homologação ou de produção), é pré-requisito ter um certificado digital válido pelo CNPJ (Cadastro Nacional de Pessoa Jurídica). Este certificado  deve estar cadastrado junto ao portal de emissão de notas da prefeitura de sua cidade.
+Para a configuração do ambiente (de homologação e/ou produção), é pré-requisito ter um certificado digital válido pelo CNPJ (Cadastro Nacional de Pessoa Jurídica). Este certificado  deve estar cadastrado junto ao portal de emissão de notas da prefeitura de sua cidade.
 
 
 Ao configurar o ambiente, é necessário ter acesso aos dados listados abaixo.
