@@ -2,8 +2,8 @@ import json
 
 import click
 
-from PyNFSe.utils.entidades import Prestador
 from PyNFSe.cli import constants
+from PyNFSe.utils.entidades import Prestador
 
 
 def prestador():

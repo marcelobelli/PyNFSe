@@ -1,8 +1,9 @@
-import unittest
 import datetime
+import unittest
 
 import PyNFSe.nfse.pr.curitiba.serializacao as s
-from tests.pr.curitiba.basetestesserializacao import BaseTestesSerializacao, xml_expected
+from tests.pr.curitiba.basetestesserializacao import (BaseTestesSerializacao,
+                                                      xml_expected)
 
 
 class SerializacaoComunicacaoTestCase(BaseTestesSerializacao):
@@ -63,4 +64,3 @@ class SerializacaoComunicacaoTestCase(BaseTestesSerializacao):
 
 if __name__ == '__main__':
     unittest.main()
-

@@ -5,14 +5,20 @@
 # Namespace http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd
 
 from __future__ import unicode_literals
+
+import io
+import sys
+
 import pyxb
 import pyxb.binding
+import pyxb.binding.datatypes
 import pyxb.binding.saxer
-import io
-import pyxb.utils.utility
 import pyxb.utils.domutils
-import sys
 import pyxb.utils.six as _six
+import pyxb.utils.utility
+
+from . import _dsig as _ImportedBinding__dsig
+
 # Unique identifier for bindings created at the same time
 _GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:f41c9a26-b4f0-11e6-9ca1-406c8f42f6c5')
 
@@ -26,9 +32,6 @@ if pyxb.__version__ != _PyXBVersion:
 # inside class definitions where property names may conflict.
 _module_typeBindings = pyxb.utils.utility.Object()
 
-# Import bindings for namespaces imported into schema
-from . import _dsig as _ImportedBinding__dsig
-import pyxb.binding.datatypes
 
 # NOTE: All namespace declarations are reserved within the binding
 Namespace = pyxb.namespace.NamespaceForURI('http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd', create_if_missing=True)
@@ -5518,4 +5521,3 @@ def _BuildAutomaton_44 ():
     st_4._set_transitionSet(transitions)
     return fac.Automaton(states, counters, False, containing_state=None)
 tcLoteRps._Automaton = _BuildAutomaton_44()
-

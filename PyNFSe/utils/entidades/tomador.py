@@ -7,15 +7,15 @@ class Tomador(Entidade):
 
     tipo_documento = 'CNPJ'
     numero_documento = str()
-    inscricao_municipal = str()
+    inscricao_municipal = None
 
     endereco = str()
     endereco_numero = str()
-    endereco_complemento = str()
+    endereco_complemento = None
     bairro = str()
-    codigo_municipio = str()
+    codigo_municipio = None
     uf = str()
     cep = str()
 
-    telefone = str()
-    email = str()
+    telefone = None
+    email = None

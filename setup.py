@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 DESCRIPTION = 'Lib que facilita a vida de quem trabalham com Nota Fiscal de Serviços Eletrônica (NFS-e)'
 

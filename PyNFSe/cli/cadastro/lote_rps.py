@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from PyNFSe.utils.entidades import LoteRPS, RPS
+from PyNFSe.utils.entidades import RPS, LoteRPS
 
 
 def lote_rps(prestador, tomador, servico, ambiente, configuracao):
@@ -9,9 +9,9 @@ def lote_rps(prestador, tomador, servico, ambiente, configuracao):
 
     rps.identificador = 'N{}'.format(ambiente.numero_rps)
     rps.data_emissao = datetime.today()
-    rps.servico = servico.__dict__
-    rps.prestador = prestador.__dict__
-    rps.tomador = tomador.__dict__
+    rps.servico = servico
+    rps.prestador = prestador
+    rps.tomador = tomador
     rps.simples = configuracao.simples
     rps.incentivo = configuracao.incentivo
     rps.numero = ambiente.numero_rps
@@ -24,6 +24,6 @@ def lote_rps(prestador, tomador, servico, ambiente, configuracao):
     lote.numero_lote = ambiente.numero_lote
     lote.cnpj = prestador.cnpj
     lote.inscricao_municipal = prestador.inscricao_municipal
-    lote.lista_rps = [rps.__dict__]
+    lote.lista_rps = [rps]
 
     return lote

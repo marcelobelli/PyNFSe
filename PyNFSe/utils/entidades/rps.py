@@ -1,4 +1,4 @@
-from .base import  Entidade
+from .base import Entidade
 
 
 class RPS(Entidade):
@@ -13,4 +13,4 @@ class RPS(Entidade):
     serie = str()
     tipo = str()
     natureza_operacao = int()
-    regime_especial = int()
+    regime_especial = None
