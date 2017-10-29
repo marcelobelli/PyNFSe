@@ -83,7 +83,7 @@ A etapa de cadastrar cliente é importante. Ao emitir a nota fiscal, os dados do
 
 No terminal, digite:
 ```console
-python3 pynfse.py cadastrar_tomador
+pynfse cadastrar_tomador
 ```
 ## Listar Clientes
 
@@ -93,7 +93,7 @@ Para emissão da NFSe, é importante ter o número do CPF ou do CNPJ do cliente.
 
 No terminal, digite:
 ```console
-python3 pynfse.py listar_cliente
+pynfse listar_cliente
 ```
 
 
@@ -105,5 +105,5 @@ Com o ambiente devidamente configurado e os dados do cliente cadastrado, é poss
 
 No terminal, digite:
 ```console
-python3 pynfse.py emitir_nfse
+pynfse emitir_nfse
 ```

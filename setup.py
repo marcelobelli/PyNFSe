@@ -21,7 +21,7 @@ CLASSIFIERS = [
     'Environment :: Console',
     'Intended Audience :: Developers',
     'Intended Audience :: Other Audience',
-    'License :: OSI Approved :: MIT License',
+    'License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)',
     'Natural Language :: Portuguese (Brazilian)',
     'Operating System :: OS Independent',
     'Programming Language :: Python :: 3.5',
@@ -51,4 +51,9 @@ setup(
     install_requires=INSTALL_REQUIREMENTS,
     test_suite='tests',
     classifiers=CLASSIFIERS,
+    entry_points={
+        'console_scripts': [
+            'pynfse = PyNFSe.pynfse:cli',
+        ],
+    },
 )
