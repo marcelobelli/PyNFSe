@@ -1,6 +1,6 @@
 requests==2.11.1
-lxml==3.6.4
 PyXB==1.2.5
-zeep==1.0.0
-signxml==2.2.3
-click==6.7
+lxml
+zeep
+signxml
+click
