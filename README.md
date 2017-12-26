@@ -35,6 +35,10 @@ pip install -r requirements.txt
 
 [Instruções](./CLI.md)
 
+## Problemas
+
+* Descobrir o problema de conexão quando atualiza o requests 
+para versões superiores a 2.11.1 e o cryptography está instalado
 
 ## Roadmap
 
