@@ -1,7 +1,7 @@
-from .base import Entidade
+from simple_model import Model
 
 
-class Prestador(Entidade):
+class Prestador(Model):
 
-    cnpj = str()
-    inscricao_municipal = str()
+    cnpj: str
+    inscricao_municipal: str
