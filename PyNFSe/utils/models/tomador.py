@@ -1,21 +1,21 @@
-from .base import Entidade
+import typing
+
+from simple_model import Model
 
 
-class Tomador(Entidade):
+class Tomador(Model):
+    razao_social: str
+    tipo_documento: str = 'CNPJ'
+    numero_documento: str
+    inscricao_municipal: typing.Any = None
 
-    razao_social = str()
+    endereco: str
+    endereco_numero: str
+    endereco_complemento: typing.Any = None
+    bairro: str
+    codigo_municipio: typing.Any = None
+    uf: str
+    cep: str
 
-    tipo_documento = 'CNPJ'
-    numero_documento = str()
-    inscricao_municipal = None
-
-    endereco = str()
-    endereco_numero = str()
-    endereco_complemento = None
-    bairro = str()
-    codigo_municipio = None
-    uf = str()
-    cep = str()
-
-    telefone = None
-    email = None
+    telefone: typing.Any = None
+    email: typing.Any = None
