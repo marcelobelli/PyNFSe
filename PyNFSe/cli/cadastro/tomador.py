@@ -3,7 +3,7 @@ import json
 import click
 
 from PyNFSe.cli import constants
-from PyNFSe.utils.entidades import Tomador
+from PyNFSe.utils.models import Tomador
 
 
 def tomador():

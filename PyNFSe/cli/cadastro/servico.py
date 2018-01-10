@@ -3,7 +3,7 @@ from decimal import Decimal
 import click
 
 from PyNFSe.cli import constants
-from PyNFSe.utils.entidades import Servico
+from PyNFSe.utils.models import Servico
 
 
 def servico():

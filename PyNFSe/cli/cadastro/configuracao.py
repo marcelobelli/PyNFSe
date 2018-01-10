@@ -3,7 +3,7 @@ import json
 import click
 
 from PyNFSe.cli import constants
-from PyNFSe.utils.entidades import Configuracao
+from PyNFSe.utils.models import Configuracao
 
 
 def configuracao():
