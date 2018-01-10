@@ -1,28 +1,30 @@
+import typing
+
+from simple_model import Model
+
 from decimal import Decimal
 
-from .base import Entidade
 
+class Servico(Model):
 
-class Servico(Entidade):
+    valor_servico: Decimal = Decimal()
+    iss_retido: int  # 1 - Sim, 2 - Não
+    item_lista: str
+    discriminacao: str
+    codigo_municipio: str
+    codigo_cnae: typing.Any = None
+    codigo_tributacao_municipio: typing.Any = None
 
-    valor_servico = Decimal()
-    iss_retido = int() # 1 - Sim, 2 - Não
-    item_lista = str()
-    discriminacao = str()
-    codigo_municipio = str()
-    codigo_cnae = None
-    codigo_tributacao_municipio = None
-
-    valor_deducoes = Decimal()
-    valor_pis = Decimal()
-    valor_cofins = Decimal()
-    valor_inss = Decimal()
-    valor_ir = Decimal()
-    valor_csll = Decimal()
-    outras_retencoes = Decimal()
-    aliquota = Decimal()
-    desconto_incondicionado = Decimal()
-    desconto_condicionado = Decimal()
+    valor_deducoes: Decimal = Decimal()
+    valor_pis: Decimal = Decimal()
+    valor_cofins: Decimal = Decimal()
+    valor_inss: Decimal = Decimal()
+    valor_ir: Decimal = Decimal()
+    valor_csll: Decimal = Decimal()
+    outras_retencoes: Decimal = Decimal()
+    aliquota: Decimal = Decimal()
+    desconto_incondicionado: Decimal = Decimal()
+    desconto_condicionado: Decimal = Decimal()
 
     def __init__(self, **kwargs):
 
