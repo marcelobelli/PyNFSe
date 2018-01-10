@@ -1,9 +1,9 @@
-from .base import Entidade
+from simple_model import Model
 
 
-class LoteRPS(Entidade):
-    identificador = str()
-    numero_lote = int()
-    cnpj = str()
-    inscricao_municipal = str()
-    lista_rps = []
+class LoteRPS(Model):
+    identificador: str
+    numero_lote: int
+    cnpj: str
+    inscricao_municipal: str
+    lista_rps: list
