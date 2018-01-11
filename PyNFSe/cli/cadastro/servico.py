@@ -17,4 +17,6 @@ def servico():
     servico.codigo_tributacao_municipio = click.prompt('Código de Tributação', default=servico.item_lista)
     servico.aliquota = Decimal(click.prompt('Aliquota', default=constants.ALIQUOTA))
 
+    servico.gerar_valores_faltantes()
+
     return servico
