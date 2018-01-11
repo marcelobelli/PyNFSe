@@ -76,8 +76,7 @@ def consulta_lote_rps(prestador, protocolo):
     return xml
 
 
-def envio_lote_rps(dict_lote_rps):
-    lote_rps = LoteRPS(**dict_lote_rps)
+def envio_lote_rps(lote_rps):
 
     serial_lote_rps = nfse_schema.tcLoteRps()
     serial_lote_rps.NumeroLote = lote_rps.numero_lote

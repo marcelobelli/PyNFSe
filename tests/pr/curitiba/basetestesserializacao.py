@@ -5,7 +5,7 @@ from decimal import Decimal
 from pyxb import BIND
 
 from PyNFSe.nfse.pr.curitiba import _schema as nfse_schema
-from PyNFSe.utils.models import RPS, Prestador, Servico, Tomador
+from PyNFSe.utils.models import RPS, Prestador, Servico, Tomador, LoteRPS
 
 
 class BaseTestesSerializacao(unittest.TestCase):
@@ -56,14 +56,14 @@ class BaseTestesSerializacao(unittest.TestCase):
             'regime_especial':6
         })
 
-        self.lote_rps = {
+        self.lote_rps = LoteRPS(**{
             'identificador':'L1',
             'numero_lote':1,
             'cnpj':self.prestador.cnpj,
             'inscricao_municipal':self.prestador.inscricao_municipal,
             'quantidade_rps':1,
             'lista_rps':[self.rps, ]
-        }
+        })
 
         self.pedido_cancelamento_nfse = {
             'identificador':'C1',
