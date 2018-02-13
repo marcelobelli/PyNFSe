@@ -4,3 +4,4 @@ lxml
 zeep
 signxml
 click
+pysimplemodel
