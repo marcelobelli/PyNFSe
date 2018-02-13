@@ -1,7 +1,6 @@
 from pyxb import BIND
 
 from PyNFSe.nfse.pr.curitiba import _schema as nfse_schema
-from PyNFSe.utils.models import LoteRPS, PedidoCancelamentoNFSe
 
 
 def consulta_nfse_por_numero(prestador, numero_nfse):
@@ -97,8 +96,7 @@ def envio_lote_rps(lote_rps):
     return xml
 
 
-def cancela_nfse(dict_pedido_cancelamento_nfse):
-    pedido_cancelamento_nfse = PedidoCancelamentoNFSe(**dict_pedido_cancelamento_nfse)
+def cancela_nfse(pedido_cancelamento_nfse):
 
     id_nfse = nfse_schema.tcIdentificacaoNfse()
     id_nfse.Numero = pedido_cancelamento_nfse.numero_nota
