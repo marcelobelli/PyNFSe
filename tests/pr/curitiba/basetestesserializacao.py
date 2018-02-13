@@ -5,7 +5,7 @@ from decimal import Decimal
 from pyxb import BIND
 
 from PyNFSe.nfse.pr.curitiba import _schema as nfse_schema
-from PyNFSe.utils.entidades import RPS, Prestador, Servico, Tomador
+from PyNFSe.utils.models import RPS, Prestador, Servico, Tomador, LoteRPS, PedidoCancelamentoNFSe
 
 
 class BaseTestesSerializacao(unittest.TestCase):
@@ -56,22 +56,22 @@ class BaseTestesSerializacao(unittest.TestCase):
             'regime_especial':6
         })
 
-        self.lote_rps = {
+        self.lote_rps = LoteRPS(**{
             'identificador':'L1',
             'numero_lote':1,
             'cnpj':self.prestador.cnpj,
             'inscricao_municipal':self.prestador.inscricao_municipal,
             'quantidade_rps':1,
             'lista_rps':[self.rps, ]
-        }
+        })
 
-        self.pedido_cancelamento_nfse = {
+        self.pedido_cancelamento_nfse = PedidoCancelamentoNFSe(**{
             'identificador':'C1',
             'prestador':self.prestador,
             'numero_nota':192,
             'codigo_municipio':'4106902',
             'codigo_cancelamento':'1'
-        }
+        })
 
         # Necessário para "serializar" os objetos antes do lote completo.
         self.tc_inf_rps = nfse_schema.tcInfRps()

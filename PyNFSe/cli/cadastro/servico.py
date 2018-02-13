@@ -3,7 +3,7 @@ from decimal import Decimal
 import click
 
 from PyNFSe.cli import constants
-from PyNFSe.utils.entidades import Servico
+from PyNFSe.utils.models import Servico
 
 
 def servico():
@@ -16,5 +16,7 @@ def servico():
     servico.codigo_cnae = click.prompt('Código CNAE', type=int, default=constants.CODIGO_CNAE)
     servico.codigo_tributacao_municipio = click.prompt('Código de Tributação', default=servico.item_lista)
     servico.aliquota = Decimal(click.prompt('Aliquota', default=constants.ALIQUOTA))
+
+    servico.gerar_valores_faltantes()
 
     return servico

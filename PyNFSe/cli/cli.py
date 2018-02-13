@@ -66,12 +66,9 @@ def emitir_nfse(producao):
 
     servico = cadastro.servico()
 
-    servico.__init__()
-
     lote = cadastro.lote_rps(prestador, tomador, servico, ambiente, configuracao)
 
-    retorno = helpers.enviar_lote(lote.__dict__, ambiente, producao)
-
+    retorno = helpers.enviar_lote(lote, ambiente, producao)
 
     ambiente.numero_lote += 1
     ambiente.numero_rps += 1
