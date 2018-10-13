@@ -11,11 +11,11 @@ class Facade:
         url_homologacao = 'https://pilotoisscuritiba.curitiba.pr.gov.br/nfse_ws/NfseWs.asmx?WSDL'
         url_producao = 'https://isscuritiba.curitiba.pr.gov.br/Iss.NfseWebService/nfsews.asmx?WSDL'
 
-        cert, cert_file, key, key_file = c(certificado_pfx, senha)
+        self.cert, self.cert_file, self.key, self.key_file = c(certificado_pfx, senha)
         url_ambiente = url_producao if producao else url_homologacao
-        cert_file_and_key_file = (cert_file.name, key_file.name)
+        cert_file_and_key_file = (self.cert_file.name, self.key_file.name)
 
-        self._assinador = Assinatura(cert, key, namespace)
+        self._assinador = Assinatura(self.cert, self.key, namespace)
         self._servicos_wsdl = Comunicacao(url_ambiente, cert_file_and_key_file, producao)
 
     def consultar_nfse_por_numero(self, prestador, numero_nfse):
