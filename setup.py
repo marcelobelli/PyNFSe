@@ -31,8 +31,8 @@ CLASSIFIERS = [
 ]
 
 INSTALL_REQUIREMENTS = [
-    'PyXB>=1.2.5',
-    'requests==2.11.1',
+    'PyXB==1.2.5',
+    'requests',
     'zeep',
     'signxml',
     'pysimplemodel',
@@ -52,9 +52,4 @@ setup(
     install_requires=INSTALL_REQUIREMENTS,
     test_suite='tests',
     classifiers=CLASSIFIERS,
-    entry_points={
-        'console_scripts': [
-            'pynfse = PyNFSe.pynfse:cli',
-        ],
-    },
 )
