@@ -1,7 +1,26 @@
+dist: xenial
+
+
 language: python
 
-python:
-  - "3.7"
+cache: pip
+
+matrix:
+    include:
+        - python: '3.5.1'
+        - python: '3.5.2'
+        - python: '3.5.3'
+        - python: '3.5.4'
+        - python: '3.5.5'
+        - python: '3.6.0'
+        - python: '3.6.1'
+        - python: '3.6.2'
+        - python: '3.6.3'
+        - python: '3.6.4'
+        - python: '3.6.5'
+        - python: '3.7.0'
+          dist: xenial
+          sudo: true
 
 install:
   - pip install -r requirements.txt
