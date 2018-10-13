@@ -52,9 +52,4 @@ setup(
     install_requires=INSTALL_REQUIREMENTS,
     test_suite='tests',
     classifiers=CLASSIFIERS,
-    entry_points={
-        'console_scripts': [
-            'pynfse = PyNFSe.pynfse:cli',
-        ],
-    },
 )
