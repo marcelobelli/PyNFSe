@@ -31,8 +31,8 @@ CLASSIFIERS = [
 ]
 
 INSTALL_REQUIREMENTS = [
-    'PyXB>=1.2.5',
-    'requests==2.11.1',
+    'PyXB==1.2.5',
+    'requests',
     'zeep',
     'signxml',
     'pysimplemodel',
