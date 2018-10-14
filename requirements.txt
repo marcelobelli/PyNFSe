@@ -1,7 +1,12 @@
-requests
-PyXB==1.2.5
-lxml
-zeep
-signxml
 click
+factory-boy
+isort
+lxml
+pre-commit
 pysimplemodel
+pytest
+pytest-cov
+PyXB==1.2.5
+requests
+signxml
+zeep

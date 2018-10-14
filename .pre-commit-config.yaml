@@ -1,0 +1,40 @@
+repos:
+- repo: git@github.com:pre-commit/pre-commit-hooks
+  rev: v2.0.0
+  hooks:
+  - id: debug-statements
+  - id: trailing-whitespace
+  - id: check-merge-conflict
+  - id: check-ast
+  - id: check-byte-order-marker
+  - id: check-json
+  - id: check-symlinks
+  - id: check-vcs-permalinks
+  - id: check-xml
+  - id: check-yaml
+  - id: detect-aws-credentials
+    args: ['--allow-missing-credentials']
+  - id: detect-private-key
+  - id: forbid-new-submodules
+  - id: flake8
+    args: ['--exclude=docs/*,*migrations*', '--ignore=E501']
+
+- repo: local
+  hooks:
+  - id: check-datetime-now
+    name: check_datetime_now
+    description: Prefer datetime.utcnow()
+    language: pygrep
+    entry: 'datetime\.now\(\)'
+    types: [python]
+
+- repo: https://github.com/pre-commit/mirrors-isort
+  rev: v4.3.4
+  hooks:
+  - id: isort
+
+- repo: git@github.com:olist/hulks.git
+  rev: 0.2.3
+  hooks:
+  - id: check-filename
+  - id: check-logger

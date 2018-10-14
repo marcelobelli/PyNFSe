@@ -1,4 +1,4 @@
-from PyNFSe.utils.cliente_comunicacao import ClienteComunicacao
+from PyNFSe.base.cliente_comunicacao import ClienteComunicacao
 
 
 class Comunicacao:
