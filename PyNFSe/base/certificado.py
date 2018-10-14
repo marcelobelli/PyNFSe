@@ -30,6 +30,7 @@ def certificado(certificado_pfx, senha):
 
     return certificado
 
+
 def _cria_arquivo_temp(str_arquivo):
     arquivo = NamedTemporaryFile()
     arquivo.write(str_arquivo)

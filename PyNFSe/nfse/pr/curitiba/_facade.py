@@ -1,7 +1,7 @@
+from PyNFSe.base.assinatura import Assinatura
+from PyNFSe.base.certificado import certificado as c
 from PyNFSe.nfse.pr.curitiba import serializacao as s
 from PyNFSe.nfse.pr.curitiba.comunicacao import Comunicacao
-from PyNFSe.utils.assinatura import Assinatura
-from PyNFSe.utils.certificado import certificado as c
 
 
 class Facade:
