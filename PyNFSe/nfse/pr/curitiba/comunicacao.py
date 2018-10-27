@@ -1,10 +1,10 @@
-from PyNFSe.base.cliente_comunicacao import ClienteComunicacao
+from PyNFSe.base.soap_client import NFSeSoapClient
 
 
 class Comunicacao:
 
     def __init__(self, url_ambiente, certificado, producao):
-        self._cliente = ClienteComunicacao(url_ambiente, certificado, producao)
+        self._cliente = NFSeSoapClient(url_ambiente, certificado, producao)
 
     def validar_xml(self, xml):
         return self._cliente.service.ValidarXml(xml)
