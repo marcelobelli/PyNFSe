@@ -1,5 +1,5 @@
-from PyNFSe.base.assinatura import Assinatura
 from PyNFSe.base.certificado import certificado as c
+from PyNFSe.base.nfse_signer import NFSeSigner
 from PyNFSe.nfse.pr.curitiba import serializacao as s
 from PyNFSe.nfse.pr.curitiba.comunicacao import Comunicacao
 
@@ -15,7 +15,7 @@ class Facade:
         url_ambiente = url_producao if producao else url_homologacao
         cert_file_and_key_file = (self.cert_file.name, self.key_file.name)
 
-        self._assinador = Assinatura(self.cert, self.key, namespace)
+        self._assinador = NFSeSigner(self.cert, self.key, namespace)
         self._servicos_wsdl = Comunicacao(url_ambiente, cert_file_and_key_file, producao)
 
     def consultar_nfse_por_numero(self, prestador, numero_nfse):
@@ -50,14 +50,14 @@ class Facade:
 
     def recepcionar_lote_rps(self, lote_rps):
         xml = s.envio_lote_rps(lote_rps)
-        xml = self._assinador.assinar_lote_rps(xml)
+        xml = self._assinador.sign_rps_batch(xml)
         xml_retorno = self._servicos_wsdl.recepcionar_lote_rps(xml)
 
         return xml_retorno
 
     def cancelar_nfse(self, pedido_cancelamento_nfse):
         xml = s.cancela_nfse(pedido_cancelamento_nfse)
-        xml = self._assinador.assinar_cancelamento_nfse(xml)
+        xml = self._assinador.sign_cancellation_request(xml)
         xml_retorno = self._servicos_wsdl.cancelar_nfse(xml)
 
         return xml_retorno

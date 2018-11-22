@@ -1,7 +1,11 @@
+import os.path
+
 import pytest
 from simple_model import to_dict
 
 from .factories import PrestadorFactory, RPSFactory, ServicoFactory, TomadorFactory
+
+file_path = os.path.abspath(os.path.dirname(__file__))
 
 
 @pytest.fixture
@@ -38,3 +42,41 @@ def dados_lote_rps(dados_rps):
         'lista_rps': [dados_rps],
         'numero_lote': 1,
     }
+
+
+@pytest.fixture
+def xml_rps():
+    xml_path = os.path.join(file_path, 'fixtures/EnviarLoteRpsEnvio.xml')
+    with open(xml_path, 'r') as xml:
+        return xml.read()
+
+
+@pytest.fixture
+def xml_rps_signed():
+    xml_path = os.path.join(file_path, 'fixtures/EnviarLoteRpsEnvio-Signed.xml')
+    with open(xml_path, 'r') as xml:
+        return xml.read()
+
+
+@pytest.fixture
+def xml_canceled_nfse():
+    xml_path = os.path.join(file_path, 'fixtures/CancelarNfseEnvio.xml')
+    with open(xml_path, 'r') as xml:
+        return xml.read()
+
+
+@pytest.fixture
+def xml_canceled_nfse_signed():
+    xml_path = os.path.join(file_path, 'fixtures/CancelarNfseEnvio-Signed.xml')
+    with open(xml_path, 'r') as xml:
+        return xml.read()
+
+
+@pytest.fixture
+def certificate_file_path():
+    return os.path.join(file_path, 'fixtures/certificate.pfx')
+
+
+@pytest.fixture
+def certificate_password():
+    return '123456'
