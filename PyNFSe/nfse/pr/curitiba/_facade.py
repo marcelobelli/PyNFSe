@@ -1,4 +1,4 @@
-from PyNFSe.base.certificado import certificado as c
+from PyNFSe.base.certificate import get_certificate
 from PyNFSe.base.nfse_signer import NFSeSigner
 from PyNFSe.nfse.pr.curitiba import serializacao as s
 from PyNFSe.nfse.pr.curitiba.comunicacao import Comunicacao
@@ -11,7 +11,7 @@ class Facade:
         url_homologacao = 'https://pilotoisscuritiba.curitiba.pr.gov.br/nfse_ws/NfseWs.asmx?WSDL'
         url_producao = 'https://isscuritiba.curitiba.pr.gov.br/Iss.NfseWebService/nfsews.asmx?WSDL'
 
-        self.cert, self.cert_file, self.key, self.key_file = c(certificado_pfx, senha)
+        self.cert, self.cert_file, self.key, self.key_file = get_certificate(certificado_pfx, senha)
         url_ambiente = url_producao if producao else url_homologacao
         cert_file_and_key_file = (self.cert_file.name, self.key_file.name)
 
