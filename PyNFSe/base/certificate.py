@@ -25,7 +25,7 @@ def get_certificate(cfx_certificate_filepath: str, password: str) -> Tuple:
     return cert_ca, cert_file, key, key_file
 
 
-def _create_temp_file(content: bytes) -> NamedTemporaryFile:
+def _create_temp_file(content: bytes):
     temp_file = NamedTemporaryFile()
     temp_file.write(content)
     temp_file.seek(0)
