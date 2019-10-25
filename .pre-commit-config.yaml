@@ -1,6 +1,6 @@
 repos:
 - repo: git@github.com:pre-commit/pre-commit-hooks
-  rev: v2.0.0
+  rev: v2.3.0
   hooks:
   - id: debug-statements
   - id: trailing-whitespace
@@ -14,7 +14,7 @@ repos:
   - id: check-yaml
   - id: forbid-new-submodules
   - id: flake8
-    args: ['--exclude=docs/*,*migrations*,_schema.py,_dsig.py', '--ignore=E501']
+    args: ['--exclude=docs/*,*migrations*,_schema.py,_dsig.py', '--ignore=E501,W503']
 
 - repo: local
   hooks:
@@ -26,13 +26,13 @@ repos:
     types: [python]
 
 - repo: https://github.com/pre-commit/mirrors-isort
-  rev: v4.3.4
+  rev: v4.3.21
   hooks:
   - id: isort
+    args: ['--check-only', '--diff']
     additional_dependencies: ['toml']
 
-- repo: git@github.com:olist/hulks.git
-  rev: 0.2.3
+- repo: https://github.com/python/black
+  rev: 19.3b0
   hooks:
-  - id: check-filename
-  - id: check-logger
+    - id: black

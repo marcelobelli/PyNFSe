@@ -1,12 +1,13 @@
 from tempfile import _TemporaryFileWrapper
 
 import pytest
+
 from PyNFSe.base.certificate import _create_temp_file, get_certificate
 
 
 @pytest.fixture
 def certificate_chain():
-    return b'''-----BEGIN CERTIFICATE-----
+    return b"""-----BEGIN CERTIFICATE-----
 MIIDhDCCAmygAwIBAgIKZCXL8wAAAAAStTANBgkqhkiG9w0BAQUFADAcMRowGAYD
 VQQDExFQSUxPVE9JU1NDVVJJVElCQTAeFw0xNjExMTUwMjQ0MzVaFw0xNzExMTUw
 MjU0MzVaMFExCzAJBgNVBAYTAkFBMQowCAYDVQQIEwFhMQowCAYDVQQHEwFhMQow
@@ -27,12 +28,12 @@ Lud52TreMS6CXFZX7wD+uHJeLPEqQja1bT/1UDxq4h6fgI+y2N2h77vyt0NJkejV
 DfKus4bPCxAVxnp4DREA+ZKlTuHFCrSQd21MDydE3sRgj9VDiJxFMoTWCTiYM63d
 0SDKDuvm7gT9lhbDUFES8RCPOL3Pagr9bmpjALK0IBUISRXHRX9R0Q==
 -----END CERTIFICATE-----
-'''
+"""
 
 
 @pytest.fixture
 def certificate_key():
-    return b'''-----BEGIN PRIVATE KEY-----
+    return b"""-----BEGIN PRIVATE KEY-----
 MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAKWXY7Ed+tNB08Gk
 9XDs64ySfebqUj8GPSkN5v0JbGoKsU28PZKJmdZGI32PzSRimpqJ8TtF+mlIYzPG
 OWaPQfQ0RIul22TLEBFV/MTf9NtQ+XtrI3P+41Z1b7NUfvZAeJX37td4yzD6tytL
@@ -48,7 +49,7 @@ aKepcPw1uWDKOmYUzqOkjlmQcNQe88gYcY4Qvd+QekqMi6TSTlIRAkA/suD5u5vF
 NbqnpyPnDulvgtXE2B1UHl0wZJbLfDH+BFckz7B557Cz507YthsWWJmjVPVqJXLM
 HFZwimKs65R9
 -----END PRIVATE KEY-----
-'''
+"""
 
 
 def test_get_certificate(certificate_chain, certificate_key, certificate_file_path, certificate_password):

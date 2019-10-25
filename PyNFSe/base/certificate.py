@@ -5,13 +5,13 @@ from OpenSSL import crypto
 
 
 def get_certificate(cfx_certificate_filepath: str, password: str) -> Tuple:
-    with open(cfx_certificate_filepath, 'rb') as cert_pfx:
+    with open(cfx_certificate_filepath, "rb") as cert_pfx:
         pkcs12 = crypto.load_pkcs12(cert_pfx.read(), password.encode())
 
     cert = crypto.dump_certificate(crypto.FILETYPE_PEM, pkcs12.get_certificate())
     key = crypto.dump_privatekey(crypto.FILETYPE_PEM, pkcs12.get_privatekey())
 
-    cert_ca = b''
+    cert_ca = b""
 
     if pkcs12.get_ca_certificates():
         for ca in pkcs12.get_ca_certificates():

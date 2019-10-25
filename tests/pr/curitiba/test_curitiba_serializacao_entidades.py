@@ -1,18 +1,16 @@
 import unittest
 
 import PyNFSe.nfse.pr.curitiba.serializacao as s
-from tests.pr.curitiba.basetestesserializacao import (BaseTestesSerializacao,
-                                                      xml_expected)
+from tests.pr.curitiba.basetestesserializacao import BaseTestesSerializacao, xml_expected
 
 
 class SerializacaoEntidadesTestCase(BaseTestesSerializacao):
-
     def test_xml_prestador(self):
         xml_prestador = s._serial_prestador(self.prestador)
         self.tc_inf_rps.Prestador = xml_prestador
         xml_prestador = xml_prestador.toxml()
 
-        xml_prestador_expected = xml_expected('prestador.xml')
+        xml_prestador_expected = xml_expected("prestador.xml")
 
         self.assertEqual(xml_prestador, xml_prestador_expected)
 
@@ -21,7 +19,7 @@ class SerializacaoEntidadesTestCase(BaseTestesSerializacao):
         self.tc_inf_rps.Tomador = xml_tomador
         xml_tomador = xml_tomador.toxml()
 
-        xml_tomador_expected = xml_expected('tomador.xml')
+        xml_tomador_expected = xml_expected("tomador.xml")
 
         self.assertEqual(xml_tomador, xml_tomador_expected)
 
@@ -30,7 +28,7 @@ class SerializacaoEntidadesTestCase(BaseTestesSerializacao):
         self.tc_inf_rps.Servico = xml_servico
         xml_servico = xml_servico.toxml()
 
-        xml_servico_expected = xml_expected('servico.xml')
+        xml_servico_expected = xml_expected("servico.xml")
 
         self.assertEqual(xml_servico, xml_servico_expected)
 
@@ -39,10 +37,10 @@ class SerializacaoEntidadesTestCase(BaseTestesSerializacao):
         self.tc_lote_rps.ListaRps.append(xml_rps)
         xml_rps = xml_rps.toxml()
 
-        xml_rps_expected = xml_expected('rps.xml')
+        xml_rps_expected = xml_expected("rps.xml")
 
         self.assertEqual(xml_rps, xml_rps_expected)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
