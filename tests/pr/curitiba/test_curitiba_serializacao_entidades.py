@@ -43,5 +43,6 @@ class SerializacaoEntidadesTestCase(BaseTestesSerializacao):
 
         self.assertEqual(xml_rps, xml_rps_expected)
 
+
 if __name__ == '__main__':
     unittest.main()

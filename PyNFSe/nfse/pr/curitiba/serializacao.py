@@ -1,6 +1,5 @@
-from pyxb import BIND
-
 from PyNFSe.nfse.pr.curitiba import _schema as nfse_schema
+from pyxb import BIND
 
 
 def consulta_nfse_por_numero(prestador, numero_nfse):
@@ -244,7 +243,7 @@ def _serial_rps(rps):
 
     serial_rps = nfse_schema.tcRps()
     serial_rps.InfRps = inf_rps
-    
+
     return serial_rps
 
 

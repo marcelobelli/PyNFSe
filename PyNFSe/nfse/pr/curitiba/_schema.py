@@ -736,18 +736,18 @@ class tcCpfCnpj (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Cpf uses Python identifier Cpf
     __Cpf = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Cpf'), 'Cpf', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcCpfCnpj_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCpf', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 270, 12), )
 
-    
+
     Cpf = property(__Cpf.value, __Cpf.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Cnpj uses Python identifier Cnpj
     __Cnpj = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Cnpj'), 'Cnpj', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcCpfCnpj_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCnpj', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 271, 12), )
 
-    
+
     Cnpj = property(__Cnpj.value, __Cnpj.set, None, None)
 
     _ElementMap.update({
@@ -755,7 +755,7 @@ class tcCpfCnpj (pyxb.binding.basis.complexTypeDefinition):
         __Cnpj.name() : __Cnpj
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcCpfCnpj = tcCpfCnpj
 Namespace.addCategoryObject('typeBinding', 'tcCpfCnpj', tcCpfCnpj)
@@ -772,53 +772,53 @@ class tcEndereco (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Endereco uses Python identifier Endereco
     __Endereco = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Endereco'), 'Endereco', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcEndereco_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdEndereco', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 276, 12), )
 
-    
+
     Endereco = property(__Endereco.value, __Endereco.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Numero uses Python identifier Numero
     __Numero = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Numero'), 'Numero', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcEndereco_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNumero', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 277, 12), )
 
-    
+
     Numero = property(__Numero.value, __Numero.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Complemento uses Python identifier Complemento
     __Complemento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Complemento'), 'Complemento', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcEndereco_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdComplemento', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 278, 12), )
 
-    
+
     Complemento = property(__Complemento.value, __Complemento.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Bairro uses Python identifier Bairro
     __Bairro = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Bairro'), 'Bairro', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcEndereco_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdBairro', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 279, 12), )
 
-    
+
     Bairro = property(__Bairro.value, __Bairro.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}CodigoMunicipio uses Python identifier CodigoMunicipio
     __CodigoMunicipio = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CodigoMunicipio'), 'CodigoMunicipio', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcEndereco_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCodigoMunicipio', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 280, 12), )
 
-    
+
     CodigoMunicipio = property(__CodigoMunicipio.value, __CodigoMunicipio.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Uf uses Python identifier Uf
     __Uf = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Uf'), 'Uf', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcEndereco_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdUf', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 281, 12), )
 
-    
+
     Uf = property(__Uf.value, __Uf.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Cep uses Python identifier Cep
     __Cep = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Cep'), 'Cep', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcEndereco_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCep', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 282, 12), )
 
-    
+
     Cep = property(__Cep.value, __Cep.set, None, None)
 
     _ElementMap.update({
@@ -831,7 +831,7 @@ class tcEndereco (pyxb.binding.basis.complexTypeDefinition):
         __Cep.name() : __Cep
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcEndereco = tcEndereco
 Namespace.addCategoryObject('typeBinding', 'tcEndereco', tcEndereco)
@@ -848,18 +848,18 @@ class tcContato (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Telefone uses Python identifier Telefone
     __Telefone = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Telefone'), 'Telefone', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcContato_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdTelefone', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 287, 12), )
 
-    
+
     Telefone = property(__Telefone.value, __Telefone.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Email uses Python identifier Email
     __Email = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Email'), 'Email', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcContato_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdEmail', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 288, 12), )
 
-    
+
     Email = property(__Email.value, __Email.set, None, None)
 
     _ElementMap.update({
@@ -867,7 +867,7 @@ class tcContato (pyxb.binding.basis.complexTypeDefinition):
         __Email.name() : __Email
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcContato = tcContato
 Namespace.addCategoryObject('typeBinding', 'tcContato', tcContato)
@@ -884,18 +884,18 @@ class tcIdentificacaoOrgaoGerador (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}CodigoMunicipio uses Python identifier CodigoMunicipio
     __CodigoMunicipio = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CodigoMunicipio'), 'CodigoMunicipio', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoOrgaoGerador_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCodigoMunicipio', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 293, 12), )
 
-    
+
     CodigoMunicipio = property(__CodigoMunicipio.value, __CodigoMunicipio.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Uf uses Python identifier Uf
     __Uf = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Uf'), 'Uf', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoOrgaoGerador_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdUf', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 294, 12), )
 
-    
+
     Uf = property(__Uf.value, __Uf.set, None, None)
 
     _ElementMap.update({
@@ -903,7 +903,7 @@ class tcIdentificacaoOrgaoGerador (pyxb.binding.basis.complexTypeDefinition):
         __Uf.name() : __Uf
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcIdentificacaoOrgaoGerador = tcIdentificacaoOrgaoGerador
 Namespace.addCategoryObject('typeBinding', 'tcIdentificacaoOrgaoGerador', tcIdentificacaoOrgaoGerador)
@@ -920,25 +920,25 @@ class tcIdentificacaoRps (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Numero uses Python identifier Numero
     __Numero = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Numero'), 'Numero', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNumero', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 299, 12), )
 
-    
+
     Numero = property(__Numero.value, __Numero.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Serie uses Python identifier Serie
     __Serie = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Serie'), 'Serie', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdSerie', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 300, 12), )
 
-    
+
     Serie = property(__Serie.value, __Serie.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Tipo uses Python identifier Tipo
     __Tipo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Tipo'), 'Tipo', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdTipo', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 301, 12), )
 
-    
+
     Tipo = property(__Tipo.value, __Tipo.set, None, None)
 
     _ElementMap.update({
@@ -947,7 +947,7 @@ class tcIdentificacaoRps (pyxb.binding.basis.complexTypeDefinition):
         __Tipo.name() : __Tipo
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcIdentificacaoRps = tcIdentificacaoRps
 Namespace.addCategoryObject('typeBinding', 'tcIdentificacaoRps', tcIdentificacaoRps)
@@ -964,18 +964,18 @@ class tcIdentificacaoPrestador (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Cnpj uses Python identifier Cnpj
     __Cnpj = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Cnpj'), 'Cnpj', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoPrestador_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCnpj', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 306, 12), )
 
-    
+
     Cnpj = property(__Cnpj.value, __Cnpj.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}InscricaoMunicipal uses Python identifier InscricaoMunicipal
     __InscricaoMunicipal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'InscricaoMunicipal'), 'InscricaoMunicipal', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoPrestador_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdInscricaoMunicipal', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 307, 12), )
 
-    
+
     InscricaoMunicipal = property(__InscricaoMunicipal.value, __InscricaoMunicipal.set, None, None)
 
     _ElementMap.update({
@@ -983,7 +983,7 @@ class tcIdentificacaoPrestador (pyxb.binding.basis.complexTypeDefinition):
         __InscricaoMunicipal.name() : __InscricaoMunicipal
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcIdentificacaoPrestador = tcIdentificacaoPrestador
 Namespace.addCategoryObject('typeBinding', 'tcIdentificacaoPrestador', tcIdentificacaoPrestador)
@@ -1000,18 +1000,18 @@ class tcIdentificacaoTomador (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}CpfCnpj uses Python identifier CpfCnpj
     __CpfCnpj = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CpfCnpj'), 'CpfCnpj', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoTomador_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCpfCnpj', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 312, 12), )
 
-    
+
     CpfCnpj = property(__CpfCnpj.value, __CpfCnpj.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}InscricaoMunicipal uses Python identifier InscricaoMunicipal
     __InscricaoMunicipal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'InscricaoMunicipal'), 'InscricaoMunicipal', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoTomador_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdInscricaoMunicipal', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 313, 12), )
 
-    
+
     InscricaoMunicipal = property(__InscricaoMunicipal.value, __InscricaoMunicipal.set, None, None)
 
     _ElementMap.update({
@@ -1019,7 +1019,7 @@ class tcIdentificacaoTomador (pyxb.binding.basis.complexTypeDefinition):
         __InscricaoMunicipal.name() : __InscricaoMunicipal
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcIdentificacaoTomador = tcIdentificacaoTomador
 Namespace.addCategoryObject('typeBinding', 'tcIdentificacaoTomador', tcIdentificacaoTomador)
@@ -1036,32 +1036,32 @@ class tcDadosTomador (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}IdentificacaoTomador uses Python identifier IdentificacaoTomador
     __IdentificacaoTomador = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'IdentificacaoTomador'), 'IdentificacaoTomador', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosTomador_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdIdentificacaoTomador', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 318, 12), )
 
-    
+
     IdentificacaoTomador = property(__IdentificacaoTomador.value, __IdentificacaoTomador.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}RazaoSocial uses Python identifier RazaoSocial
     __RazaoSocial = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'RazaoSocial'), 'RazaoSocial', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosTomador_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdRazaoSocial', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 319, 12), )
 
-    
+
     RazaoSocial = property(__RazaoSocial.value, __RazaoSocial.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Endereco uses Python identifier Endereco
     __Endereco = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Endereco'), 'Endereco', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosTomador_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdEndereco', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 320, 12), )
 
-    
+
     Endereco = property(__Endereco.value, __Endereco.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Contato uses Python identifier Contato
     __Contato = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Contato'), 'Contato', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosTomador_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdContato', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 321, 12), )
 
-    
+
     Contato = property(__Contato.value, __Contato.set, None, None)
 
     _ElementMap.update({
@@ -1071,7 +1071,7 @@ class tcDadosTomador (pyxb.binding.basis.complexTypeDefinition):
         __Contato.name() : __Contato
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcDadosTomador = tcDadosTomador
 Namespace.addCategoryObject('typeBinding', 'tcDadosTomador', tcDadosTomador)
@@ -1088,25 +1088,25 @@ class tcIdentificacaoIntermediarioServico (pyxb.binding.basis.complexTypeDefinit
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}RazaoSocial uses Python identifier RazaoSocial
     __RazaoSocial = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'RazaoSocial'), 'RazaoSocial', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoIntermediarioServico_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdRazaoSocial', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 326, 12), )
 
-    
+
     RazaoSocial = property(__RazaoSocial.value, __RazaoSocial.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}CpfCnpj uses Python identifier CpfCnpj
     __CpfCnpj = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CpfCnpj'), 'CpfCnpj', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoIntermediarioServico_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCpfCnpj', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 327, 12), )
 
-    
+
     CpfCnpj = property(__CpfCnpj.value, __CpfCnpj.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}InscricaoMunicipal uses Python identifier InscricaoMunicipal
     __InscricaoMunicipal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'InscricaoMunicipal'), 'InscricaoMunicipal', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoIntermediarioServico_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdInscricaoMunicipal', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 328, 12), )
 
-    
+
     InscricaoMunicipal = property(__InscricaoMunicipal.value, __InscricaoMunicipal.set, None, None)
 
     _ElementMap.update({
@@ -1115,7 +1115,7 @@ class tcIdentificacaoIntermediarioServico (pyxb.binding.basis.complexTypeDefinit
         __InscricaoMunicipal.name() : __InscricaoMunicipal
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcIdentificacaoIntermediarioServico = tcIdentificacaoIntermediarioServico
 Namespace.addCategoryObject('typeBinding', 'tcIdentificacaoIntermediarioServico', tcIdentificacaoIntermediarioServico)
@@ -1132,116 +1132,116 @@ class tcValores (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ValorServicos uses Python identifier ValorServicos
     __ValorServicos = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ValorServicos'), 'ValorServicos', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdValorServicos', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 333, 12), )
 
-    
+
     ValorServicos = property(__ValorServicos.value, __ValorServicos.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ValorDeducoes uses Python identifier ValorDeducoes
     __ValorDeducoes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ValorDeducoes'), 'ValorDeducoes', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdValorDeducoes', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 334, 12), )
 
-    
+
     ValorDeducoes = property(__ValorDeducoes.value, __ValorDeducoes.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ValorPis uses Python identifier ValorPis
     __ValorPis = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ValorPis'), 'ValorPis', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdValorPis', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 335, 12), )
 
-    
+
     ValorPis = property(__ValorPis.value, __ValorPis.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ValorCofins uses Python identifier ValorCofins
     __ValorCofins = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ValorCofins'), 'ValorCofins', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdValorCofins', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 336, 12), )
 
-    
+
     ValorCofins = property(__ValorCofins.value, __ValorCofins.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ValorInss uses Python identifier ValorInss
     __ValorInss = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ValorInss'), 'ValorInss', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdValorInss', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 337, 12), )
 
-    
+
     ValorInss = property(__ValorInss.value, __ValorInss.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ValorIr uses Python identifier ValorIr
     __ValorIr = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ValorIr'), 'ValorIr', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdValorIr', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 338, 12), )
 
-    
+
     ValorIr = property(__ValorIr.value, __ValorIr.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ValorCsll uses Python identifier ValorCsll
     __ValorCsll = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ValorCsll'), 'ValorCsll', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdValorCsll', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 339, 12), )
 
-    
+
     ValorCsll = property(__ValorCsll.value, __ValorCsll.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}IssRetido uses Python identifier IssRetido
     __IssRetido = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'IssRetido'), 'IssRetido', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdIssRetido', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 340, 12), )
 
-    
+
     IssRetido = property(__IssRetido.value, __IssRetido.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ValorIss uses Python identifier ValorIss
     __ValorIss = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ValorIss'), 'ValorIss', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdValorIss', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 341, 12), )
 
-    
+
     ValorIss = property(__ValorIss.value, __ValorIss.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ValorIssRetido uses Python identifier ValorIssRetido
     __ValorIssRetido = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ValorIssRetido'), 'ValorIssRetido', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdValorIssRetido', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 342, 12), )
 
-    
+
     ValorIssRetido = property(__ValorIssRetido.value, __ValorIssRetido.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}OutrasRetencoes uses Python identifier OutrasRetencoes
     __OutrasRetencoes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'OutrasRetencoes'), 'OutrasRetencoes', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdOutrasRetencoes', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 343, 12), )
 
-    
+
     OutrasRetencoes = property(__OutrasRetencoes.value, __OutrasRetencoes.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}BaseCalculo uses Python identifier BaseCalculo
     __BaseCalculo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'BaseCalculo'), 'BaseCalculo', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdBaseCalculo', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 344, 12), )
 
-    
+
     BaseCalculo = property(__BaseCalculo.value, __BaseCalculo.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Aliquota uses Python identifier Aliquota
     __Aliquota = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Aliquota'), 'Aliquota', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdAliquota', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 345, 12), )
 
-    
+
     Aliquota = property(__Aliquota.value, __Aliquota.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ValorLiquidoNfse uses Python identifier ValorLiquidoNfse
     __ValorLiquidoNfse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ValorLiquidoNfse'), 'ValorLiquidoNfse', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdValorLiquidoNfse', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 346, 12), )
 
-    
+
     ValorLiquidoNfse = property(__ValorLiquidoNfse.value, __ValorLiquidoNfse.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}DescontoIncondicionado uses Python identifier DescontoIncondicionado
     __DescontoIncondicionado = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'DescontoIncondicionado'), 'DescontoIncondicionado', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdDescontoIncondicionado', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 347, 12), )
 
-    
+
     DescontoIncondicionado = property(__DescontoIncondicionado.value, __DescontoIncondicionado.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}DescontoCondicionado uses Python identifier DescontoCondicionado
     __DescontoCondicionado = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'DescontoCondicionado'), 'DescontoCondicionado', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcValores_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdDescontoCondicionado', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 348, 12), )
 
-    
+
     DescontoCondicionado = property(__DescontoCondicionado.value, __DescontoCondicionado.set, None, None)
 
     _ElementMap.update({
@@ -1263,7 +1263,7 @@ class tcValores (pyxb.binding.basis.complexTypeDefinition):
         __DescontoCondicionado.name() : __DescontoCondicionado
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcValores = tcValores
 Namespace.addCategoryObject('typeBinding', 'tcValores', tcValores)
@@ -1280,46 +1280,46 @@ class tcDadosServico (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Valores uses Python identifier Valores
     __Valores = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Valores'), 'Valores', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosServico_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdValores', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 353, 12), )
 
-    
+
     Valores = property(__Valores.value, __Valores.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ItemListaServico uses Python identifier ItemListaServico
     __ItemListaServico = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ItemListaServico'), 'ItemListaServico', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosServico_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdItemListaServico', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 354, 12), )
 
-    
+
     ItemListaServico = property(__ItemListaServico.value, __ItemListaServico.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}CodigoCnae uses Python identifier CodigoCnae
     __CodigoCnae = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CodigoCnae'), 'CodigoCnae', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosServico_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCodigoCnae', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 355, 12), )
 
-    
+
     CodigoCnae = property(__CodigoCnae.value, __CodigoCnae.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}CodigoTributacaoMunicipio uses Python identifier CodigoTributacaoMunicipio
     __CodigoTributacaoMunicipio = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CodigoTributacaoMunicipio'), 'CodigoTributacaoMunicipio', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosServico_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCodigoTributacaoMunicipio', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 356, 12), )
 
-    
+
     CodigoTributacaoMunicipio = property(__CodigoTributacaoMunicipio.value, __CodigoTributacaoMunicipio.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Discriminacao uses Python identifier Discriminacao
     __Discriminacao = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Discriminacao'), 'Discriminacao', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosServico_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdDiscriminacao', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 357, 12), )
 
-    
+
     Discriminacao = property(__Discriminacao.value, __Discriminacao.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}CodigoMunicipio uses Python identifier CodigoMunicipio
     __CodigoMunicipio = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CodigoMunicipio'), 'CodigoMunicipio', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosServico_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCodigoMunicipio', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 358, 12), )
 
-    
+
     CodigoMunicipio = property(__CodigoMunicipio.value, __CodigoMunicipio.set, None, None)
 
     _ElementMap.update({
@@ -1331,7 +1331,7 @@ class tcDadosServico (pyxb.binding.basis.complexTypeDefinition):
         __CodigoMunicipio.name() : __CodigoMunicipio
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcDadosServico = tcDadosServico
 Namespace.addCategoryObject('typeBinding', 'tcDadosServico', tcDadosServico)
@@ -1348,18 +1348,18 @@ class tcDadosConstrucaoCivil (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}CodigoObra uses Python identifier CodigoObra
     __CodigoObra = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CodigoObra'), 'CodigoObra', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosConstrucaoCivil_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCodigoObra', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 363, 12), )
 
-    
+
     CodigoObra = property(__CodigoObra.value, __CodigoObra.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Art uses Python identifier Art
     __Art = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Art'), 'Art', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosConstrucaoCivil_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdArt', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 364, 12), )
 
-    
+
     Art = property(__Art.value, __Art.set, None, None)
 
     _ElementMap.update({
@@ -1367,7 +1367,7 @@ class tcDadosConstrucaoCivil (pyxb.binding.basis.complexTypeDefinition):
         __Art.name() : __Art
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcDadosConstrucaoCivil = tcDadosConstrucaoCivil
 Namespace.addCategoryObject('typeBinding', 'tcDadosConstrucaoCivil', tcDadosConstrucaoCivil)
@@ -1384,39 +1384,39 @@ class tcDadosPrestador (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}IdentificacaoPrestador uses Python identifier IdentificacaoPrestador
     __IdentificacaoPrestador = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'IdentificacaoPrestador'), 'IdentificacaoPrestador', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosPrestador_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdIdentificacaoPrestador', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 369, 12), )
 
-    
+
     IdentificacaoPrestador = property(__IdentificacaoPrestador.value, __IdentificacaoPrestador.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}RazaoSocial uses Python identifier RazaoSocial
     __RazaoSocial = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'RazaoSocial'), 'RazaoSocial', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosPrestador_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdRazaoSocial', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 370, 12), )
 
-    
+
     RazaoSocial = property(__RazaoSocial.value, __RazaoSocial.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}NomeFantasia uses Python identifier NomeFantasia
     __NomeFantasia = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'NomeFantasia'), 'NomeFantasia', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosPrestador_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNomeFantasia', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 371, 12), )
 
-    
+
     NomeFantasia = property(__NomeFantasia.value, __NomeFantasia.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Endereco uses Python identifier Endereco
     __Endereco = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Endereco'), 'Endereco', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosPrestador_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdEndereco', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 372, 12), )
 
-    
+
     Endereco = property(__Endereco.value, __Endereco.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Contato uses Python identifier Contato
     __Contato = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Contato'), 'Contato', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcDadosPrestador_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdContato', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 373, 12), )
 
-    
+
     Contato = property(__Contato.value, __Contato.set, None, None)
 
     _ElementMap.update({
@@ -1427,7 +1427,7 @@ class tcDadosPrestador (pyxb.binding.basis.complexTypeDefinition):
         __Contato.name() : __Contato
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcDadosPrestador = tcDadosPrestador
 Namespace.addCategoryObject('typeBinding', 'tcDadosPrestador', tcDadosPrestador)
@@ -1444,18 +1444,18 @@ class tcRps (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}InfRps uses Python identifier InfRps
     __InfRps = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'InfRps'), 'InfRps', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdInfRps', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 396, 12), )
 
-    
+
     InfRps = property(__InfRps.value, __InfRps.set, None, None)
 
-    
+
     # Element {http://www.w3.org/2000/09/xmldsig#}Signature uses Python identifier Signature
     __Signature = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(_Namespace_dsig, 'Signature'), 'Signature', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcRps_httpwww_w3_org200009xmldsigSignature', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/xmldsig-core-schema20020212.xsd', 41, 0), )
 
-    
+
     Signature = property(__Signature.value, __Signature.set, None, None)
 
     _ElementMap.update({
@@ -1463,7 +1463,7 @@ class tcRps (pyxb.binding.basis.complexTypeDefinition):
         __Signature.name() : __Signature
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcRps = tcRps
 Namespace.addCategoryObject('typeBinding', 'tcRps', tcRps)
@@ -1480,32 +1480,32 @@ class tcIdentificacaoNfse (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Numero uses Python identifier Numero
     __Numero = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Numero'), 'Numero', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNumero', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 402, 12), )
 
-    
+
     Numero = property(__Numero.value, __Numero.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Cnpj uses Python identifier Cnpj
     __Cnpj = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Cnpj'), 'Cnpj', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCnpj', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 403, 12), )
 
-    
+
     Cnpj = property(__Cnpj.value, __Cnpj.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}InscricaoMunicipal uses Python identifier InscricaoMunicipal
     __InscricaoMunicipal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'InscricaoMunicipal'), 'InscricaoMunicipal', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdInscricaoMunicipal', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 404, 12), )
 
-    
+
     InscricaoMunicipal = property(__InscricaoMunicipal.value, __InscricaoMunicipal.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}CodigoMunicipio uses Python identifier CodigoMunicipio
     __CodigoMunicipio = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CodigoMunicipio'), 'CodigoMunicipio', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcIdentificacaoNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCodigoMunicipio', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 405, 12), )
 
-    
+
     CodigoMunicipio = property(__CodigoMunicipio.value, __CodigoMunicipio.set, None, None)
 
     _ElementMap.update({
@@ -1515,7 +1515,7 @@ class tcIdentificacaoNfse (pyxb.binding.basis.complexTypeDefinition):
         __CodigoMunicipio.name() : __CodigoMunicipio
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcIdentificacaoNfse = tcIdentificacaoNfse
 Namespace.addCategoryObject('typeBinding', 'tcIdentificacaoNfse', tcIdentificacaoNfse)
@@ -1532,18 +1532,18 @@ class tcNfse (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}InfNfse uses Python identifier InfNfse
     __InfNfse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'InfNfse'), 'InfNfse', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdInfNfse', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 434, 12), )
 
-    
+
     InfNfse = property(__InfNfse.value, __InfNfse.set, None, None)
 
-    
+
     # Element {http://www.w3.org/2000/09/xmldsig#}Signature uses Python identifier Signature
     __Signature = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(_Namespace_dsig, 'Signature'), 'Signature', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcNfse_httpwww_w3_org200009xmldsigSignature', True, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/xmldsig-core-schema20020212.xsd', 41, 0), )
 
-    
+
     Signature = property(__Signature.value, __Signature.set, None, None)
 
     _ElementMap.update({
@@ -1551,7 +1551,7 @@ class tcNfse (pyxb.binding.basis.complexTypeDefinition):
         __Signature.name() : __Signature
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcNfse = tcNfse
 Namespace.addCategoryObject('typeBinding', 'tcNfse', tcNfse)
@@ -1568,18 +1568,18 @@ class tcPedidoCancelamento (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}InfPedidoCancelamento uses Python identifier InfPedidoCancelamento
     __InfPedidoCancelamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'InfPedidoCancelamento'), 'InfPedidoCancelamento', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcPedidoCancelamento_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdInfPedidoCancelamento', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 448, 12), )
 
-    
+
     InfPedidoCancelamento = property(__InfPedidoCancelamento.value, __InfPedidoCancelamento.set, None, None)
 
-    
+
     # Element {http://www.w3.org/2000/09/xmldsig#}Signature uses Python identifier Signature
     __Signature = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(_Namespace_dsig, 'Signature'), 'Signature', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcPedidoCancelamento_httpwww_w3_org200009xmldsigSignature', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/xmldsig-core-schema20020212.xsd', 41, 0), )
 
-    
+
     Signature = property(__Signature.value, __Signature.set, None, None)
 
     _ElementMap.update({
@@ -1587,7 +1587,7 @@ class tcPedidoCancelamento (pyxb.binding.basis.complexTypeDefinition):
         __Signature.name() : __Signature
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcPedidoCancelamento = tcPedidoCancelamento
 Namespace.addCategoryObject('typeBinding', 'tcPedidoCancelamento', tcPedidoCancelamento)
@@ -1604,18 +1604,18 @@ class tcCancelamentoNfse (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Confirmacao uses Python identifier Confirmacao
     __Confirmacao = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Confirmacao'), 'Confirmacao', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcCancelamentoNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdConfirmacao', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 462, 12), )
 
-    
+
     Confirmacao = property(__Confirmacao.value, __Confirmacao.set, None, None)
 
-    
+
     # Element {http://www.w3.org/2000/09/xmldsig#}Signature uses Python identifier Signature
     __Signature = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(_Namespace_dsig, 'Signature'), 'Signature', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcCancelamentoNfse_httpwww_w3_org200009xmldsigSignature', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/xmldsig-core-schema20020212.xsd', 41, 0), )
 
-    
+
     Signature = property(__Signature.value, __Signature.set, None, None)
 
     _ElementMap.update({
@@ -1623,7 +1623,7 @@ class tcCancelamentoNfse (pyxb.binding.basis.complexTypeDefinition):
         __Signature.name() : __Signature
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcCancelamentoNfse = tcCancelamentoNfse
 Namespace.addCategoryObject('typeBinding', 'tcCancelamentoNfse', tcCancelamentoNfse)
@@ -1640,18 +1640,18 @@ class tcSubstituicaoNfse (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}SubstituicaoNfse uses Python identifier SubstituicaoNfse
     __SubstituicaoNfse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'SubstituicaoNfse'), 'SubstituicaoNfse', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcSubstituicaoNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdSubstituicaoNfse', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 475, 12), )
 
-    
+
     SubstituicaoNfse = property(__SubstituicaoNfse.value, __SubstituicaoNfse.set, None, None)
 
-    
+
     # Element {http://www.w3.org/2000/09/xmldsig#}Signature uses Python identifier Signature
     __Signature = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(_Namespace_dsig, 'Signature'), 'Signature', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcSubstituicaoNfse_httpwww_w3_org200009xmldsigSignature', True, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/xmldsig-core-schema20020212.xsd', 41, 0), )
 
-    
+
     Signature = property(__Signature.value, __Signature.set, None, None)
 
     _ElementMap.update({
@@ -1659,7 +1659,7 @@ class tcSubstituicaoNfse (pyxb.binding.basis.complexTypeDefinition):
         __Signature.name() : __Signature
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcSubstituicaoNfse = tcSubstituicaoNfse
 Namespace.addCategoryObject('typeBinding', 'tcSubstituicaoNfse', tcSubstituicaoNfse)
@@ -1676,25 +1676,25 @@ class tcCompNfse (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Nfse uses Python identifier Nfse
     __Nfse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Nfse'), 'Nfse', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcCompNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNfse', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 481, 12), )
 
-    
+
     Nfse = property(__Nfse.value, __Nfse.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}NfseCancelamento uses Python identifier NfseCancelamento
     __NfseCancelamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'NfseCancelamento'), 'NfseCancelamento', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcCompNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNfseCancelamento', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 482, 12), )
 
-    
+
     NfseCancelamento = property(__NfseCancelamento.value, __NfseCancelamento.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}NfseSubstituicao uses Python identifier NfseSubstituicao
     __NfseSubstituicao = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'NfseSubstituicao'), 'NfseSubstituicao', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcCompNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNfseSubstituicao', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 483, 12), )
 
-    
+
     NfseSubstituicao = property(__NfseSubstituicao.value, __NfseSubstituicao.set, None, None)
 
     _ElementMap.update({
@@ -1703,7 +1703,7 @@ class tcCompNfse (pyxb.binding.basis.complexTypeDefinition):
         __NfseSubstituicao.name() : __NfseSubstituicao
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcCompNfse = tcCompNfse
 Namespace.addCategoryObject('typeBinding', 'tcCompNfse', tcCompNfse)
@@ -1720,18 +1720,18 @@ class CTD_ANON (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}MensagemRetorno uses Python identifier MensagemRetorno
     __MensagemRetorno = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'MensagemRetorno'), 'MensagemRetorno', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdMensagemRetorno', True, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 490, 16), )
 
-    
+
     MensagemRetorno = property(__MensagemRetorno.value, __MensagemRetorno.set, None, None)
 
     _ElementMap.update({
         __MensagemRetorno.name() : __MensagemRetorno
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON = CTD_ANON
 
@@ -1747,25 +1747,25 @@ class tcMensagemRetorno (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Codigo uses Python identifier Codigo
     __Codigo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Codigo'), 'Codigo', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcMensagemRetorno_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCodigo', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 496, 12), )
 
-    
+
     Codigo = property(__Codigo.value, __Codigo.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Mensagem uses Python identifier Mensagem
     __Mensagem = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Mensagem'), 'Mensagem', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcMensagemRetorno_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdMensagem', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 497, 12), )
 
-    
+
     Mensagem = property(__Mensagem.value, __Mensagem.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Correcao uses Python identifier Correcao
     __Correcao = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Correcao'), 'Correcao', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcMensagemRetorno_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCorrecao', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 498, 12), )
 
-    
+
     Correcao = property(__Correcao.value, __Correcao.set, None, None)
 
     _ElementMap.update({
@@ -1774,7 +1774,7 @@ class tcMensagemRetorno (pyxb.binding.basis.complexTypeDefinition):
         __Correcao.name() : __Correcao
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcMensagemRetorno = tcMensagemRetorno
 Namespace.addCategoryObject('typeBinding', 'tcMensagemRetorno', tcMensagemRetorno)
@@ -1791,25 +1791,25 @@ class tcMensagemRetornoLote (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}IdentificacaoRps uses Python identifier IdentificacaoRps
     __IdentificacaoRps = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'IdentificacaoRps'), 'IdentificacaoRps', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcMensagemRetornoLote_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdIdentificacaoRps', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 503, 12), )
 
-    
+
     IdentificacaoRps = property(__IdentificacaoRps.value, __IdentificacaoRps.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Codigo uses Python identifier Codigo
     __Codigo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Codigo'), 'Codigo', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcMensagemRetornoLote_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCodigo', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 504, 12), )
 
-    
+
     Codigo = property(__Codigo.value, __Codigo.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Mensagem uses Python identifier Mensagem
     __Mensagem = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Mensagem'), 'Mensagem', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcMensagemRetornoLote_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdMensagem', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 505, 12), )
 
-    
+
     Mensagem = property(__Mensagem.value, __Mensagem.set, None, None)
 
     _ElementMap.update({
@@ -1818,7 +1818,7 @@ class tcMensagemRetornoLote (pyxb.binding.basis.complexTypeDefinition):
         __Mensagem.name() : __Mensagem
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.tcMensagemRetornoLote = tcMensagemRetornoLote
 Namespace.addCategoryObject('typeBinding', 'tcMensagemRetornoLote', tcMensagemRetornoLote)
@@ -1835,18 +1835,18 @@ class CTD_ANON_ (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Rps uses Python identifier Rps
     __Rps = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Rps'), 'Rps', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON__httpisscuritiba_curitiba_pr_gov_brissnfse_xsdRps', True, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 517, 24), )
 
-    
+
     Rps = property(__Rps.value, __Rps.set, None, None)
 
     _ElementMap.update({
         __Rps.name() : __Rps
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_ = CTD_ANON_
 
@@ -1862,32 +1862,32 @@ class CTD_ANON_2 (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ListaMensagemRetorno uses Python identifier ListaMensagemRetorno
     __ListaMensagemRetorno = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ListaMensagemRetorno'), 'ListaMensagemRetorno', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_2_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdListaMensagemRetorno', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 487, 4), )
 
-    
+
     ListaMensagemRetorno = property(__ListaMensagemRetorno.value, __ListaMensagemRetorno.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}NumeroLote uses Python identifier NumeroLote
     __NumeroLote = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'NumeroLote'), 'NumeroLote', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_2_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNumeroLote', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 530, 20), )
 
-    
+
     NumeroLote = property(__NumeroLote.value, __NumeroLote.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}DataRecebimento uses Python identifier DataRecebimento
     __DataRecebimento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'DataRecebimento'), 'DataRecebimento', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_2_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdDataRecebimento', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 531, 20), )
 
-    
+
     DataRecebimento = property(__DataRecebimento.value, __DataRecebimento.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Protocolo uses Python identifier Protocolo
     __Protocolo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Protocolo'), 'Protocolo', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_2_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdProtocolo', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 532, 20), )
 
-    
+
     Protocolo = property(__Protocolo.value, __Protocolo.set, None, None)
 
     _ElementMap.update({
@@ -1897,7 +1897,7 @@ class CTD_ANON_2 (pyxb.binding.basis.complexTypeDefinition):
         __Protocolo.name() : __Protocolo
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_2 = CTD_ANON_2
 
@@ -1913,18 +1913,18 @@ class CTD_ANON_3 (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}LoteRps uses Python identifier LoteRps
     __LoteRps = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'LoteRps'), 'LoteRps', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_3_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdLoteRps', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 542, 16), )
 
-    
+
     LoteRps = property(__LoteRps.value, __LoteRps.set, None, None)
 
-    
+
     # Element {http://www.w3.org/2000/09/xmldsig#}Signature uses Python identifier Signature
     __Signature = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(_Namespace_dsig, 'Signature'), 'Signature', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_3_httpwww_w3_org200009xmldsigSignature', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/xmldsig-core-schema20020212.xsd', 41, 0), )
 
-    
+
     Signature = property(__Signature.value, __Signature.set, None, None)
 
     _ElementMap.update({
@@ -1932,7 +1932,7 @@ class CTD_ANON_3 (pyxb.binding.basis.complexTypeDefinition):
         __Signature.name() : __Signature
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_3 = CTD_ANON_3
 
@@ -1948,25 +1948,25 @@ class CTD_ANON_4 (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ListaMensagemRetorno uses Python identifier ListaMensagemRetorno
     __ListaMensagemRetorno = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ListaMensagemRetorno'), 'ListaMensagemRetorno', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_4_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdListaMensagemRetorno', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 487, 4), )
 
-    
+
     ListaMensagemRetorno = property(__ListaMensagemRetorno.value, __ListaMensagemRetorno.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}NumeroLote uses Python identifier NumeroLote
     __NumeroLote = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'NumeroLote'), 'NumeroLote', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_4_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNumeroLote', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 552, 20), )
 
-    
+
     NumeroLote = property(__NumeroLote.value, __NumeroLote.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Situacao uses Python identifier Situacao
     __Situacao = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Situacao'), 'Situacao', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_4_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdSituacao', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 553, 20), )
 
-    
+
     Situacao = property(__Situacao.value, __Situacao.set, None, None)
 
     _ElementMap.update({
@@ -1975,7 +1975,7 @@ class CTD_ANON_4 (pyxb.binding.basis.complexTypeDefinition):
         __Situacao.name() : __Situacao
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_4 = CTD_ANON_4
 
@@ -1991,18 +1991,18 @@ class CTD_ANON_5 (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Prestador uses Python identifier Prestador
     __Prestador = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Prestador'), 'Prestador', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_5_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdPrestador', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 563, 16), )
 
-    
+
     Prestador = property(__Prestador.value, __Prestador.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Protocolo uses Python identifier Protocolo
     __Protocolo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Protocolo'), 'Protocolo', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_5_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdProtocolo', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 564, 16), )
 
-    
+
     Protocolo = property(__Protocolo.value, __Protocolo.set, None, None)
 
     _ElementMap.update({
@@ -2010,7 +2010,7 @@ class CTD_ANON_5 (pyxb.binding.basis.complexTypeDefinition):
         __Protocolo.name() : __Protocolo
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_5 = CTD_ANON_5
 
@@ -2026,18 +2026,18 @@ class CTD_ANON_6 (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ListaMensagemRetorno uses Python identifier ListaMensagemRetorno
     __ListaMensagemRetorno = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ListaMensagemRetorno'), 'ListaMensagemRetorno', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_6_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdListaMensagemRetorno', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 487, 4), )
 
-    
+
     ListaMensagemRetorno = property(__ListaMensagemRetorno.value, __ListaMensagemRetorno.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}CompNfse uses Python identifier CompNfse
     __CompNfse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CompNfse'), 'CompNfse', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_6_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCompNfse', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 572, 16), )
 
-    
+
     CompNfse = property(__CompNfse.value, __CompNfse.set, None, None)
 
     _ElementMap.update({
@@ -2045,7 +2045,7 @@ class CTD_ANON_6 (pyxb.binding.basis.complexTypeDefinition):
         __CompNfse.name() : __CompNfse
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_6 = CTD_ANON_6
 
@@ -2061,18 +2061,18 @@ class CTD_ANON_7 (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}IdentificacaoRps uses Python identifier IdentificacaoRps
     __IdentificacaoRps = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'IdentificacaoRps'), 'IdentificacaoRps', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_7_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdIdentificacaoRps', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 581, 16), )
 
-    
+
     IdentificacaoRps = property(__IdentificacaoRps.value, __IdentificacaoRps.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Prestador uses Python identifier Prestador
     __Prestador = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Prestador'), 'Prestador', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_7_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdPrestador', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 582, 16), )
 
-    
+
     Prestador = property(__Prestador.value, __Prestador.set, None, None)
 
     _ElementMap.update({
@@ -2080,7 +2080,7 @@ class CTD_ANON_7 (pyxb.binding.basis.complexTypeDefinition):
         __Prestador.name() : __Prestador
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_7 = CTD_ANON_7
 
@@ -2096,18 +2096,18 @@ class CTD_ANON_8 (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ListaMensagemRetorno uses Python identifier ListaMensagemRetorno
     __ListaMensagemRetorno = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ListaMensagemRetorno'), 'ListaMensagemRetorno', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_8_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdListaMensagemRetorno', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 487, 4), )
 
-    
+
     ListaMensagemRetorno = property(__ListaMensagemRetorno.value, __ListaMensagemRetorno.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ListaNfse uses Python identifier ListaNfse
     __ListaNfse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ListaNfse'), 'ListaNfse', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_8_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdListaNfse', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 590, 16), )
 
-    
+
     ListaNfse = property(__ListaNfse.value, __ListaNfse.set, None, None)
 
     _ElementMap.update({
@@ -2115,7 +2115,7 @@ class CTD_ANON_8 (pyxb.binding.basis.complexTypeDefinition):
         __ListaNfse.name() : __ListaNfse
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_8 = CTD_ANON_8
 
@@ -2131,18 +2131,18 @@ class CTD_ANON_9 (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}CompNfse uses Python identifier CompNfse
     __CompNfse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CompNfse'), 'CompNfse', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_9_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCompNfse', True, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 593, 28), )
 
-    
+
     CompNfse = property(__CompNfse.value, __CompNfse.set, None, None)
 
     _ElementMap.update({
         __CompNfse.name() : __CompNfse
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_9 = CTD_ANON_9
 
@@ -2158,39 +2158,39 @@ class CTD_ANON_10 (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Prestador uses Python identifier Prestador
     __Prestador = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Prestador'), 'Prestador', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_10_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdPrestador', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 605, 16), )
 
-    
+
     Prestador = property(__Prestador.value, __Prestador.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}NumeroNfse uses Python identifier NumeroNfse
     __NumeroNfse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'NumeroNfse'), 'NumeroNfse', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_10_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNumeroNfse', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 606, 16), )
 
-    
+
     NumeroNfse = property(__NumeroNfse.value, __NumeroNfse.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}PeriodoEmissao uses Python identifier PeriodoEmissao
     __PeriodoEmissao = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'PeriodoEmissao'), 'PeriodoEmissao', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_10_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdPeriodoEmissao', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 607, 16), )
 
-    
+
     PeriodoEmissao = property(__PeriodoEmissao.value, __PeriodoEmissao.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Tomador uses Python identifier Tomador
     __Tomador = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Tomador'), 'Tomador', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_10_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdTomador', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 615, 16), )
 
-    
+
     Tomador = property(__Tomador.value, __Tomador.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}IntermediarioServico uses Python identifier IntermediarioServico
     __IntermediarioServico = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'IntermediarioServico'), 'IntermediarioServico', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_10_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdIntermediarioServico', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 616, 16), )
 
-    
+
     IntermediarioServico = property(__IntermediarioServico.value, __IntermediarioServico.set, None, None)
 
     _ElementMap.update({
@@ -2201,7 +2201,7 @@ class CTD_ANON_10 (pyxb.binding.basis.complexTypeDefinition):
         __IntermediarioServico.name() : __IntermediarioServico
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_10 = CTD_ANON_10
 
@@ -2217,18 +2217,18 @@ class CTD_ANON_11 (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}DataInicial uses Python identifier DataInicial
     __DataInicial = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'DataInicial'), 'DataInicial', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_11_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdDataInicial', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 610, 28), )
 
-    
+
     DataInicial = property(__DataInicial.value, __DataInicial.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}DataFinal uses Python identifier DataFinal
     __DataFinal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'DataFinal'), 'DataFinal', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_11_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdDataFinal', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 611, 28), )
 
-    
+
     DataFinal = property(__DataFinal.value, __DataFinal.set, None, None)
 
     _ElementMap.update({
@@ -2236,7 +2236,7 @@ class CTD_ANON_11 (pyxb.binding.basis.complexTypeDefinition):
         __DataFinal.name() : __DataFinal
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_11 = CTD_ANON_11
 
@@ -2252,18 +2252,18 @@ class CTD_ANON_12 (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ListaMensagemRetorno uses Python identifier ListaMensagemRetorno
     __ListaMensagemRetorno = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ListaMensagemRetorno'), 'ListaMensagemRetorno', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_12_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdListaMensagemRetorno', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 487, 4), )
 
-    
+
     ListaMensagemRetorno = property(__ListaMensagemRetorno.value, __ListaMensagemRetorno.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ListaNfse uses Python identifier ListaNfse
     __ListaNfse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ListaNfse'), 'ListaNfse', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_12_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdListaNfse', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 624, 16), )
 
-    
+
     ListaNfse = property(__ListaNfse.value, __ListaNfse.set, None, None)
 
     _ElementMap.update({
@@ -2271,7 +2271,7 @@ class CTD_ANON_12 (pyxb.binding.basis.complexTypeDefinition):
         __ListaNfse.name() : __ListaNfse
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_12 = CTD_ANON_12
 
@@ -2287,18 +2287,18 @@ class CTD_ANON_13 (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}CompNfse uses Python identifier CompNfse
     __CompNfse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CompNfse'), 'CompNfse', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_13_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCompNfse', True, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 627, 28), )
 
-    
+
     CompNfse = property(__CompNfse.value, __CompNfse.set, None, None)
 
     _ElementMap.update({
         __CompNfse.name() : __CompNfse
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_13 = CTD_ANON_13
 
@@ -2314,18 +2314,18 @@ class CTD_ANON_14 (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Prestador uses Python identifier Prestador
     __Prestador = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Prestador'), 'Prestador', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_14_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdPrestador', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 639, 16), )
 
-    
+
     Prestador = property(__Prestador.value, __Prestador.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Protocolo uses Python identifier Protocolo
     __Protocolo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Protocolo'), 'Protocolo', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_14_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdProtocolo', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 640, 16), )
 
-    
+
     Protocolo = property(__Protocolo.value, __Protocolo.set, None, None)
 
     _ElementMap.update({
@@ -2333,7 +2333,7 @@ class CTD_ANON_14 (pyxb.binding.basis.complexTypeDefinition):
         __Protocolo.name() : __Protocolo
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_14 = CTD_ANON_14
 
@@ -2349,18 +2349,18 @@ class CTD_ANON_15 (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ListaMensagemRetorno uses Python identifier ListaMensagemRetorno
     __ListaMensagemRetorno = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ListaMensagemRetorno'), 'ListaMensagemRetorno', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_15_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdListaMensagemRetorno', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 487, 4), )
 
-    
+
     ListaMensagemRetorno = property(__ListaMensagemRetorno.value, __ListaMensagemRetorno.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Cancelamento uses Python identifier Cancelamento
     __Cancelamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Cancelamento'), 'Cancelamento', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_15_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCancelamento', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 648, 16), )
 
-    
+
     Cancelamento = property(__Cancelamento.value, __Cancelamento.set, None, None)
 
     _ElementMap.update({
@@ -2368,7 +2368,7 @@ class CTD_ANON_15 (pyxb.binding.basis.complexTypeDefinition):
         __Cancelamento.name() : __Cancelamento
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_15 = CTD_ANON_15
 
@@ -2384,18 +2384,18 @@ class CTD_ANON_16 (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Pedido uses Python identifier Pedido
     __Pedido = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Pedido'), 'Pedido', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_CTD_ANON_16_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdPedido', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 657, 16), )
 
-    
+
     Pedido = property(__Pedido.value, __Pedido.set, None, None)
 
     _ElementMap.update({
         __Pedido.name() : __Pedido
     })
     _AttributeMap.update({
-        
+
     })
 _module_typeBindings.CTD_ANON_16 = CTD_ANON_16
 
@@ -2411,103 +2411,103 @@ class tcInfRps (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}IdentificacaoRps uses Python identifier IdentificacaoRps
     __IdentificacaoRps = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'IdentificacaoRps'), 'IdentificacaoRps', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdIdentificacaoRps', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 378, 12), )
 
-    
+
     IdentificacaoRps = property(__IdentificacaoRps.value, __IdentificacaoRps.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}DataEmissao uses Python identifier DataEmissao
     __DataEmissao = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'DataEmissao'), 'DataEmissao', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdDataEmissao', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 379, 12), )
 
-    
+
     DataEmissao = property(__DataEmissao.value, __DataEmissao.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}NaturezaOperacao uses Python identifier NaturezaOperacao
     __NaturezaOperacao = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'NaturezaOperacao'), 'NaturezaOperacao', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNaturezaOperacao', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 380, 12), )
 
-    
+
     NaturezaOperacao = property(__NaturezaOperacao.value, __NaturezaOperacao.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}RegimeEspecialTributacao uses Python identifier RegimeEspecialTributacao
     __RegimeEspecialTributacao = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'RegimeEspecialTributacao'), 'RegimeEspecialTributacao', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdRegimeEspecialTributacao', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 381, 12), )
 
-    
+
     RegimeEspecialTributacao = property(__RegimeEspecialTributacao.value, __RegimeEspecialTributacao.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}OptanteSimplesNacional uses Python identifier OptanteSimplesNacional
     __OptanteSimplesNacional = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'OptanteSimplesNacional'), 'OptanteSimplesNacional', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdOptanteSimplesNacional', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 382, 12), )
 
-    
+
     OptanteSimplesNacional = property(__OptanteSimplesNacional.value, __OptanteSimplesNacional.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}IncentivadorCultural uses Python identifier IncentivadorCultural
     __IncentivadorCultural = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'IncentivadorCultural'), 'IncentivadorCultural', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdIncentivadorCultural', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 383, 12), )
 
-    
+
     IncentivadorCultural = property(__IncentivadorCultural.value, __IncentivadorCultural.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Status uses Python identifier Status
     __Status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Status'), 'Status', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdStatus', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 384, 12), )
 
-    
+
     Status = property(__Status.value, __Status.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}RpsSubstituido uses Python identifier RpsSubstituido
     __RpsSubstituido = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'RpsSubstituido'), 'RpsSubstituido', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdRpsSubstituido', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 385, 12), )
 
-    
+
     RpsSubstituido = property(__RpsSubstituido.value, __RpsSubstituido.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Servico uses Python identifier Servico
     __Servico = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Servico'), 'Servico', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdServico', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 386, 12), )
 
-    
+
     Servico = property(__Servico.value, __Servico.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Prestador uses Python identifier Prestador
     __Prestador = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Prestador'), 'Prestador', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdPrestador', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 387, 12), )
 
-    
+
     Prestador = property(__Prestador.value, __Prestador.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Tomador uses Python identifier Tomador
     __Tomador = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Tomador'), 'Tomador', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdTomador', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 388, 12), )
 
-    
+
     Tomador = property(__Tomador.value, __Tomador.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}IntermediarioServico uses Python identifier IntermediarioServico
     __IntermediarioServico = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'IntermediarioServico'), 'IntermediarioServico', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdIntermediarioServico', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 389, 12), )
 
-    
+
     IntermediarioServico = property(__IntermediarioServico.value, __IntermediarioServico.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ContrucaoCivil uses Python identifier ContrucaoCivil
     __ContrucaoCivil = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ContrucaoCivil'), 'ContrucaoCivil', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdContrucaoCivil', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 390, 12), )
 
-    
+
     ContrucaoCivil = property(__ContrucaoCivil.value, __ContrucaoCivil.set, None, None)
 
-    
+
     # Attribute id uses Python identifier id
     __id = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'id'), 'id', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfRps_id', _module_typeBindings.tsIdTag)
     __id._DeclarationLocation = pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 392, 8)
     __id._UseLocation = pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 392, 8)
-    
+
     id = property(__id.value, __id.set, None, None)
 
     _ElementMap.update({
@@ -2543,145 +2543,145 @@ class tcInfNfse (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Numero uses Python identifier Numero
     __Numero = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Numero'), 'Numero', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNumero', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 410, 12), )
 
-    
+
     Numero = property(__Numero.value, __Numero.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}CodigoVerificacao uses Python identifier CodigoVerificacao
     __CodigoVerificacao = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CodigoVerificacao'), 'CodigoVerificacao', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCodigoVerificacao', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 411, 12), )
 
-    
+
     CodigoVerificacao = property(__CodigoVerificacao.value, __CodigoVerificacao.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}DataEmissao uses Python identifier DataEmissao
     __DataEmissao = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'DataEmissao'), 'DataEmissao', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdDataEmissao', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 412, 12), )
 
-    
+
     DataEmissao = property(__DataEmissao.value, __DataEmissao.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}IdentificacaoRps uses Python identifier IdentificacaoRps
     __IdentificacaoRps = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'IdentificacaoRps'), 'IdentificacaoRps', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdIdentificacaoRps', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 413, 12), )
 
-    
+
     IdentificacaoRps = property(__IdentificacaoRps.value, __IdentificacaoRps.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}DataEmissaoRps uses Python identifier DataEmissaoRps
     __DataEmissaoRps = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'DataEmissaoRps'), 'DataEmissaoRps', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdDataEmissaoRps', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 414, 12), )
 
-    
+
     DataEmissaoRps = property(__DataEmissaoRps.value, __DataEmissaoRps.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}NaturezaOperacao uses Python identifier NaturezaOperacao
     __NaturezaOperacao = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'NaturezaOperacao'), 'NaturezaOperacao', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNaturezaOperacao', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 415, 12), )
 
-    
+
     NaturezaOperacao = property(__NaturezaOperacao.value, __NaturezaOperacao.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}RegimeEspecialTributacao uses Python identifier RegimeEspecialTributacao
     __RegimeEspecialTributacao = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'RegimeEspecialTributacao'), 'RegimeEspecialTributacao', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdRegimeEspecialTributacao', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 416, 12), )
 
-    
+
     RegimeEspecialTributacao = property(__RegimeEspecialTributacao.value, __RegimeEspecialTributacao.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}OptanteSimplesNacional uses Python identifier OptanteSimplesNacional
     __OptanteSimplesNacional = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'OptanteSimplesNacional'), 'OptanteSimplesNacional', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdOptanteSimplesNacional', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 417, 12), )
 
-    
+
     OptanteSimplesNacional = property(__OptanteSimplesNacional.value, __OptanteSimplesNacional.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}IncentivadorCultural uses Python identifier IncentivadorCultural
     __IncentivadorCultural = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'IncentivadorCultural'), 'IncentivadorCultural', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdIncentivadorCultural', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 418, 12), )
 
-    
+
     IncentivadorCultural = property(__IncentivadorCultural.value, __IncentivadorCultural.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Competencia uses Python identifier Competencia
     __Competencia = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Competencia'), 'Competencia', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCompetencia', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 419, 12), )
 
-    
+
     Competencia = property(__Competencia.value, __Competencia.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}NfseSubstituida uses Python identifier NfseSubstituida
     __NfseSubstituida = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'NfseSubstituida'), 'NfseSubstituida', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNfseSubstituida', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 420, 12), )
 
-    
+
     NfseSubstituida = property(__NfseSubstituida.value, __NfseSubstituida.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}OutrasInformacoes uses Python identifier OutrasInformacoes
     __OutrasInformacoes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'OutrasInformacoes'), 'OutrasInformacoes', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdOutrasInformacoes', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 421, 12), )
 
-    
+
     OutrasInformacoes = property(__OutrasInformacoes.value, __OutrasInformacoes.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Servico uses Python identifier Servico
     __Servico = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Servico'), 'Servico', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdServico', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 422, 12), )
 
-    
+
     Servico = property(__Servico.value, __Servico.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ValorCredito uses Python identifier ValorCredito
     __ValorCredito = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ValorCredito'), 'ValorCredito', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdValorCredito', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 423, 12), )
 
-    
+
     ValorCredito = property(__ValorCredito.value, __ValorCredito.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}PrestadorServico uses Python identifier PrestadorServico
     __PrestadorServico = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'PrestadorServico'), 'PrestadorServico', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdPrestadorServico', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 424, 12), )
 
-    
+
     PrestadorServico = property(__PrestadorServico.value, __PrestadorServico.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}TomadorServico uses Python identifier TomadorServico
     __TomadorServico = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'TomadorServico'), 'TomadorServico', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdTomadorServico', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 425, 12), )
 
-    
+
     TomadorServico = property(__TomadorServico.value, __TomadorServico.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}IntermediarioServico uses Python identifier IntermediarioServico
     __IntermediarioServico = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'IntermediarioServico'), 'IntermediarioServico', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdIntermediarioServico', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 426, 12), )
 
-    
+
     IntermediarioServico = property(__IntermediarioServico.value, __IntermediarioServico.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}OrgaoGerador uses Python identifier OrgaoGerador
     __OrgaoGerador = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'OrgaoGerador'), 'OrgaoGerador', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdOrgaoGerador', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 427, 12), )
 
-    
+
     OrgaoGerador = property(__OrgaoGerador.value, __OrgaoGerador.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ContrucaoCivil uses Python identifier ContrucaoCivil
     __ContrucaoCivil = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ContrucaoCivil'), 'ContrucaoCivil', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdContrucaoCivil', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 428, 12), )
 
-    
+
     ContrucaoCivil = property(__ContrucaoCivil.value, __ContrucaoCivil.set, None, None)
 
-    
+
     # Attribute id uses Python identifier id
     __id = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'id'), 'id', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfNfse_id', _module_typeBindings.tsIdTag)
     __id._DeclarationLocation = pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 430, 8)
     __id._UseLocation = pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 430, 8)
-    
+
     id = property(__id.value, __id.set, None, None)
 
     _ElementMap.update({
@@ -2723,26 +2723,26 @@ class tcInfPedidoCancelamento (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}IdentificacaoNfse uses Python identifier IdentificacaoNfse
     __IdentificacaoNfse = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'IdentificacaoNfse'), 'IdentificacaoNfse', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfPedidoCancelamento_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdIdentificacaoNfse', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 441, 12), )
 
-    
+
     IdentificacaoNfse = property(__IdentificacaoNfse.value, __IdentificacaoNfse.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}CodigoCancelamento uses Python identifier CodigoCancelamento
     __CodigoCancelamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CodigoCancelamento'), 'CodigoCancelamento', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfPedidoCancelamento_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCodigoCancelamento', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 442, 12), )
 
-    
+
     CodigoCancelamento = property(__CodigoCancelamento.value, __CodigoCancelamento.set, None, None)
 
-    
+
     # Attribute id uses Python identifier id
     __id = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'id'), 'id', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfPedidoCancelamento_id', _module_typeBindings.tsIdTag)
     __id._DeclarationLocation = pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 444, 8)
     __id._UseLocation = pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 444, 8)
-    
+
     id = property(__id.value, __id.set, None, None)
 
     _ElementMap.update({
@@ -2767,26 +2767,26 @@ class tcConfirmacaoCancelamento (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Pedido uses Python identifier Pedido
     __Pedido = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Pedido'), 'Pedido', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcConfirmacaoCancelamento_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdPedido', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 454, 12), )
 
-    
+
     Pedido = property(__Pedido.value, __Pedido.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}DataHoraCancelamento uses Python identifier DataHoraCancelamento
     __DataHoraCancelamento = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'DataHoraCancelamento'), 'DataHoraCancelamento', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcConfirmacaoCancelamento_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdDataHoraCancelamento', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 455, 12), )
 
-    
+
     DataHoraCancelamento = property(__DataHoraCancelamento.value, __DataHoraCancelamento.set, None, None)
 
-    
+
     # Attribute id uses Python identifier id
     __id = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'id'), 'id', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcConfirmacaoCancelamento_id', _module_typeBindings.tsIdTag)
     __id._DeclarationLocation = pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 457, 8)
     __id._UseLocation = pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 457, 8)
-    
+
     id = property(__id.value, __id.set, None, None)
 
     _ElementMap.update({
@@ -2811,19 +2811,19 @@ class tcInfSubstituicaoNfse (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}NfseSubstituidora uses Python identifier NfseSubstituidora
     __NfseSubstituidora = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'NfseSubstituidora'), 'NfseSubstituidora', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfSubstituicaoNfse_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNfseSubstituidora', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 469, 12), )
 
-    
+
     NfseSubstituidora = property(__NfseSubstituidora.value, __NfseSubstituidora.set, None, None)
 
-    
+
     # Attribute id uses Python identifier id
     __id = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'id'), 'id', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcInfSubstituicaoNfse_id', _module_typeBindings.tsIdTag)
     __id._DeclarationLocation = pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 471, 8)
     __id._UseLocation = pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 471, 8)
-    
+
     id = property(__id.value, __id.set, None, None)
 
     _ElementMap.update({
@@ -2847,47 +2847,47 @@ class tcLoteRps (pyxb.binding.basis.complexTypeDefinition):
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}NumeroLote uses Python identifier NumeroLote
     __NumeroLote = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'NumeroLote'), 'NumeroLote', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcLoteRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdNumeroLote', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 510, 12), )
 
-    
+
     NumeroLote = property(__NumeroLote.value, __NumeroLote.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}Cnpj uses Python identifier Cnpj
     __Cnpj = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Cnpj'), 'Cnpj', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcLoteRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdCnpj', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 511, 12), )
 
-    
+
     Cnpj = property(__Cnpj.value, __Cnpj.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}InscricaoMunicipal uses Python identifier InscricaoMunicipal
     __InscricaoMunicipal = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'InscricaoMunicipal'), 'InscricaoMunicipal', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcLoteRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdInscricaoMunicipal', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 512, 12), )
 
-    
+
     InscricaoMunicipal = property(__InscricaoMunicipal.value, __InscricaoMunicipal.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}QuantidadeRps uses Python identifier QuantidadeRps
     __QuantidadeRps = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'QuantidadeRps'), 'QuantidadeRps', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcLoteRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdQuantidadeRps', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 513, 12), )
 
-    
+
     QuantidadeRps = property(__QuantidadeRps.value, __QuantidadeRps.set, None, None)
 
-    
+
     # Element {http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}ListaRps uses Python identifier ListaRps
     __ListaRps = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ListaRps'), 'ListaRps', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcLoteRps_httpisscuritiba_curitiba_pr_gov_brissnfse_xsdListaRps', False, pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 514, 12), )
 
-    
+
     ListaRps = property(__ListaRps.value, __ListaRps.set, None, None)
 
-    
+
     # Attribute id uses Python identifier id
     __id = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'id'), 'id', '__httpisscuritiba_curitiba_pr_gov_brissnfse_xsd_tcLoteRps_id', _module_typeBindings.tsIdTag)
     __id._DeclarationLocation = pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 523, 8)
     __id._UseLocation = pyxb.utils.utility.Location('/Users/Marcelo/Dev/Projetos/PyNFSe/PyNFSe/XSD/Curitiba/Template/nfse.xsd', 523, 8)
-    
+
     id = property(__id.value, __id.set, None, None)
 
     _ElementMap.update({

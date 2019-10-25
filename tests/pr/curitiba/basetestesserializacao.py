@@ -2,7 +2,8 @@ import unittest
 from datetime import datetime
 from decimal import Decimal
 
-from PyNFSe.base.models import RPS, LoteRPS, PedidoCancelamentoNFSe, Prestador, Servico, Tomador
+from PyNFSe.base.models import (RPS, LoteRPS, PedidoCancelamentoNFSe,
+                                Prestador, Servico, Tomador)
 from PyNFSe.nfse.pr.curitiba import _schema as nfse_schema
 from pyxb import BIND
 

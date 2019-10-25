@@ -3,7 +3,8 @@ import os.path
 import pytest
 from simple_model import to_dict
 
-from .factories import PrestadorFactory, RPSFactory, ServicoFactory, TomadorFactory
+from .factories import (PrestadorFactory, RPSFactory, ServicoFactory,
+                        TomadorFactory)
 
 file_path = os.path.abspath(os.path.dirname(__file__))
 
