@@ -1,1 +1,1 @@
-from ._facade import Facade as NFSeCuritiba
+from ._facade import Facade as NFSeCuritiba  # noqa
