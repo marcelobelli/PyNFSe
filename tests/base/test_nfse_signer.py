@@ -1,11 +1,12 @@
 import pytest
+
 from PyNFSe.base.certificate import get_certificate
 from PyNFSe.base.nfse_signer import NFSeSigner
 
 
 @pytest.fixture
 def signer(certificate_file_path, certificate_password):
-    namespace = '{http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}'
+    namespace = "{http://isscuritiba.curitiba.pr.gov.br/iss/nfse.xsd}"
     cert, _, key, _ = get_certificate(certificate_file_path, certificate_password)
     return NFSeSigner(cert, key, namespace)
 
