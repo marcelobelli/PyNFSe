@@ -29,7 +29,6 @@ repos:
   rev: v4.3.21
   hooks:
   - id: isort
-    args: ['--check-only', '--diff']
     additional_dependencies: ['toml']
 
 - repo: https://github.com/python/black
