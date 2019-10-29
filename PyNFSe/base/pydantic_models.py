@@ -1,11 +1,10 @@
+from decimal import Decimal
 from typing import Optional
 
-from pydantic import validator
-from pydantic.dataclasses import dataclass
+from pydantic import BaseModel, validator
 
 
-@dataclass
-class Prestador:
+class Prestador(BaseModel):
     cnpj: str
     inscricao_municipal: str
 
@@ -14,8 +13,7 @@ class Prestador:
         return _validate_cnpj(value)
 
 
-@dataclass
-class Tomador:
+class Tomador(BaseModel):
     tipo_documento: str
     numero_documento: str
     razao_social: str
@@ -47,6 +45,65 @@ class Tomador:
 
         document_validator = validators.get(values["tipo_documento"].upper(), None)
         return document_validator(value)
+
+
+class Servico(BaseModel):
+    aliquota: Decimal
+    codigo_municipio: str
+    discriminacao: str
+    iss_retido: int
+    item_lista: str
+    valor_servico: Decimal
+
+    desconto_condicionado: Decimal = 0
+    desconto_incondicionado: Decimal = 0
+    outras_retencoes: Decimal = 0
+    valor_cofins: Decimal = 0
+    valor_csll: Decimal = 0
+    valor_deducoes: Decimal = 0
+    valor_inss: Decimal = 0
+    valor_ir: Decimal = 0
+    valor_pis: Decimal = 0
+
+    codigo_cnae: Optional[int] = None
+    codigo_tributacao_municipio: Optional[str] = None
+
+    @validator("iss_retido")
+    def iss_retido_must_be_1_or_2(cls, value):
+        if value not in [1, 2]:
+            raise ValueError("ISS Retido deve ser 1 para SIM ou 2 para NÃO.")
+
+        return value
+
+    @property
+    def base_calculo(self):
+        return self.valor_servico - self.valor_deducoes - self.desconto_incondicionado
+
+    @property
+    def valor_iss(self):
+        return Decimal(self.base_calculo * self.aliquota).quantize(Decimal("0.01"))
+
+    @property
+    def valor_iss_retido(self):
+        return self.valor_iss if self.iss_retido == 1 else 0
+
+    @property
+    def valor_liquido(self):
+        total_discount = sum(
+            [
+                self.desconto_condicionado,
+                self.desconto_incondicionado,
+                self.outras_retencoes,
+                self.valor_cofins,
+                self.valor_csll,
+                self.valor_inss,
+                self.valor_ir,
+                self.valor_iss_retido,
+                self.valor_pis,
+            ]
+        )
+
+        return Decimal(self.valor_servico - total_discount)
 
 
 def _validate_cpf(document_number: str) -> str:
