@@ -1,6 +1,6 @@
 from datetime import datetime
 from decimal import Decimal
-from typing import Optional
+from typing import List, Optional
 
 from pydantic import BaseModel, validator
 
@@ -107,20 +107,6 @@ class Servico(BaseModel):
         return Decimal(self.valor_servico - total_discount)
 
 
-def _validate_cpf(document_number: str) -> str:
-    if len(document_number) != 11 or not document_number.isdigit():
-        raise ValueError("CPF deve conter 11 caracteres, sendo todos números.")
-
-    return document_number
-
-
-def _validate_cnpj(document_number: str) -> str:
-    if len(document_number) != 14 or not document_number.isdigit():
-        raise ValueError("CNPJ deve conter 14 caracteres, sendo todos números.")
-
-    return document_number
-
-
 class RPS(BaseModel):
     data_emissao: datetime
     identificador: str
@@ -148,3 +134,37 @@ class RPS(BaseModel):
             raise ValueError("Regime Especial deve ser um número entre 1 e 4.")
 
         return value
+
+
+class LoteRPS(BaseModel):
+    cnpj: str
+    identificador: str
+    inscricao_municipal: str
+    lista_rps: List[RPS]
+    numero_lote: int
+
+    @validator("cnpj")
+    def cnpj_must_have_14_digits(cls, value):
+        return _validate_cnpj(value)
+
+
+class PedidoCancelamentoNFSe(BaseModel):
+    identificador: str
+    prestador: Prestador
+    numero_nota: int
+    codigo_municipio: str
+    codigo_cancelamento: str
+
+
+def _validate_cpf(document_number: str) -> str:
+    if len(document_number) != 11 or not document_number.isdigit():
+        raise ValueError("CPF deve conter 11 caracteres, sendo todos números.")
+
+    return document_number
+
+
+def _validate_cnpj(document_number: str) -> str:
+    if len(document_number) != 14 or not document_number.isdigit():
+        raise ValueError("CNPJ deve conter 14 caracteres, sendo todos números.")
+
+    return document_number

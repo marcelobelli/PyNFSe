@@ -7,6 +7,7 @@ from .factories import (
     PrestadorFactory,
     PrestadorPydanticFactory,
     RPSFactory,
+    RPSPydanticFactory,
     ServicoFactory,
     ServicoPydanticFactory,
     TomadorFactory,
@@ -49,6 +50,11 @@ def servico_pydantic():
 @pytest.fixture
 def rps():
     return RPSFactory()
+
+
+@pytest.fixture
+def rps_pydantic():
+    return RPSPydanticFactory()
 
 
 @pytest.fixture

@@ -3,7 +3,15 @@ from decimal import Decimal
 
 import pytest
 
-from PyNFSe.base.pydantic_models import RPS, Prestador, Servico, Tomador, _validate_cnpj, _validate_cpf
+from PyNFSe.base.pydantic_models import (
+    RPS,
+    LoteRPS,
+    Prestador,
+    Servico,
+    Tomador,
+    _validate_cnpj,
+    _validate_cpf,
+)
 
 
 def test_prestador_incorrect_cnpj():
@@ -124,7 +132,7 @@ def test_servico_incorrect_iss_retido_value():
     assert "ISS Retido deve ser 1 para SIM ou 2 para NÃO." in exc.value.errors()[0]["msg"]
 
 
-def test_rps_natureza_operacao_invalido(prestador_pydantic, tomador_pydantic, servico_pydantic):
+def test_rps_invalid_natureza_operacao(prestador_pydantic, tomador_pydantic, servico_pydantic):
     with pytest.raises(ValueError) as exc:
         RPS(
             identificador="N1",
@@ -143,7 +151,7 @@ def test_rps_natureza_operacao_invalido(prestador_pydantic, tomador_pydantic, se
     assert "Natureza da Operação deve ser um número entre 1 e 6." in exc.value.errors()[0]["msg"]
 
 
-def test_rps_regime_especial_invalido(prestador_pydantic, tomador_pydantic, servico_pydantic):
+def test_rps_invalid_regime_especial(prestador_pydantic, tomador_pydantic, servico_pydantic):
     with pytest.raises(ValueError) as exc:
         RPS(
             identificador="N1",
@@ -161,6 +169,17 @@ def test_rps_regime_especial_invalido(prestador_pydantic, tomador_pydantic, serv
         )
 
     assert "Regime Especial deve ser um número entre 1 e 4." in exc.value.errors()[0]["msg"]
+
+
+def test_lote_rps_invalid_cnpj(rps_pydantic):
+    with pytest.raises(ValueError):
+        LoteRPS(
+            identificador="L1",
+            numero_lote=1,
+            cnpj="1234567890123",
+            inscricao_municipal=rps_pydantic.prestador.inscricao_municipal,
+            lista_rps=[rps_pydantic],
+        )
 
 
 @pytest.mark.parametrize("wrong_cpf", ("123456789012", "1234567890", "1234567890a"))

@@ -93,6 +93,23 @@ class RPSFactory(Factory):
         model = models.RPS
 
 
+class RPSPydanticFactory(Factory):
+    identificador = "N1"
+    data_emissao = datetime.today()
+    servico = ServicoPydanticFactory()
+    prestador = PrestadorPydanticFactory()
+    tomador = TomadorPydanticFactory()
+    simples = 1
+    incentivo = 2
+    numero = 1
+    serie = "A1"
+    tipo = "1"
+    natureza_operacao = 1
+
+    class Meta:
+        model = pydantic_models.RPS
+
+
 class LoteRPSFactory(Factory):
     identificador = "L1"
     numero_lote = 1
