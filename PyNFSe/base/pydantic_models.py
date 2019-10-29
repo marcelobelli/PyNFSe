@@ -1,3 +1,4 @@
+from datetime import datetime
 from decimal import Decimal
 from typing import Optional
 
@@ -118,3 +119,32 @@ def _validate_cnpj(document_number: str) -> str:
         raise ValueError("CNPJ deve conter 14 caracteres, sendo todos números.")
 
     return document_number
+
+
+class RPS(BaseModel):
+    data_emissao: datetime
+    identificador: str
+    incentivo: int
+    natureza_operacao: int
+    numero: int
+    prestador: Prestador
+    regime_especial: int = 1
+    serie: str
+    servico: Servico
+    simples: int
+    tipo: str
+    tomador: Tomador
+
+    @validator("natureza_operacao")
+    def natureza_operacao_must_be_between_1_and_6(cls, value):
+        if value not in range(1, 7):
+            raise ValueError("Natureza da Operação deve ser um número entre 1 e 6.")
+
+        return value
+
+    @validator("regime_especial")
+    def regime_especial_must_be_between_1_and_4(cls, value):
+        if value not in range(1, 5):
+            raise ValueError("Regime Especial deve ser um número entre 1 e 4.")
+
+        return value

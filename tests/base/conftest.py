@@ -3,7 +3,15 @@ import os.path
 import pytest
 from simple_model import to_dict
 
-from .factories import PrestadorFactory, RPSFactory, ServicoFactory, TomadorFactory
+from .factories import (
+    PrestadorFactory,
+    PrestadorPydanticFactory,
+    RPSFactory,
+    ServicoFactory,
+    ServicoPydanticFactory,
+    TomadorFactory,
+    TomadorPydanticFactory,
+)
 
 file_path = os.path.abspath(os.path.dirname(__file__))
 
@@ -14,13 +22,28 @@ def prestador():
 
 
 @pytest.fixture
+def prestador_pydantic():
+    return PrestadorPydanticFactory()
+
+
+@pytest.fixture
 def tomador():
     return TomadorFactory()
 
 
 @pytest.fixture
+def tomador_pydantic():
+    return TomadorPydanticFactory()
+
+
+@pytest.fixture
 def servico():
     return ServicoFactory()
+
+
+@pytest.fixture
+def servico_pydantic():
+    return ServicoPydanticFactory()
 
 
 @pytest.fixture
