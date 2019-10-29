@@ -3,7 +3,7 @@ from decimal import Decimal
 
 from factory import Factory
 
-from PyNFSe.base import models, pydantic_models
+from PyNFSe.base import models
 
 
 class PrestadorFactory(Factory):
@@ -12,14 +12,6 @@ class PrestadorFactory(Factory):
 
     class Meta:
         model = models.Prestador
-
-
-class PrestadorPydanticFactory(Factory):
-    cnpj = "12345678901234"
-    inscricao_municipal = "1234567890"
-
-    class Meta:
-        model = pydantic_models.Prestador
 
 
 class TomadorFactory(Factory):
@@ -37,21 +29,6 @@ class TomadorFactory(Factory):
         model = models.Tomador
 
 
-class TomadorPydanticFactory(Factory):
-    razao_social = "Nome do Tomador"
-    tipo_documento = "CNPJ"
-    numero_documento = "12345678901234"
-    endereco = "Rua Getúlio Vargas"
-    endereco_numero = "1000"
-    bairro = "Bairro Centro"
-    codigo_municipio = "4106902"
-    uf = "PR"
-    cep = "80000000"
-
-    class Meta:
-        model = pydantic_models.Tomador
-
-
 class ServicoFactory(Factory):
     valor_servico = Decimal("1000.00")
     iss_retido = 1
@@ -62,18 +39,6 @@ class ServicoFactory(Factory):
 
     class Meta:
         model = models.Servico
-
-
-class ServicoPydanticFactory(Factory):
-    valor_servico = Decimal("1000.00")
-    iss_retido = 1
-    item_lista = "0107"
-    discriminacao = "Teste Integração"
-    codigo_municipio = "4106902"
-    aliquota = Decimal("0.02")
-
-    class Meta:
-        model = pydantic_models.Servico
 
 
 class RPSFactory(Factory):
@@ -91,23 +56,6 @@ class RPSFactory(Factory):
 
     class Meta:
         model = models.RPS
-
-
-class RPSPydanticFactory(Factory):
-    identificador = "N1"
-    data_emissao = datetime.today()
-    servico = ServicoPydanticFactory()
-    prestador = PrestadorPydanticFactory()
-    tomador = TomadorPydanticFactory()
-    simples = 1
-    incentivo = 2
-    numero = 1
-    serie = "A1"
-    tipo = "1"
-    natureza_operacao = 1
-
-    class Meta:
-        model = pydantic_models.RPS
 
 
 class LoteRPSFactory(Factory):

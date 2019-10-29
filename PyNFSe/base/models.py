@@ -1,79 +1,56 @@
 from datetime import datetime
 from decimal import Decimal
-from typing import Any, List
+from typing import List, Optional
 
-from simple_model import Model
-from simple_model.exceptions import ValidationError
+from pydantic import BaseModel, validator
 
 
-class Prestador(Model):
-
+class Prestador(BaseModel):
     cnpj: str
     inscricao_municipal: str
 
-    def __post_init__(self, **kwargs):
-        self.validate()
-
-    def validate_cnpj(self, cnpj: str):
-        if len(cnpj) != 14 or not cnpj.isdigit():
-            raise ValidationError("CNPJ deve conter 14 caracteres, sendo todos números.")
-
-        return cnpj
+    @validator("cnpj")
+    def cnpj_must_have_14_digits(cls, value):
+        return _validate_cnpj(value)
 
 
-class Tomador(Model):
-    inscricao_municipal: Any = None
+class Tomador(BaseModel):
+    tipo_documento: str
     numero_documento: str
     razao_social: str
-    tipo_documento: str
-
     bairro: str
     cep: str
     codigo_municipio: str
     endereco: str
-    endereco_complemento: Any = None
     endereco_numero: str
     uf: str
 
-    email: Any = None
-    telefone: Any = None
+    inscricao_municipal: Optional[str] = None
+    endereco_complemento: Optional[str] = None
+    email: Optional[str] = None
+    telefone: Optional[str] = None
 
-    def __post_init__(self, **kwargs):
-        self.validate()
+    @validator("tipo_documento")
+    def tipo_documento_must_be_CPF_or_CNPJ(cls, value):
+        if value.upper() not in ["CPF", "CNPJ"]:
+            raise ValueError("O tipo de documento do tomador deve ser CPF ou CNPJ.")
 
-    def validate_tipo_documento(self, tipo_documento: str):
-        if tipo_documento.upper() not in ["CPF", "CNPJ"]:
-            raise ValidationError("O tipo de documento do tomador deve ser CPF ou CNPJ.")
+        return value.upper()
 
-        return tipo_documento.upper()
+    @validator("numero_documento")
+    def validate_digits_from_numero_documento(cls, value, values):
+        validators = {"CPF": _validate_cpf, "CNPJ": _validate_cnpj}
 
-    def validate_numero_documento(self, numero_documento: str):
-        validators = {"CPF": self._validate_cpf, "CNPJ": self._validate_cnpj}
-        validator = validators.get(self.tipo_documento.upper())
+        if "tipo_documento" not in values:
+            return value
 
-        if not validator:
-            return numero_documento
-
-        return validator(numero_documento)
-
-    def _validate_cpf(self, numero_documento: str):
-        if len(numero_documento) != 11 or not numero_documento.isdigit():
-            raise ValidationError("CPF deve conter 11 caracteres, sendo todos números.")
-
-        return numero_documento
-
-    def _validate_cnpj(self, numero_documento: str):
-        if len(numero_documento) != 14 or not numero_documento.isdigit():
-            raise ValidationError("CNPJ deve conter 14 caracteres, sendo todos números.")
-
-        return numero_documento
+        document_validator = validators.get(values["tipo_documento"].upper(), None)
+        return document_validator(value)
 
 
-class Servico(Model):
+class Servico(BaseModel):
     aliquota: Decimal
-    codigo_cnae: Any = None
     codigo_municipio: str
-    codigo_tributacao_municipio: Any = None
     discriminacao: str
     iss_retido: int
     item_lista: str
@@ -89,27 +66,31 @@ class Servico(Model):
     valor_ir: Decimal = 0
     valor_pis: Decimal = 0
 
-    def __post_init__(self, **kwargs):
-        self.gerar_valores_faltantes()
-        self.validate()
+    codigo_cnae: Optional[int] = None
+    codigo_tributacao_municipio: Optional[str] = None
 
-    def validate_iss_retido(self, iss_retido):
-        if iss_retido not in [1, 2]:
-            raise ValidationError("ISS Retido deve ser 1 para SIM ou 2 para NÃO.")
+    @validator("iss_retido")
+    def iss_retido_must_be_1_or_2(cls, value):
+        if value not in [1, 2]:
+            raise ValueError("ISS Retido deve ser 1 para SIM ou 2 para NÃO.")
 
-        return iss_retido
+        return value
 
-    def gerar_valores_faltantes(self):
-        self.base_calculo = self._calcular_base_calculo()
-        self.valor_iss = self._calcular_iss()
-        self.valor_iss_retido = Decimal() if self.iss_retido == 2 else self.valor_iss
-        self.valor_liquido = self._calcular_valor_liquido()
-
-    def _calcular_base_calculo(self):
+    @property
+    def base_calculo(self):
         return self.valor_servico - self.valor_deducoes - self.desconto_incondicionado
 
-    def _calcular_valor_liquido(self):
-        descontos = sum(
+    @property
+    def valor_iss(self):
+        return Decimal(self.base_calculo * self.aliquota).quantize(Decimal("0.01"))
+
+    @property
+    def valor_iss_retido(self):
+        return self.valor_iss if self.iss_retido == 1 else 0
+
+    @property
+    def valor_liquido(self):
+        total_discount = sum(
             [
                 self.desconto_condicionado,
                 self.desconto_incondicionado,
@@ -123,96 +104,67 @@ class Servico(Model):
             ]
         )
 
-        return Decimal(self.valor_servico - descontos)
-
-    def _calcular_iss(self):
-        return Decimal(self.base_calculo * self.aliquota).quantize(Decimal("0.01"))
+        return Decimal(self.valor_servico - total_discount)
 
 
-class RPS(Model):
+class RPS(BaseModel):
     data_emissao: datetime
     identificador: str
     incentivo: int
     natureza_operacao: int
     numero: int
     prestador: Prestador
-    regime_especial: Any = None
+    regime_especial: Optional[int] = None
     serie: str
     servico: Servico
     simples: int
     tipo: str
     tomador: Tomador
 
-    def __post_init__(self, **kwargs):
-        self.validate()
+    @validator("natureza_operacao")
+    def natureza_operacao_must_be_between_1_and_6(cls, value):
+        if value not in range(1, 7):
+            raise ValueError("Natureza da Operação deve ser um número entre 1 e 6.")
 
-    def validate_natureza_operacao(self, natureza_operacao: int):
-        if natureza_operacao not in range(1, 7):
-            raise ValidationError("Natureza da Operação deve ser um número entre 1 e 6.")
+        return value
 
-        return natureza_operacao
+    @validator("regime_especial")
+    def regime_especial_must_be_between_1_and_4(cls, value):
+        if value is None or value not in range(1, 5):
+            raise ValueError("Regime Especial deve ser um número entre 1 e 4.")
 
-    def validate_regime_especial(self, regime_especial: Any):
-        if regime_especial is None:
-            return regime_especial
-
-        if (
-            type(regime_especial) != int
-            or type(regime_especial) == int
-            and regime_especial not in range(0, 5)
-        ):
-            raise ValidationError("Regime Especial deve ser um número entre 0 e 4 ou None.")
-
-        return regime_especial
-
-    @classmethod
-    def criar_a_partir_de_dados(cls, dados_rps: dict) -> "RPS":
-        return cls(
-            data_emissao=dados_rps["data_emissao"],
-            identificador=dados_rps["identificador"],
-            incentivo=dados_rps["incentivo"],
-            natureza_operacao=dados_rps["natureza_operacao"],
-            numero=dados_rps["numero"],
-            prestador=Prestador(**dados_rps["prestador"]),
-            regime_especial=dados_rps.get("regime_especial"),
-            serie=dados_rps["serie"],
-            servico=Servico(**dados_rps["servico"]),
-            simples=dados_rps["simples"],
-            tipo=dados_rps["tipo"],
-            tomador=Tomador(**dados_rps["tomador"]),
-        )
+        return value
 
 
-class LoteRPS(Model):
+class LoteRPS(BaseModel):
     cnpj: str
     identificador: str
     inscricao_municipal: str
     lista_rps: List[RPS]
     numero_lote: int
 
-    def __post_init__(self, **kwargs):
-        self.validate()
-
-    def validate_cnpj(self, cnpj: str):
-        if len(cnpj) != 14 or not cnpj.isdigit():
-            raise ValidationError("CNPJ deve conter 14 caracteres, sendo todos números.")
-
-        return cnpj
-
-    @classmethod
-    def criar_a_partir_de_dados(cls, dados_lote_rps: dict) -> "LoteRPS":
-        return cls(
-            cnpj=dados_lote_rps["cnpj"],
-            identificador=dados_lote_rps["identificador"],
-            inscricao_municipal=dados_lote_rps["inscricao_municipal"],
-            lista_rps=[RPS.criar_a_partir_de_dados(dados_rps) for dados_rps in dados_lote_rps["lista_rps"]],
-            numero_lote=dados_lote_rps["numero_lote"],
-        )
+    @validator("cnpj")
+    def cnpj_must_have_14_digits(cls, value):
+        return _validate_cnpj(value)
 
 
-class PedidoCancelamentoNFSe(Model):
+class PedidoCancelamentoNFSe(BaseModel):
     identificador: str
     prestador: Prestador
     numero_nota: int
     codigo_municipio: str
     codigo_cancelamento: str
+
+
+def _validate_cpf(document_number: str) -> str:
+    if len(document_number) != 11 or not document_number.isdigit():
+        raise ValueError("CPF deve conter 11 caracteres, sendo todos números.")
+
+    return document_number
+
+
+def _validate_cnpj(document_number: str) -> str:
+    if len(document_number) != 14 or not document_number.isdigit():
+        raise ValueError("CNPJ deve conter 14 caracteres, sendo todos números.")
+
+    return document_number
