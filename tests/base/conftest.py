@@ -1,18 +1,8 @@
 import os.path
 
 import pytest
-from simple_model import to_dict
 
-from .factories import (
-    PrestadorFactory,
-    PrestadorPydanticFactory,
-    RPSFactory,
-    RPSPydanticFactory,
-    ServicoFactory,
-    ServicoPydanticFactory,
-    TomadorFactory,
-    TomadorPydanticFactory,
-)
+from .factories import PrestadorFactory, RPSFactory, ServicoFactory, TomadorFactory
 
 file_path = os.path.abspath(os.path.dirname(__file__))
 
@@ -23,18 +13,8 @@ def prestador():
 
 
 @pytest.fixture
-def prestador_pydantic():
-    return PrestadorPydanticFactory()
-
-
-@pytest.fixture
 def tomador():
     return TomadorFactory()
-
-
-@pytest.fixture
-def tomador_pydantic():
-    return TomadorPydanticFactory()
 
 
 @pytest.fixture
@@ -43,23 +23,13 @@ def servico():
 
 
 @pytest.fixture
-def servico_pydantic():
-    return ServicoPydanticFactory()
-
-
-@pytest.fixture
 def rps():
     return RPSFactory()
 
 
 @pytest.fixture
-def rps_pydantic():
-    return RPSPydanticFactory()
-
-
-@pytest.fixture
 def dados_rps(rps):
-    return to_dict(rps)
+    return rps.dict()
 
 
 @pytest.fixture
