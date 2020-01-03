@@ -1,6 +1,7 @@
 import unittest
 
-import PyNFSe.nfse.pr.curitiba.serializacao as s
+import pynfse.nfse.pr.curitiba.serializacao as s
+
 from tests.pr.curitiba.basetestesserializacao import BaseTestesSerializacao, xml_expected
 
 

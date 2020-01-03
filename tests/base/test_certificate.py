@@ -1,8 +1,7 @@
 from tempfile import _TemporaryFileWrapper
 
 import pytest
-
-from PyNFSe.base.certificate import _create_temp_file, get_certificate
+from pynfse.base.certificate import _create_temp_file, get_certificate
 
 
 @pytest.fixture
