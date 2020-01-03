@@ -1,4 +1,7 @@
+from datetime import date
+
 from PyNFSe.base.certificate import get_certificate
+from PyNFSe.base.models import RPS, LoteRPS, PedidoCancelamentoNFSe, Prestador
 from PyNFSe.base.nfse_signer import NFSeSigner
 from PyNFSe.nfse.pr.curitiba import serializacao as s
 from PyNFSe.nfse.pr.curitiba.comunicacao import Comunicacao
@@ -17,51 +20,58 @@ class Facade:
         self._assinador = NFSeSigner(self.cert, self.key, namespace)
         self._servicos_wsdl = Comunicacao(url_ambiente, cert_file_and_key_file, producao)
 
-    def consultar_nfse_por_numero(self, prestador, numero_nfse):
-        xml = s.consulta_nfse_por_numero(prestador, numero_nfse)
-        xml_retorno = self._servicos_wsdl.consultar_nfse(xml)
+    def consultar_nfse_por_numero(self, prestador_data: dict, nfse_number: str) -> str:
+        prestador = Prestador(**prestador_data)
+        request_xml = s.consulta_nfse_por_numero(prestador, nfse_number)
+        response_xml = self._servicos_wsdl.consultar_nfse(request_xml)
 
-        return xml_retorno
+        return response_xml
 
-    def consultar_nfse_por_data(self, prestador, data_inicial, data_final):
+    def consultar_nfse_por_data(self, prestador_data: dict, data_inicial: date, data_final: date) -> str:
+        prestador = Prestador(**prestador_data)
         xml = s.consulta_nfse_por_data(prestador, data_inicial, data_final)
         xml_retorno = self._servicos_wsdl.consultar_nfse(xml)
 
         return xml_retorno
 
-    def consultar_nfse_por_rps(self, rps):
+    def consultar_nfse_por_rps(self, rps_data: dict) -> str:
+        rps = RPS(**rps_data)
         xml = s.consulta_nfse_por_rps(rps)
         xml_retorno = self._servicos_wsdl.consultar_nfse_por_rps(xml)
 
         return xml_retorno
 
-    def consultar_situacao_lote_rps(self, prestador, protocolo):
+    def consultar_situacao_lote_rps(self, prestador_data: dict, protocolo: str) -> str:
+        prestador = Prestador(**prestador_data)
         xml = s.consulta_situacao_lote_rps(prestador, protocolo)
         xml_retorno = self._servicos_wsdl.consultar_situacao_lote_rps(xml)
 
         return xml_retorno
 
-    def consultar_lote_rps(self, prestador, protocolo):
+    def consultar_lote_rps(self, prestador_data: dict, protocolo: str) -> str:
+        prestador = Prestador(**prestador_data)
         xml = s.consulta_lote_rps(prestador, protocolo)
         xml_retorno = self._servicos_wsdl.consultar_lote_rps(xml)
 
         return xml_retorno
 
-    def recepcionar_lote_rps(self, lote_rps):
+    def recepcionar_lote_rps(self, lote_rps_data: dict) -> str:
+        lote_rps = LoteRPS(**lote_rps_data)
         xml = s.envio_lote_rps(lote_rps)
         xml = self._assinador.sign_rps_batch(xml)
         xml_retorno = self._servicos_wsdl.recepcionar_lote_rps(xml)
 
         return xml_retorno
 
-    def cancelar_nfse(self, pedido_cancelamento_nfse):
+    def cancelar_nfse(self, pedido_cancelamento_nfse_data: dict) -> str:
+        pedido_cancelamento_nfse = PedidoCancelamentoNFSe(**pedido_cancelamento_nfse_data)
         xml = s.cancela_nfse(pedido_cancelamento_nfse)
         xml = self._assinador.sign_cancellation_request(xml)
         xml_retorno = self._servicos_wsdl.cancelar_nfse(xml)
 
         return xml_retorno
 
-    def validar_xml(self, xml):
+    def validar_xml(self, xml: str) -> str:
         retorno = self._servicos_wsdl.validar_xml(xml)
 
         return retorno
