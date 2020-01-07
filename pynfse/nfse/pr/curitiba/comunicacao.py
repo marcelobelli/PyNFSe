@@ -1,4 +1,4 @@
-from PyNFSe.base.soap_client import NFSeSoapClient
+from pynfse.base.soap_client import NFSeSoapClient
 
 
 class Comunicacao:

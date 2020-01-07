@@ -2,8 +2,7 @@ from datetime import datetime
 from decimal import Decimal
 
 import pytest
-
-from PyNFSe.base.models import RPS, LoteRPS, Prestador, Servico, Tomador, _validate_cnpj, _validate_cpf
+from pynfse.base.models import RPS, LoteRPS, Prestador, Servico, Tomador, _validate_cnpj, _validate_cpf
 
 
 def test_prestador_incorrect_cnpj():

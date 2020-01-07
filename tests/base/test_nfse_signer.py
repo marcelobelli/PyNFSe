@@ -1,7 +1,6 @@
 import pytest
-
-from PyNFSe.base.certificate import get_certificate
-from PyNFSe.base.nfse_signer import NFSeSigner
+from pynfse.base.certificate import get_certificate
+from pynfse.base.nfse_signer import NFSeSigner
 
 
 @pytest.fixture

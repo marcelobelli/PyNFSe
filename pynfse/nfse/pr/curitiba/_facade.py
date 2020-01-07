@@ -1,10 +1,10 @@
 from datetime import date
 
-from PyNFSe.base.certificate import get_certificate
-from PyNFSe.base.models import RPS, LoteRPS, PedidoCancelamentoNFSe, Prestador
-from PyNFSe.base.nfse_signer import NFSeSigner
-from PyNFSe.nfse.pr.curitiba import serializacao as s
-from PyNFSe.nfse.pr.curitiba.comunicacao import Comunicacao
+from pynfse.base.certificate import get_certificate
+from pynfse.base.models import RPS, LoteRPS, PedidoCancelamentoNFSe, Prestador
+from pynfse.base.nfse_signer import NFSeSigner
+from pynfse.nfse.pr.curitiba import serializacao as s
+from pynfse.nfse.pr.curitiba.comunicacao import Comunicacao
 
 
 class Facade:

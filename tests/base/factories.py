@@ -2,8 +2,7 @@ from datetime import datetime
 from decimal import Decimal
 
 from factory import Factory
-
-from PyNFSe.base import models
+from pynfse.base import models
 
 
 class PrestadorFactory(Factory):
