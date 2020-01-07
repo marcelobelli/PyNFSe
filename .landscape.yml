@@ -1,5 +1,0 @@
-python-targets:
-  - 3
-ignore-patterns:
-  - _dsig\.py$
-  - _schema\.py$

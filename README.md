@@ -1,14 +1,16 @@
 # PyNFSe
-[![Code Health](https://landscape.io/github/marcelobelli/PyNFSe/master/landscape.svg?style=flat)](https://landscape.io/github/marcelobelli/PyNFSe/master)
 [![Code Climate](https://codeclimate.com/github/marcelobelli/PyNFSe/badges/gpa.svg)](https://codeclimate.com/github/marcelobelli/PyNFSe)
 [![Build Status](https://travis-ci.org/marcelobelli/PyNFSe.svg?branch=master)](https://travis-ci.org/marcelobelli/PyNFSe)
 [![Coverage Status](https://coveralls.io/repos/github/marcelobelli/PyNFSe/badge.svg?branch=master)](https://coveralls.io/github/marcelobelli/PyNFSe?branch=master)
 
-A PyNFSe realiza todos os passos para quem trabalha com NFS-e:
-* Cria os XMLs de RPS (Recibo Provisório de Serviço) e dos Lotes RPS. Tudo devidamente assinado :)
-* Realiza a comunicação com o webservice da respectiva prefeitura, enviando lotes RPSs, consultando e cancelando NFS-es...
+A biblioteca PyNFSe funciona como um facilitador para os desenvolvedores que precisam gerir a emissão de Nota Fiscal de Serviços por meio eletrônico. As funcionalidades desta biblioteca são:
 
-Enfim, a PyNFSe faz todo o trabalho duro :)
+* Criação dos XMLs de RPS (Recibo Provisório de Serviço)
+* Criação dos XML dos Lotes RPS.
+* Envio dos lotes de RPSs, realizando a comunicação com o webservice da respectiva prefeitura
+* Consulta e Cancelamento de NFS-es emitidas
+
+Além disso a PyNFSe possui uma CLI para operação via linha de comando.
 
 ## Cidades Atendidas
 
@@ -27,6 +29,11 @@ git clone https://github.com/marcelobelli/PyNFSe.git
 cd PyNFSe
 pip install -r requirements.txt
 ```
+
+## Problemas
+
+* Descobrir o problema de conexão quando atualiza o requests
+para versões superiores a 2.11.1 e o cryptography está instalado
 
 ## Roadmap
 
