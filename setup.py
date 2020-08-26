@@ -30,7 +30,8 @@ CLASSIFIERS = [
     "Topic :: Utilities",
 ]
 
-INSTALL_REQUIREMENTS = ["PyXB==1.2.5", "requests", "zeep", "signxml", "pysimplemodel"]
+INSTALL_REQUIREMENTS = ["PyXB==1.2.5", "requests",
+                        "zeep", "signxml", "pysimplemodel", "falcon", "xmltodict"]
 
 setup(
     name="PyNFSe",
@@ -38,7 +39,7 @@ setup(
     long_description=LONG_DESCRIPTION,
     license="MIT License",
     platforms="any",
-    version="0.1.0",
+    version="0.1.1",
     url="https://github.com/marcelobelli/PyNFSe",
     author="Marcelo Belli",
     author_email="marcelo@belli.me",
