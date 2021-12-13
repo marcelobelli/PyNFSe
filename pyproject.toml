@@ -39,7 +39,7 @@ include = ["LICENSE"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-lxml = "4.4.1"
+lxml = "4.6.5"
 pydantic = "1.0"
 PyXB = "1.2.5"
 signxml = "2.6.0"
